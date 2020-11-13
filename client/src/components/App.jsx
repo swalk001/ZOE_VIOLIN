@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import NavBar from './NavBar.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -18,11 +19,11 @@ class App extends React.Component {
     }
 
     render() {
-        const { connection } = this.state;
+        // const { connection } = this.state;
         return (
             <div>
-                <h1>Need a teacher</h1>
-                <h2>{connection}</h2>
+                <NavBar />
+                <img src="../imgs/ZOE.JPG" alt="Zoe" />
             </div>
         );
     }
