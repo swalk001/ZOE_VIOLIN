@@ -23,7 +23,19 @@ class App extends React.Component {
         return (
             <div>
                 <NavBar />
-                <img src="../imgs/ZOE.JPG" alt="Zoe" />
+                <img className="zoe-hero" src="../imgs/ZOE.JPG" alt="Zoe" />
+                <section className="packages">
+                    <img
+                        className="packages-solo"
+                        src="../imgs/ZOE_PLAYING.jpg"
+                        alt="solo"
+                    />
+                    <img
+                        className="packages-duo"
+                        src="../imgs/ZOE_CHRISTIAN_PLAYING4.jpg"
+                        alt="duo"
+                    />
+                </section>
             </div>
         );
     }

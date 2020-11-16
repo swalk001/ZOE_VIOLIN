@@ -7,35 +7,117 @@
 html,
 body {
     background-color: #fff;
-    font-family: 'proxima-nova';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 /**************
 NAV-BAR
 **************/
 .nav-bar {
-    background-color: #e1c8c0;
+    background-color: #dfd2b0;
+    /* opacity: 0.95; */
     position: fixed;
-    height: 200px;
+    height: 160px;
     width: 100%;
-    border: 1px solid black;
+    z-index: 10;
+    /* border: 1px solid black; */
 }
 
 .header-name {
     text-align: center;
+    margin-top: 50px;
+}
+.main-nav {
+    text-align: center;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li:first-child {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid black;
 }
 
 /**************
-NAV-BAR
+HERO
 **************/
+.zoe-hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -o-object-fit: cover;
+    object-fit: contain;
+    height: 1000px;
+    width: 100%;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /**************
-NAV-BAR
+PACKAGES
 **************/
+.packages {
+    text-align: center;
+    margin-top: 200px;
+}
+.packages img {
+    margin-left: 100px;
+    width: 400px;
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
 
+.packages img:first-child {
+    margin-left: 0;
+}
 /**************
 NAV-BAR
 **************/

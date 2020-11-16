@@ -1,12 +1,28 @@
-import React, { Link } from 'react';
+import React from 'react';
 
 const NavBar = () => {
     return (
         <div className="nav-bar">
-            <Link to="/" className="header-name">
-                <h1>Zoe Whittaker</h1>
-            </Link>
-            <section></section>
+            <h1 className="header-name">Zoe Whittaker</h1>
+            <ul className="main-nav">
+                <li>
+                    <a href="">BIO</a>
+                </li>
+                <li>
+                    <a href="#">SONG LIST</a>
+                </li>
+                <li>
+                    <a href="#">AUDIO</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=wnTMPQX5c9I">
+                        VIDEO
+                    </a>
+                </li>
+                <li>
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
         </div>
     );
 };
