@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import NavBar from './NavBar.jsx';
+import AudioPlayer from './AudioPlayer.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class App extends React.Component {
     render() {
         // const { connection } = this.state;
         return (
-            <div>
+            <div className="main-wrapper">
                 <NavBar />
                 <img className="zoe-hero" src="../imgs/ZOE.JPG" alt="Zoe" />
                 <section className="packages">
@@ -36,6 +37,7 @@ class App extends React.Component {
                         alt="duo"
                     />
                 </section>
+                <AudioPlayer />
             </div>
         );
     }

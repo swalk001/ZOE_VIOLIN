@@ -14,6 +14,10 @@ body {
     text-rendering: optimizeLegibility;
     /* overflow-x: hidden; */
 }
+
+.main-wrapper {
+    width: 100%;
+}
 /**************
 NAV-BAR
 **************/
@@ -119,5 +123,17 @@ PACKAGES
     margin-left: 0;
 }
 /**************
-NAV-BAR
+AudioPlayer
 **************/
+.audio-player {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.audio-player-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
