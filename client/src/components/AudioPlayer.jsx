@@ -1,4 +1,6 @@
 import React from 'react';
+import Controls from './Controls.jsx';
+import Songs from './Songs.jsx';
 
 class AudioPlayer extends React.Component {
     constructor(props) {
@@ -12,7 +14,10 @@ class AudioPlayer extends React.Component {
     render() {
         return (
             <div className="audio-player">
-                <div className="audio-player-title">AUDIO PLAYER</div>
+                <Controls />
+                <div className="audio-songs">
+                    <Songs />
+                </div>
             </div>
         );
     }

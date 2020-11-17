@@ -1,8 +1,10 @@
 import React from 'react';
+import AudioPlayer from './AudioPlayer.jsx';
 
 const NavBar = () => {
     return (
         <div className="nav-bar">
+            {/* <AudioPlayer /> */}
             <h1 className="header-name">Zoe Whittaker</h1>
             <ul className="main-nav">
                 <li>

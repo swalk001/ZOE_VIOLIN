@@ -6,16 +6,16 @@
 
 html,
 body {
-    background-color: #fff;
+    background-color: rgb(255, 245, 245);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    /* overflow-x: hidden; */
 }
 
 .main-wrapper {
+    height: auto;
     width: 100%;
 }
 /**************
@@ -25,15 +25,14 @@ NAV-BAR
     background-color: #dfd2b0;
     /* opacity: 0.95; */
     position: fixed;
-    height: 160px;
+    height: 120px;
     width: 100%;
     z-index: 10;
-    /* border: 1px solid black; */
 }
 
 .header-name {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .main-nav {
     text-align: center;
@@ -53,7 +52,7 @@ NAV-BAR
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 8px 0;
+    padding: 4px 0;
     color: black;
     text-decoration: none;
     font-size: 90%;
@@ -104,7 +103,8 @@ PACKAGES
 **************/
 .packages {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .packages img {
     margin-left: 100px;
@@ -126,14 +126,64 @@ PACKAGES
 AudioPlayer
 **************/
 .audio-player {
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto;
+    background: #dfd2b0;
+    left: 0;
+    bottom: 0;
+    height: 500px;
 }
 
-.audio-player-title {
-    width: 100%;
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-controls ion-icon {
+    display: flex;
+    background: rgb(255, 245, 245);
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgb(101, 101, 91);
+}
+
+.audio-play ion-icon {
+    height: 150px;
+    width: 100px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.audio-play ion-icon:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.audio-choice ion-icon {
+    width: 70px;
+    height: 50px;
+    border: 30px solid rgb(255, 245, 245);
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.audio-choice ion-icon:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.audio-songs {
+    margin-top: 40px;
+    margin-left: 25vw;
+    border: 1px solid black;
+    width: 50vw;
+    height: 200px;
+    justify-content: center;
     text-align: center;
-    font-weight: bold;
-    font-size: 24px;
+}
+
+.audio-songs ul {
+    list-style: none;
+    height: 200px;
+    overflow: auto;
+    overflow-y: scroll;
 }
