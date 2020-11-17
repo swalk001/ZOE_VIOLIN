@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 
-const Controls = () => {
-    const [playing, setPlaying] = useState(false);
+const Controls = ({ isPlaying, handlePlay, handleStop }) => {
+    // const [playing, setPlaying] = useState(false);
 
     return (
         <div className="audio-controls">
             <div className="audio-choice">
-                <ion-icon name="play-back"></ion-icon>
+                <ion-icon name="play-back-sharp"></ion-icon>
             </div>
             <div className="audio-play">
-                {!playing ? (
+                {isPlaying === null ? (
                     <ion-icon
-                        name="play"
-                        onClick={() => setPlaying(!playing)}
+                        name="play-circle-sharp"
+                        onClick={() => handlePlay()}
                     ></ion-icon>
                 ) : (
                     <ion-icon
-                        name="pause"
-                        onClick={() => setPlaying(!playing)}
+                        name="stop-circle-sharp"
+                        onClick={() => handleStop()}
                     ></ion-icon>
                 )}
             </div>
             <div className="audio-choice">
-                <ion-icon name="play-forward"></ion-icon>
+                <ion-icon name="play-forward-sharp"></ion-icon>
             </div>
         </div>
     );

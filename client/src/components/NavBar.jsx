@@ -4,11 +4,12 @@ import AudioPlayer from './AudioPlayer.jsx';
 const NavBar = () => {
     return (
         <div className="nav-bar">
-            {/* <AudioPlayer /> */}
-            <h1 className="header-name">Zoe Whittaker</h1>
+            <h1 className="header-name">
+                <a href="#top">Zoe Whittaker</a>
+            </h1>
             <ul className="main-nav">
                 <li>
-                    <a href="">BIO</a>
+                    <a href="#bio">BIO</a>
                 </li>
                 <li>
                     <a href="#">SONG LIST</a>

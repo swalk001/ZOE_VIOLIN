@@ -12,6 +12,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
 }
 
 .main-wrapper {
@@ -23,7 +24,6 @@ NAV-BAR
 **************/
 .nav-bar {
     background-color: #dfd2b0;
-    /* opacity: 0.95; */
     position: fixed;
     height: 120px;
     width: 100%;
@@ -33,6 +33,16 @@ NAV-BAR
 .header-name {
     text-align: center;
     margin-top: 10px;
+    text-decoration: none;
+}
+.header-name a:link,
+.header-name a:visited {
+    padding: 4px 0;
+    color: black;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 .main-nav {
     text-align: center;
@@ -129,7 +139,7 @@ AudioPlayer
     background: #dfd2b0;
     left: 0;
     bottom: 0;
-    height: 500px;
+    height: 630px;
 }
 
 .audio-controls {
@@ -147,10 +157,10 @@ AudioPlayer
 }
 
 .audio-play ion-icon {
-    height: 150px;
+    height: 250px;
     width: 100px;
     border-radius: 2px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 2px black;
 }
 
 .audio-play ion-icon:hover {
@@ -163,7 +173,7 @@ AudioPlayer
     height: 50px;
     border: 30px solid rgb(255, 245, 245);
     border-radius: 2px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 2px black;
 }
 
 .audio-choice ion-icon:hover {
@@ -175,15 +185,39 @@ AudioPlayer
     margin-top: 40px;
     margin-left: 25vw;
     border: 1px solid black;
+    border-radius: 10px;
     width: 50vw;
-    height: 200px;
+    height: 300px;
     justify-content: center;
     text-align: center;
 }
 
 .audio-songs ul {
     list-style: none;
-    height: 200px;
+    height: 300px;
     overflow: auto;
     overflow-y: scroll;
+}
+
+.audio-songs li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/**************
+BIO
+**************/
+.bio {
+    display: flex;
+    width: 100%;
+    padding-top: 80px;
+    justify-content: center;
+}
+
+.bio p {
+    margin: 20px 0;
+    width: 60vw;
+    font-size: 24px;
+    line-height: 50px;
+    text-indent: 60px;
 }
