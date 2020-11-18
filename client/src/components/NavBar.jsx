@@ -15,7 +15,7 @@ const NavBar = () => {
                     <a href="#">SONG LIST</a>
                 </li>
                 <li>
-                    <a href="#">AUDIO</a>
+                    <a href="#audio-player">AUDIO</a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/watch?v=wnTMPQX5c9I">

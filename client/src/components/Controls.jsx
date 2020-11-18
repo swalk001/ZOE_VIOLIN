@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 
-const Controls = ({ isPlaying, handlePlay, handleStop }) => {
-    // const [playing, setPlaying] = useState(false);
-
+const Controls = ({
+    isPlaying,
+    handlePlay,
+    handleStop,
+    handleNext,
+    handlePrev,
+}) => {
     return (
         <div className="audio-controls">
             <div className="audio-choice">
-                <ion-icon name="play-back-sharp"></ion-icon>
+                <ion-icon
+                    name="play-back-sharp"
+                    onClick={() => handlePrev()}
+                ></ion-icon>
             </div>
             <div className="audio-play">
                 {isPlaying === null ? (
@@ -22,7 +29,10 @@ const Controls = ({ isPlaying, handlePlay, handleStop }) => {
                 )}
             </div>
             <div className="audio-choice">
-                <ion-icon name="play-forward-sharp"></ion-icon>
+                <ion-icon
+                    name="play-forward-sharp"
+                    onClick={() => handleNext()}
+                ></ion-icon>
             </div>
         </div>
     );

@@ -135,6 +135,9 @@ PACKAGES
 /**************
 AudioPlayer
 **************/
+#audio-player {
+    padding: 8vh;
+}
 .audio-player {
     background: #dfd2b0;
     left: 0;
@@ -202,6 +205,10 @@ AudioPlayer
 .audio-songs li {
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.active {
+    background-color: #aca185;
 }
 
 /**************

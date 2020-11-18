@@ -37,6 +37,7 @@ class App extends React.Component {
                         alt="duo"
                     />
                 </section>
+                <div id="audio-player"></div>
                 <AudioPlayer />
                 <section className="bio">
                     <p id="bio">
