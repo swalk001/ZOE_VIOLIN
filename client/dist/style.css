@@ -18,13 +18,18 @@ body {
 .main-wrapper {
     height: auto;
     width: 100%;
+    background-color: rgba(245, 222, 179, 0.455);
 }
 /**************
 NAV-BAR
 **************/
 .nav-bar {
-    background-color: #dfd2b0;
+    background-color: #fffdf7;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     height: 120px;
     width: 100%;
     z-index: 10;
@@ -32,7 +37,6 @@ NAV-BAR
 
 .header-name {
     text-align: center;
-    margin-top: 10px;
     text-decoration: none;
 }
 .header-name a:link,
@@ -52,12 +56,7 @@ NAV-BAR
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;
-}
-
-.main-nav li:first-child {
-    display: inline-block;
-    margin-left: 0;
+    margin-left: 30px;
 }
 
 .main-nav li a:link,
@@ -74,17 +73,26 @@ NAV-BAR
     border-bottom: 2px solid black;
 }
 
+.main-nav-active {
+    border-bottom: 2px solid black;
+}
+
 /**************
 HERO
 **************/
+/* .hero-wrapper {
+} */
+
 .zoe-hero {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto 70px auto;
+    padding: 100px 0 0 0;
     -o-object-fit: cover;
-    object-fit: contain;
-    height: 1000px;
-    width: 100%;
+    object-fit: cover;
+    height: 1200px;
+    width: 80%;
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
     -moz-animation: fadeIn ease 2s;
@@ -108,18 +116,67 @@ HERO
         opacity: 1;
     }
 }
+
+/**************
+LINKS
+**************/
+.links {
+    /* margin: 50px 0; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 120px;
+    /* border: 8px solid rgb(0, 0, 0); */
+    border-left: none;
+    border-right: none;
+}
+
+.links-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100px;
+}
+
+.links-img-box img {
+    width: 80px;
+    height: 80px;
+}
+
+.links-img-box:hover {
+    cursor: pointer;
+}
+
+.links-img-box > img:nth-child(2) {
+    width: 210px;
+    height: 210px;
+}
+.links-img-box > img:last-child {
+    width: 200px;
+    height: 200px;
+}
+
+/**************
+DESCRIPTION
+**************/
+.description {
+    text-align: center;
+}
+
 /**************
 PACKAGES
 **************/
 .packages {
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    /* margin-top: 0;
+    margin-bottom: 100px; */
 }
 .packages img {
     margin-left: 100px;
     width: 400px;
-    height: 400px;
+    height: 600px;
     -o-object-fit: cover;
     object-fit: cover;
     animation: fadeIn ease 2s;
@@ -136,10 +193,13 @@ PACKAGES
 AudioPlayer
 **************/
 #audio-player {
-    padding: 8vh;
+    padding: 4vh;
 }
 .audio-player {
-    background: #dfd2b0;
+    background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.702)),
+        url('./imgs/VIOLIN.jpg');
+    background-attachment: fixed;
+    background-size: cover;
     left: 0;
     bottom: 0;
     height: 630px;
@@ -153,48 +213,54 @@ AudioPlayer
 
 .audio-controls ion-icon {
     display: flex;
-    background: rgb(255, 245, 245);
     text-decoration: none;
     box-sizing: border-box;
-    color: rgb(101, 101, 91);
+    color: rgba(245, 222, 179, 0.455);
 }
 
 .audio-play ion-icon {
-    height: 250px;
-    width: 100px;
+    height: 230px;
+    width: 300px;
     border-radius: 2px;
-    box-shadow: 2px 2px 2px black;
 }
 
 .audio-play ion-icon:hover {
-    color: black;
+    color: rgba(245, 222, 179);
     cursor: pointer;
 }
 
 .audio-choice ion-icon {
-    width: 70px;
-    height: 50px;
-    border: 30px solid rgb(255, 245, 245);
-    border-radius: 2px;
-    box-shadow: 2px 2px 2px black;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.298);
+    border-radius: 200px;
 }
 
 .audio-choice ion-icon:hover {
-    color: black;
+    color: rgba(245, 222, 179);
     cursor: pointer;
+    border-color: rgba(245, 222, 179);
 }
 
 .audio-songs {
     margin-top: 40px;
-    margin-left: 25vw;
-    border: 1px solid black;
+    /* margin-left: 25vw; */
+    /* background: rgba(245, 222, 179, 0.524); */
+    /* border: 1px solid black; */
     border-radius: 10px;
-    width: 50vw;
+    width: 100%;
     height: 300px;
     justify-content: center;
     text-align: center;
 }
 
+.audio-songs-wrapper {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+}
 .audio-songs ul {
     list-style: none;
     height: 300px;
@@ -203,12 +269,35 @@ AudioPlayer
 }
 
 .audio-songs li {
+    color: rgba(244, 205, 134, 0.578);
     margin-bottom: 10px;
+    font-size: 22px;
+    align-items: baseline;
+    height: 30px;
     cursor: pointer;
 }
 
 .active {
-    background-color: #aca185;
+    background-color: #aca1853a;
+}
+
+/**************
+VIDEO PLAYER
+**************/
+
+#video-player {
+    padding: 4vh;
+}
+
+.video-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    margin: 40px 0;
 }
 
 /**************
@@ -217,7 +306,7 @@ BIO
 .bio {
     display: flex;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 120px;
     justify-content: center;
 }
 
@@ -227,4 +316,60 @@ BIO
     font-size: 24px;
     line-height: 50px;
     text-indent: 60px;
+}
+
+/**************
+SONG LIST
+**************/
+.song-list {
+    text-align: center;
+    display: inline-block;
+    padding: 140px 0 0 0;
+    width: 100%;
+    font-size: 24px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    line-height: 60px;
+}
+
+/* .song-list ul {
+} */
+
+/**************
+CONTACT
+**************/
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.contact h1 {
+    display: inline;
+}
+
+.contact-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    width: 40vw;
+    height: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+.contact-form {
+    /* text-align: center; */
+    width: 70vw;
+    border: 1px solid black;
 }

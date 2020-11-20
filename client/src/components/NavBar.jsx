@@ -1,29 +1,44 @@
 import React from 'react';
 import AudioPlayer from './AudioPlayer.jsx';
 
-const NavBar = () => {
+const NavBar = ({ pageSelect }) => {
     return (
         <div className="nav-bar">
             <h1 className="header-name">
-                <a href="#top">Zoe Whittaker</a>
+                <a href="#top" onClick={(e) => pageSelect(0)}>
+                    Zoe Whittaker
+                </a>
             </h1>
             <ul className="main-nav">
                 <li>
-                    <a href="#bio">BIO</a>
+                    <a onClick={(e) => pageSelect(0)} href="#">
+                        HOME
+                    </a>
                 </li>
                 <li>
-                    <a href="#">SONG LIST</a>
+                    <a onClick={(e) => pageSelect(2)} href="#">
+                        BIO
+                    </a>
                 </li>
                 <li>
-                    <a href="#audio-player">AUDIO</a>
+                    <a onClick={(e) => pageSelect(3)} href="#song-list">
+                        SONG LIST
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/watch?v=wnTMPQX5c9I">
+                    <a onClick={(e) => pageSelect(0)} href="#audio-player">
+                        AUDIO
+                    </a>
+                </li>
+                <li>
+                    <a onClick={(e) => pageSelect(0)} href="#video-player">
                         VIDEO
                     </a>
                 </li>
                 <li>
-                    <a href="#">CONTACT</a>
+                    <a onClick={(e) => pageSelect(1)} href="#">
+                        CONTACT
+                    </a>
                 </li>
             </ul>
         </div>

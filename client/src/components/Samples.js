@@ -5,7 +5,7 @@ const songList = [
     'Gavotte in D Major by J.S. Bach',
     'Hallelujah by Leonard Cohen',
     'Here Comes the Sun by The Beatles',
-    'Hornpipe from _Water Music_ by G.F. Handel',
+    'Hornpipe from "Water Music" by G.F. Handel',
     'Humoresque by A. Dvorak',
     "Jesu' Joy of Man's Desiring by J.S. Bach",
     'Make You Feel My Love by Bob Dylan',

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Howl } from 'howler';
 
 const Songs = ({ songList, handlePlay, isPlaying }) => {
     return (
-        <div>
+        <div className="audio-songs">
             <ul>
                 {songList.map((song) => {
                     return song === isPlaying ? (
