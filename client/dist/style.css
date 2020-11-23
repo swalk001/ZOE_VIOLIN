@@ -396,9 +396,9 @@ CONTACT
     border-bottom: 2px solid #2a79a7;
 }
 
-.message {
-    /* margin: 20px 0; */
-}
+/* .message {
+    margin: 20px 0;
+} */
 
 .contact-form textarea {
     width: 100%;

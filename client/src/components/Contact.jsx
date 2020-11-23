@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-const Contact = ({ submitForm }) => {
+const Contact = () => {
     const [name, setName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('');
     const [message, setMessage] = useState('');
+    const sendEmail = (data) => {
+        emailjs.send(
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID,
+            data,
+            process.env.USER_ID
+        );
+    };
     return (
         <div className="contact-wrapper">
             <img
@@ -18,8 +24,6 @@ const Contact = ({ submitForm }) => {
             <br></br>
             <div className="contact-form">
                 <form>
-                    {/* <h3>NAME</h3>
-                    <h3>E-MAIL</h3> */}
                     <br></br>
                     <label>
                         NAME:
@@ -35,23 +39,7 @@ const Contact = ({ submitForm }) => {
                             onChange={(e) => setEmail(e.target.value)}
                         ></input>
                     </label>
-                    {/* <br></br>
-                    <h3>PHONE</h3>
-                    <input
-                        type="text"
-                        onChange={(e) => setPhoneNumber(e.target.value)}
-                    ></input>
-                    <br></br> */}
-                    {/* <br></br> */}
-                    {/* <h3>DATE</h3>
-                    <select onChange={(e) => setDate(e.target.value)}>
-                        {}
-                    </select> */}
-                    {/* <br></br>
-                    <h3>TIME</h3>
-                    <select onChange={(e) => setTime(e.target.value)}></select>
-                    */}
-                    {/* <br></br> */}
+
                     <label className="message">
                         MESSAGE:
                         <br></br>
@@ -60,16 +48,12 @@ const Contact = ({ submitForm }) => {
                             onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
                     </label>
-                    {/* <br></br> */}
                     <button
                         onClick={(e) => {
                             e.preventDefault();
-                            submitForm({
+                            sendEmail({
                                 name,
-                                // phoneNumber,
                                 email,
-                                // date,
-                                // time,
                                 message,
                             });
                         }}

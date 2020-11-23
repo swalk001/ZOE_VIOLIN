@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
 
-app.get('/api/connection', (req, res) => {
+app.get('/api/connect', (req, res) => {
     res.send('hell yea');
 });
 

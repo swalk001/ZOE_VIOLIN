@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import axios from 'axios';
 import NavBar from './NavBar.jsx';
 import AudioPlayer from './AudioPlayer.jsx';
@@ -14,22 +15,27 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            connection: '',
+            connect: '',
             page: 0,
         };
     }
 
     componentDidMount() {
-        axios.get('/api/connection').then((data) => {
+        axios.get('/api/connect').then((data) => {
             this.setState({
-                connection: data.data,
+                connect: data.data,
             });
         });
     }
 
-    submitForm(form) {
-        console.log(form);
-    }
+    // submitForm(data) {
+    //     emailjs.send(
+    //         'service_sa9q7rt',
+    //         'template_m2vq3hs',
+    //         data,
+    //         'user_vIfKhr4fTD9JBr7RmsfXN'
+    //     );
+    // }
 
     pageSelect(page) {
         this.setState({
@@ -45,7 +51,7 @@ class App extends React.Component {
                 <div className="main-wrapper">
                     <NavBar pageSelect={this.pageSelect.bind(this)} />
                     <section className="contact">
-                        <Contact submitForm={this.submitForm} />
+                        <Contact />
                     </section>
                 </div>
             );
