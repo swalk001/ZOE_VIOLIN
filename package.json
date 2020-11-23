@@ -12,6 +12,7 @@
     "author": "Steven Walker",
     "license": "ISC",
     "dependencies": {
+        "@reach/router": "^1.3.4",
         "axios": "^0.21.0",
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",

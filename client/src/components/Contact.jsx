@@ -14,55 +14,57 @@ const Contact = () => {
         );
     };
     return (
-        <div className="contact-wrapper">
-            <img
-                className="contact-img"
-                src="../imgs/ZOE_CHRISTIAN_PLAYING3.JPG"
-                alt="duo"
-            />
-            <h1>GET IN TOUCH</h1>
-            <br></br>
-            <div className="contact-form">
-                <form>
-                    <br></br>
-                    <label>
-                        NAME:
-                        <input
-                            type="text"
-                            onChange={(e) => setName(e.target.value)}
-                        ></input>
-                    </label>
-                    <label>
-                        E-MAIL:
-                        <input
-                            type="text"
-                            onChange={(e) => setEmail(e.target.value)}
-                        ></input>
-                    </label>
-
-                    <label className="message">
-                        MESSAGE:
+        <section className="contact">
+            <div className="contact-wrapper">
+                <img
+                    className="contact-img"
+                    src="../imgs/ZOE_CHRISTIAN_PLAYING3.JPG"
+                    alt="duo"
+                />
+                <h1>GET IN TOUCH</h1>
+                <br></br>
+                <div id="contact" className="contact-form">
+                    <form>
                         <br></br>
-                        <textarea
-                            type="text"
-                            onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
-                    </label>
-                    <button
-                        onClick={(e) => {
-                            e.preventDefault();
-                            sendEmail({
-                                name,
-                                email,
-                                message,
-                            });
-                        }}
-                    >
-                        SUBMIT
-                    </button>
-                </form>
+                        <label>
+                            NAME:
+                            <input
+                                type="text"
+                                onChange={(e) => setName(e.target.value)}
+                            ></input>
+                        </label>
+                        <label>
+                            E-MAIL:
+                            <input
+                                type="text"
+                                onChange={(e) => setEmail(e.target.value)}
+                            ></input>
+                        </label>
+
+                        <label>
+                            MESSAGE:
+                            <br></br>
+                            <textarea
+                                type="text"
+                                onChange={(e) => setMessage(e.target.value)}
+                            ></textarea>
+                        </label>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                sendEmail({
+                                    name,
+                                    email,
+                                    message,
+                                });
+                            }}
+                        >
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

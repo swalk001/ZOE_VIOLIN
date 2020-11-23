@@ -15,7 +15,7 @@ body {
 }
 
 .main-wrapper {
-    height: auto;
+    height: 100%;
     width: 100%;
     background-color: rgba(245, 222, 179, 0.455);
 }
@@ -194,6 +194,7 @@ AudioPlayer
 #audio-player {
     padding: 4vh;
 }
+
 .audio-player {
     background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.702)),
         url('./imgs/VIOLIN.jpg');
@@ -343,6 +344,7 @@ CONTACT
 .contact {
     display: flex;
     text-align: center;
+    height: auto;
     justify-content: center;
 }
 
@@ -376,6 +378,7 @@ CONTACT
     display: flex;
     justify-content: center;
     width: 100%;
+    height: auto;
 }
 
 .contact-form input {
@@ -396,8 +399,8 @@ CONTACT
     border-bottom: 2px solid #2a79a7;
 }
 
-/* .message {
-    margin: 20px 0;
+/* .contact-form > form > label {
+    line-height: 50px;
 } */
 
 .contact-form textarea {

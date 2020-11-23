@@ -1,44 +1,46 @@
 import React from 'react';
 import AudioPlayer from './AudioPlayer.jsx';
+import { Router, Link } from '@reach/router';
+import scroll from './ScrollOptions.js';
 
-const NavBar = ({ pageSelect }) => {
+const NavBar = () => {
     return (
         <div className="nav-bar">
             <h1 className="header-name">
-                <a href="#top" onClick={(e) => pageSelect(0)}>
+                <Link to="/" onClick={() => scroll.top()}>
                     Zoe Whittaker
-                </a>
+                </Link>
             </h1>
             <ul className="main-nav">
                 <li>
-                    <a onClick={(e) => pageSelect(0)} href="#">
+                    <Link to="/" onClick={() => scroll.top()}>
                         HOME
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={(e) => pageSelect(2)} href="#">
+                    <Link to="bio" onClick={() => scroll.top()}>
                         BIO
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={(e) => pageSelect(3)} href="#song-list">
+                    <Link to="song-list" onClick={() => scroll.top()}>
                         SONG LIST
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={(e) => pageSelect(0)} href="#audio-player">
+                    <Link to="/" onClick={() => scroll.spot('audio-player')}>
                         AUDIO
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={(e) => pageSelect(0)} href="#video-player">
+                    <Link to="/" onClick={() => scroll.spot('video-player')}>
                         VIDEO
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={(e) => pageSelect(1)} href="#">
+                    <Link to="contact" onClick={() => scroll.spot('contact')}>
                         CONTACT
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>
