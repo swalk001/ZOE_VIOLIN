@@ -32,7 +32,7 @@ class App extends React.Component {
                 <Router primary={false}>
                     <Home path="/" />
                     <Bio path="bio" />
-                    <Contact path="contact" />
+                    {/* <Contact path="contact" /> */}
                     <SongList path="song-list" />
                 </Router>
             </div>

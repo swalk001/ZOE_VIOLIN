@@ -7,11 +7,12 @@
 html,
 body {
     background-color: rgb(255, 245, 245);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cormorant', serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .main-wrapper {
@@ -35,6 +36,10 @@ NAV-BAR
 }
 
 .header-name {
+    color: #131516;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    line-height: 0.8em;
     text-align: center;
     text-decoration: none;
 }
@@ -55,7 +60,7 @@ NAV-BAR
 
 .main-nav li {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .main-nav li a:link,
@@ -79,24 +84,35 @@ NAV-BAR
 /**************
 HERO
 **************/
-/* .hero-wrapper {
-} */
 
-.zoe-hero {
+/* .zoe-hero {
     display: block;
-    /* margin-left: auto;
-    margin-right: auto; */
     margin: 0 auto 70px auto;
     padding: 100px 0 0 0;
     -o-object-fit: cover;
     object-fit: cover;
-    height: 1200px;
-    width: 80%;
+    height: auto;
+    width: auto;
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
     -moz-animation: fadeIn ease 2s;
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
+} */
+
+.hero2 {
+    background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.386)),
+        url('./imgs/ZOE.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin-bottom: 20px;
+    transform: translateZ(-999px) scale(1.04);
+    z-index: 3;
 }
 @keyframes fadeIn {
     0% {
@@ -148,11 +164,11 @@ LINKS
     cursor: pointer;
 }
 
-.links-img-box > img:nth-child(2) {
+.links-left > img:nth-child(2) {
     width: 210px;
     height: 100px;
 }
-.links-img-box > img:last-child {
+.links-right > img:last-child {
     width: 200px;
     height: 100px;
 }
@@ -168,13 +184,13 @@ DESCRIPTION
 PACKAGES
 **************/
 .packages {
-    text-align: center;
-    /* margin-top: 0;
-    margin-bottom: 100px; */
+    display: flex;
+    justify-content: space-between;
 }
 .packages img {
     margin-left: 100px;
-    width: 400px;
+    margin-bottom: 8vh;
+    width: 30vw;
     height: 600px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -200,6 +216,8 @@ AudioPlayer
         url('./imgs/VIOLIN.jpg');
     background-attachment: fixed;
     background-size: cover;
+    transform: translateZ(-999px) scale(1.08);
+    z-index: 3;
     left: 0;
     bottom: 0;
     height: 630px;
@@ -291,13 +309,13 @@ VIDEO PLAYER
 
 .video-player {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .video {
-    margin: 40px 0;
+    margin: 100px 0;
 }
 
 /**************
@@ -306,7 +324,7 @@ BIO
 .bio {
     display: flex;
     width: 100%;
-    padding-top: 120px;
+    padding: 120px;
     justify-content: center;
 }
 
@@ -318,6 +336,33 @@ BIO
     text-indent: 60px;
 }
 
+.bio2 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.bio-wrapper h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 3em;
+    height: 20vh;
+}
+
+.bio-wrapper {
+    /* background-color: #fffdf7; */
+    padding: 30px 0;
+}
+
+.bio2 p {
+    margin: 20px 40px;
+    width: 60vw;
+    font-size: 20px;
+    line-height: 50px;
+    text-indent: 60px;
+}
 /**************
 SONG LIST
 **************/
@@ -333,9 +378,6 @@ SONG LIST
     align-content: center;
     line-height: 60px;
 }
-
-/* .song-list ul {
-} */
 
 /**************
 CONTACT
@@ -378,6 +420,7 @@ CONTACT
     display: flex;
     justify-content: center;
     width: 100%;
+    min-width: 60vw;
     height: auto;
 }
 
@@ -399,10 +442,6 @@ CONTACT
     border-bottom: 2px solid #2a79a7;
 }
 
-/* .contact-form > form > label {
-    line-height: 50px;
-} */
-
 .contact-form textarea {
     width: 100%;
     height: 200px;
@@ -418,10 +457,20 @@ CONTACT
 
 .contact-form form button {
     display: flex;
-    margin: auto auto;
+    margin: 30px auto 0 auto;
     font-family: inherit;
     font-size: 20px;
     width: 200px;
     text-align: center;
     justify-content: center;
+}
+
+.contact-form form button a:link,
+.contact-form form button a:visited {
+    padding: 4px 0 0 0;
+    color: black;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }

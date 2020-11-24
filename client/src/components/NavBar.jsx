@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className="nav-bar">
             <h1 className="header-name">
                 <Link to="/" onClick={() => scroll.top()}>
-                    Zoe Whittaker
+                    ZOE WHITTAKER
                 </Link>
             </h1>
             <ul className="main-nav">
@@ -18,7 +18,7 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="bio" onClick={() => scroll.top()}>
+                    <Link to="/" onClick={() => scroll.spot('bio2')}>
                         BIO
                     </Link>
                 </li>
@@ -38,7 +38,7 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="contact" onClick={() => scroll.spot('contact')}>
+                    <Link to="/" onClick={() => scroll.spot('contact')}>
                         CONTACT
                     </Link>
                 </li>

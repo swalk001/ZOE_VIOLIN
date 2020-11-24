@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoPlayer = () => (
     <div>
-        <div className="video-player">
+        <div id="video-player" className="video-player">
             <iframe
                 className="video"
                 width="560"

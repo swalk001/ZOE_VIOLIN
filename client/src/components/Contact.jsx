@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { Link } from '@reach/router';
+import scroll from './ScrollOptions.js';
+import Links from './Links.jsx';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -16,11 +19,6 @@ const Contact = () => {
     return (
         <section className="contact">
             <div className="contact-wrapper">
-                <img
-                    className="contact-img"
-                    src="../imgs/ZOE_CHRISTIAN_PLAYING3.JPG"
-                    alt="duo"
-                />
                 <h1>GET IN TOUCH</h1>
                 <br></br>
                 <div id="contact" className="contact-form">
@@ -59,7 +57,9 @@ const Contact = () => {
                                 });
                             }}
                         >
-                            SUBMIT
+                            <Link to="/" onClick={() => scroll.top()}>
+                                SUBMIT
+                            </Link>
                         </button>
                     </form>
                 </div>

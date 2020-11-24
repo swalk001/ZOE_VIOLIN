@@ -64,7 +64,7 @@ class AudioPlayer extends React.Component {
         const { songList, isPlaying } = this.state;
         return (
             <div className="audio-player-background">
-                <div className="audio-player">
+                <div id="audio-player" className="audio-player">
                     <Controls
                         isPlaying={isPlaying}
                         handleStop={this.handleStop}

@@ -2,8 +2,12 @@ export default {
     top: () => window.scrollTo(0, 0),
     spot: (id) => {
         setTimeout(() => {
-            let el = document.getElementById(id);
-            el.scrollIntoView();
+            const el = document.getElementById(id);
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+                inline: 'nearest',
+            });
         }, 50);
     },
 };
