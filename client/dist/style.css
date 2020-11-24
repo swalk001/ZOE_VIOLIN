@@ -185,13 +185,14 @@ PACKAGES
 **************/
 .packages {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .packages img {
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    border-radius: 50%;
     margin-bottom: 8vh;
     width: 30vw;
-    height: 600px;
+    height: 60vh;
     -o-object-fit: cover;
     object-fit: cover;
     animation: fadeIn ease 2s;
@@ -315,7 +316,7 @@ VIDEO PLAYER
 }
 
 .video {
-    margin: 100px 0;
+    margin: 100px 20px;
 }
 
 /**************
@@ -366,6 +367,31 @@ BIO
 /**************
 SONG LIST
 **************/
+.song-list-img,
+.song-list-img2 {
+    position: fixed;
+    margin-top: 10vh;
+    /* border: 10px solid black; */
+    height: 90vh;
+    width: 25vw;
+    background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.702)),
+        url('./imgs/ZOE_HAT.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: white;
+    backdrop-filter: white;
+    /* transform: translateZ(-999px) scale(1.1); */
+    transform: scaleX(-1);
+    /* transform: translate(150px, 1%) scale(1.15); */
+    z-index: 0;
+}
+
+.song-list-img2 {
+    transform: none;
+    left: 75%;
+}
+
 .song-list {
     text-align: center;
     display: inline-block;
