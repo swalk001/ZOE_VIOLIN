@@ -4,7 +4,7 @@ const Links = () => {
     return (
         <div className="links">
             <div className="links-img-box">
-                <div className="links-left">
+                <div className="links-lefts">
                     <img
                         alt="As Seen on The Knot"
                         src="https://www.xoedge.com/myaccount/2019/website-share/VendorBadge_AsSeenOnWeb.png"
@@ -14,6 +14,15 @@ const Links = () => {
                             )
                         }
                     ></img>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    {/* <img
+                        alt="Instagram_logo_2016"
+                        src="https://www.clipartmax.com/png/small/41-412755_weggle-instagram-logo-vector-white.png"
+                        alt="Weggle - Instagram Logo Vector White @clipartmax.com"
+                        onClick={() =>
+                            window.open('https://www.instagram.com/zoewviolin/')
+                        }
+                    ></img> */}
                     <img
                         alt="Wedding-Wire"
                         src="https://cdn1.weddingwire.com/assets/img/logos/gen_logoHeader.svg"
@@ -24,7 +33,7 @@ const Links = () => {
                         }
                     ></img>
                 </div>
-                <div className="links-right">
+                {/* <div className="links-right">
                     <img
                         alt="Instagram_logo_2016"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png"
@@ -38,7 +47,7 @@ const Links = () => {
                             window.open('https://www.ashleyhall.org/')
                         }
                     ></img>
-                </div>
+                </div> */}
             </div>
         </div>
     );

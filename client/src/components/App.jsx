@@ -7,13 +7,14 @@ import Contact from './Contact.jsx';
 import Bio from './Bio.jsx';
 import SongList from './SongList.jsx';
 import Home from './Home.jsx';
+import Modal from './Modal.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             connect: '',
-            page: 0,
+            modal: false,
         };
     }
 
@@ -25,14 +26,27 @@ class App extends React.Component {
         });
     }
 
+    displayModal() {
+        this.setState({
+            modal: !this.state.modal,
+        });
+    }
+
     render() {
+        const { modal } = this.state;
         return (
             <div className="main-wrapper">
+                <Modal
+                    modal={modal}
+                    displayModal={this.displayModal.bind(this)}
+                />
                 <NavBar />
                 <Router primary={false}>
-                    <Home path="/" />
-                    <Bio path="bio" />
-                    {/* <Contact path="contact" /> */}
+                    <Home
+                        path="/"
+                        displayModal={this.displayModal.bind(this)}
+                        modal={modal}
+                    />
                     <SongList path="song-list" />
                 </Router>
             </div>

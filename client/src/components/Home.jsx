@@ -8,18 +8,15 @@ import Hero2 from './HERO2.jsx';
 import Links from './Links.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 
-const Home = () => {
+const Home = ({ displayModal, modal }) => {
     return (
         <div>
-            {/* <Hero /> */}
             <Hero2 />
             <Bio2 />
-            <Description />
-            {/* <div id="audio-player" /> */}
             <AudioPlayer />
-            {/* <div id="video-player" /> */}
-            <VideoPlayer />
-            <Contact />
+            <Description />
+            <VideoPlayer />,{/* <Links /> */}
+            <Contact displayModal={displayModal} />
         </div>
     );
 };

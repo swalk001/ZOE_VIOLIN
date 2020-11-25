@@ -9,6 +9,10 @@ const Description = () => {
                     src="../imgs/ZOE_PLAYING.jpg"
                     alt="solo"
                 />
+                <p>
+                    Offering solo violin and guitar duo. Electric and acoustic
+                    to fit any space!
+                </p>
                 <img
                     className="packages-duo"
                     src="../imgs/ZOE_CHRISTIAN_PLAYING4.jpg"
