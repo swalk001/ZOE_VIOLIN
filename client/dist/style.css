@@ -89,12 +89,90 @@ NAV-BAR
 .main-nav-active {
     border-bottom: 2px solid black;
 }
+/**************
+PARA-HERO
+**************/
+/* .parallax-section {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.parallax-child-section {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#frontlashID {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-1px) scale(1.1);
+    will-change: transform;
+    z-index: 1;
+}
+.fw-main-row {
+    background-attachment: scroll;
+    background-image: url('./imgs/ZOE.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform: translateZ(-999vh) scale(1);
+    background-size: 50%;
+} */
+.para-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px;
+    scroll-behavior: smooth;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.1);
+    height: 1200px;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    height: 100px;
+    background: red;
+}
+
+.bg1::after {
+    background-image: url('./imgs/ZOE.jpg');
+}
+
+.bg2::after {
+    background-image: url('./imgs/ZOE.jpg');
+}
 
 /**************
 HERO
 **************/
 
-/* .zoe-hero {
+.zoe-hero {
     display: block;
     margin: 0 auto 70px auto;
     padding: 100px 0 0 0;
@@ -107,9 +185,9 @@ HERO
     -moz-animation: fadeIn ease 2s;
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
-} */
+}
 
-.hero2 {
+/* .hero2 {
     background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.386)),
         url('./imgs/ZOE.jpg');
     background-attachment: fixed;
@@ -118,7 +196,6 @@ HERO
     background-position: center;
     background-position-y: 5%;
     background-size: 50%;
-    /* min-width: 50vw; */
     min-height: 100vh;
     margin-bottom: 20px;
     transform: translateZ(-999px) scale(1.04);
@@ -141,7 +218,7 @@ HERO
     100% {
         opacity: 1;
     }
-}
+} */
 
 /**************
 LINKS
@@ -218,6 +295,7 @@ PACKAGES
 
 .packages p {
     margin-top: 10%;
+    font-size: 0.8em;
 }
 .packages > img {
     border-radius: 5vh 5vw;

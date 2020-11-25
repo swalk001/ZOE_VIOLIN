@@ -6,12 +6,15 @@ import Description from './Description.jsx';
 import Hero from './Hero.jsx';
 import Hero2 from './HERO2.jsx';
 import Links from './Links.jsx';
+import ParaHero from './ParaHero.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 
 const Home = ({ displayModal, modal }) => {
     return (
         <div>
-            <Hero2 />
+            <ParaHero />
+            {/* <Hero /> */}
+            {/* <Hero2 /> */}
             <Bio2 />
             <AudioPlayer />
             <Description />
