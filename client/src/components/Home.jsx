@@ -7,18 +7,19 @@ import Hero from './Hero.jsx';
 import Hero2 from './HERO2.jsx';
 import Links from './Links.jsx';
 import ParaHero from './ParaHero.jsx';
+import ParaImage from './ParaImage.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 
 const Home = ({ displayModal, modal }) => {
     return (
         <div>
             <ParaHero />
-            {/* <Hero /> */}
-            {/* <Hero2 /> */}
             <Bio2 />
+            <ParaImage />
             <AudioPlayer />
-            <Description />
-            <VideoPlayer />,{/* <Links /> */}
+            {/* <Description /> */}
+            <VideoPlayer />
+            {/* <Links /> */}
             <Contact displayModal={displayModal} />
         </div>
     );

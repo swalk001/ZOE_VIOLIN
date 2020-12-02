@@ -8,6 +8,7 @@ import Bio from './Bio.jsx';
 import SongList from './SongList.jsx';
 import Home from './Home.jsx';
 import Modal from './Modal.jsx';
+import Effects from './Effects.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -24,6 +25,9 @@ class App extends React.Component {
                 connect: data.data,
             });
         });
+        Effects.parallax();
+        Effects.parallaxImage();
+        Effects.parallaxHeading();
     }
 
     displayModal() {

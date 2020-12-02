@@ -2,21 +2,40 @@ import React from 'react';
 
 const ParaHero = () => {
     return (
-        // <div class="parallax-section">
-        //     <div class="parallax-child-section">
-        //         <section class="fw-main-row" id="frontlashID"></section>
-        //     </div>
-        // </div>
-        <div className="para-wrapper">
-            <section className="section parallax bg1">
-                <h1>Cute Kitten</h1>
+        <div className="para-hero">
+            <section className="para-section">
+                <ul className="para-ul">
+                    {/* <li
+                        className="scroll"
+                        data-rate="-2"
+                        data-direction="vertical"
+                    >
+                        vi
+                    </li> */}
+                    <li
+                        className="scroll"
+                        data-rate=".3"
+                        data-direction="vertical"
+                    >
+                        <img
+                            className="zoe-para-hero"
+                            src="../imgs/ZOE.JPG"
+                            alt="Zoe"
+                        />
+                    </li>
+                    {/* <li
+                        className="scroll"
+                        data-rate="2"
+                        data-direction="vertical"
+                    ></li> */}
+                </ul>
+                {/* <span
+                    className="scroll"
+                    data-ratey="-.1"
+                    data-ratex=".2"
+                    data-direction="horizontal"
+                ></span> */}
             </section>
-            <section className="section static">
-                <h1>Boring</h1>
-            </section>
-            {/* <section className="section parallax bg2">
-                <h1>Fluffy Kitten</h1>
-            </section> */}
         </div>
     );
 };

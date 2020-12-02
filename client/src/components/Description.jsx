@@ -5,7 +5,7 @@ const Description = () => {
         <div className="description">
             <section className="packages">
                 <img
-                    className="packages-solo"
+                    // className="packages-solo"
                     src="../imgs/ZOE_PLAYING.jpg"
                     alt="solo"
                 />
@@ -14,7 +14,7 @@ const Description = () => {
                     to fit any space!
                 </p>
                 <img
-                    className="packages-duo"
+                    // className="packages-duo"
                     src="../imgs/ZOE_CHRISTIAN_PLAYING4.jpg"
                     alt="duo"
                 />

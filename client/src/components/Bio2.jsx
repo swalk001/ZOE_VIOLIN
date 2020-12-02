@@ -3,9 +3,15 @@ import React from 'react';
 const Bio2 = () => {
     return (
         <div className="bio-wrapper">
-            <h2>BIO</h2>
+            <h2
+                className="scroll bio-wrapper-h2"
+                data-rate="-.08"
+                data-direction="vertical"
+            >
+                BIO
+            </h2>
             <section className="bio2">
-                <p id="bio2">
+                <p>
                     Zoe has studied the violin for over 20 years. Her education
                     includes a Bachelor of Arts in Violin Performance from the
                     College of Charleston where she studied with Charleston

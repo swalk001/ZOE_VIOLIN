@@ -64,7 +64,19 @@ class AudioPlayer extends React.Component {
         const { songList, isPlaying } = this.state;
         return (
             <div className="audio-player-background">
-                <div id="audio-player" className="audio-player">
+                <h2
+                    className="scroll-heading bio-wrapper-h2"
+                    data-rate="-.09"
+                    data-direction="vertical"
+                >
+                    MEDIA
+                </h2>
+                <div
+                    id="audio-player"
+                    className="audio-player scroll"
+                    data-rate="-.01"
+                    data-direction="vertical"
+                >
                     <Controls
                         isPlaying={isPlaying}
                         handleStop={this.handleStop}
