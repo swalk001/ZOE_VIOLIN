@@ -18,7 +18,7 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" onClick={() => scroll.spot('bio2')}>
+                    <Link to="/" onClick={() => scroll.spot('bio')}>
                         BIO
                     </Link>
                 </li>

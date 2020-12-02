@@ -4,7 +4,6 @@ import { Router } from '@reach/router';
 import axios from 'axios';
 import NavBar from './NavBar.jsx';
 import Contact from './Contact.jsx';
-import Bio from './Bio.jsx';
 import SongList from './SongList.jsx';
 import Home from './Home.jsx';
 import Modal from './Modal.jsx';
@@ -25,9 +24,7 @@ class App extends React.Component {
                 connect: data.data,
             });
         });
-        Effects.parallax();
-        Effects.parallaxImage();
-        Effects.parallaxHeading();
+        Object.keys(Effects).forEach((key) => Effects[key]());
     }
 
     displayModal() {

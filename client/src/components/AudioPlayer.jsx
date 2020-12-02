@@ -69,7 +69,7 @@ class AudioPlayer extends React.Component {
                     data-rate="-.09"
                     data-direction="vertical"
                 >
-                    MEDIA
+                    AUDIO
                 </h2>
                 <div
                     id="audio-player"

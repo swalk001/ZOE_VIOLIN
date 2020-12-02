@@ -7,7 +7,7 @@ const ParaImage = () => {
                 <ul className="para-img-ul">
                     <li
                         className="scroll-img"
-                        data-rate=".2"
+                        data-rate=".14"
                         data-direction="vertical"
                     >
                         <img

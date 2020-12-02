@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { Link } from '@reach/router';
 import scroll from './ScrollOptions.js';
 import Links from './Links.jsx';
 
@@ -45,6 +44,7 @@ const Contact = ({ displayModal }) => {
     const [message, setMessage] = useState('');
     const sendEmail = (data) => {
         if (validateForm(data)) {
+            displayModal();
             console.log('sent!');
             // emailjs.send(
             //     process.env.SERVICE_ID,
@@ -57,36 +57,40 @@ const Contact = ({ displayModal }) => {
     return (
         <section className="contact">
             <div className="contact-wrapper">
-                <h1>GET IN TOUCH</h1>
-                <br></br>
+                <h2
+                    className="parallax-heading"
+                    data-rate="-.09"
+                    data-direction="vertical"
+                >
+                    GET IN TOUCH
+                </h2>
                 <div id="contact" className="contact-form">
                     <form>
                         <br></br>
                         <label>
-                            NAME:
+                            <div className="label-field">Name:</div>
+                            <div id="form-name">&nbsp;</div>
                             <input
                                 type="text"
                                 onChange={(e) => setName(e.target.value)}
                             ></input>
                         </label>
-                        <div id="form-name">&nbsp;</div>
                         <label>
-                            E-MAIL:
+                            <div className="label-field">E-mail:</div>
+                            <div id="form-email">&nbsp;</div>
                             <input
                                 type="text"
                                 onChange={(e) => setEmail(e.target.value)}
                             ></input>
-                            <div id="form-email">&nbsp;</div>
                         </label>
 
                         <label>
-                            MESSAGE:
-                            <br></br>
+                            <div className="label-field">Message:</div>
+                            <div id="form-message">&nbsp;</div>
                             <textarea
                                 type="text"
                                 onChange={(e) => setMessage(e.target.value)}
                             ></textarea>
-                            <div id="form-message">&nbsp;</div>
                         </label>
                         <button
                             onClick={(e) => {
@@ -98,9 +102,7 @@ const Contact = ({ displayModal }) => {
                                 });
                             }}
                         >
-                            <Link to="/" onClick={() => displayModal()}>
-                                SUBMIT
-                            </Link>
+                            SUBMIT
                         </button>
                     </form>
                 </div>

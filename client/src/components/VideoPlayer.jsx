@@ -2,6 +2,13 @@ import React from 'react';
 
 const VideoPlayer = () => (
     <div>
+        <h2
+            className="scroll-heading2 video-player-h2"
+            data-rate="-.09"
+            data-direction="vertical"
+        >
+            VIDEOS
+        </h2>
         <div id="video-player" className="video-player">
             <iframe
                 className="video"
@@ -12,6 +19,7 @@ const VideoPlayer = () => (
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
             ></iframe>
+            <h1>Can't Help Falling In Love - Elvis Presley</h1>
             <iframe
                 className="video"
                 width="560"
@@ -21,6 +29,7 @@ const VideoPlayer = () => (
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
             ></iframe>
+            <h1>Canon in D - Pachelbel</h1>
             <iframe
                 className="video"
                 width="560"
@@ -30,6 +39,7 @@ const VideoPlayer = () => (
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
             ></iframe>
+            <h1>Viva La Vida - Coldplay</h1>
         </div>
     </div>
 );

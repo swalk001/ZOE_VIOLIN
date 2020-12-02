@@ -25,24 +25,55 @@ const parallaxHeading = () => {
     window.addEventListener('scroll', (e) => {
         const target = document.querySelector('.scroll-heading');
 
-        let pos = (window.pageYOffset - 4000) * target.dataset.rate;
+        let pos = (window.pageYOffset - 4800) * target.dataset.rate;
 
         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
+    });
+};
+
+const parallaxHeading2 = () => {
+    window.addEventListener('scroll', (e) => {
+        const target = document.querySelector('.scroll-heading2');
+
+        let pos = (window.pageYOffset - 6900) * target.dataset.rate;
+
+        target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
+    });
+};
+
+const parallaxHeading3 = () => {
+    window.addEventListener('scroll', (e) => {
+        const target = document.querySelector('.parallax-heading');
+
+        const rect = target.getBoundingClientRect();
+        const elemTop = rect.top;
+        const elemBottom = rect.bottom;
+
+        const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+
+        if (isVisible) {
+            let pos =
+                (document.documentElement.scrollHeight -
+                    window.pageYOffset -
+                    2123) *
+                target.dataset.rate;
+            target.style.transform = `translate3d(0px, ${-pos}px, 0px)`;
+        }
     });
 };
 
 const parallaxImage = () => {
     window.addEventListener('scroll', (e) => {
         const target = document.querySelector('.scroll-img');
-
-        // if (target.getBoundingClientRect().top > window.pageYOffset - 2000) {
-        // let length = target.length;
         let pos = (window.pageYOffset - 5000) * target.dataset.rate;
         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-        // }
     });
 };
 
-module.exports.parallax = parallax;
-module.exports.parallaxImage = parallaxImage;
-module.exports.parallaxHeading = parallaxHeading;
+module.exports = {
+    parallax,
+    parallaxImage,
+    parallaxHeading,
+    parallaxHeading2,
+    parallaxHeading3,
+};

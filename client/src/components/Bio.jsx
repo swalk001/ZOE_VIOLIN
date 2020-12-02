@@ -2,9 +2,16 @@ import React from 'react';
 
 const Bio = () => {
     return (
-        <div>
-            <section className="bio">
-                <p id="bio">
+        <div className="bio-wrapper" id="bio">
+            <h2
+                className="scroll bio-wrapper-h2"
+                data-rate="-.08"
+                data-direction="vertical"
+            >
+                BIO
+            </h2>
+            <section className="bio2">
+                <p>
                     Zoe has studied the violin for over 20 years. Her education
                     includes a Bachelor of Arts in Violin Performance from the
                     College of Charleston where she studied with Charleston
@@ -17,6 +24,8 @@ const Bio = () => {
                     for the College of Charleston Orchestra and received the
                     Mary Stewart Allen Award for Violin and Most Outstanding
                     Music Award by College of Charleston School of the Arts.
+                </p>
+                <p>
                     Through studying with renowned Suzuki teacher-trainer, Dr.
                     Louise Scott, she is certified in Suzuki Violin Books 1
                     through 7. Zoe has been selected as a soloist and chamber
