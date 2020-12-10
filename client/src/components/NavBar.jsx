@@ -1,17 +1,24 @@
 import React from 'react';
 import AudioPlayer from './AudioPlayer.jsx';
+import NavModal from './NavModal.jsx';
 import { Router, Link } from '@reach/router';
 import scroll from './ScrollOptions.js';
 
-const NavBar = () => {
+const NavBar = ({ displayNavModal }) => {
     return (
         <div className="nav-bar">
+            <button
+                className="nav-modal-open"
+                onClick={() => displayNavModal()}
+            >
+                ________ ______ ________
+            </button>
             <h1 className="header-name">
                 <Link to="/" onClick={() => scroll.top()}>
                     ZOE WHITTAKER
                 </Link>
             </h1>
-            <ul className="main-nav">
+            {/* <ul className="main-nav">
                 <li>
                     <Link to="/" onClick={() => scroll.top()}>
                         HOME
@@ -42,7 +49,7 @@ const NavBar = () => {
                         CONTACT
                     </Link>
                 </li>
-            </ul>
+            </ul> */}
         </div>
     );
 };

@@ -8,6 +8,7 @@ import SongList from './SongList.jsx';
 import Home from './Home.jsx';
 import Modal from './Modal.jsx';
 import Effects from './Effects.js';
+import NavModal from './NavModal.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class App extends React.Component {
         this.state = {
             connect: '',
             modal: false,
+            navModal: false,
         };
     }
 
@@ -33,15 +35,31 @@ class App extends React.Component {
         });
     }
 
+    displayNavModal() {
+        this.setState(
+            {
+                navModal: !this.state.navModal,
+            },
+            () => console.log('nav-modal', this.state.navModal)
+        );
+    }
+
     render() {
-        const { modal } = this.state;
+        const { modal, navModal } = this.state;
         return (
             <div className="main-wrapper">
                 <Modal
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <NavBar />
+                <NavModal
+                    navModal={navModal}
+                    displayNavModal={this.displayNavModal.bind(this)}
+                />
+                <NavBar
+                    navModal={navModal}
+                    displayNavModal={this.displayNavModal.bind(this)}
+                />
                 <Router primary={false}>
                     <Home
                         path="/"

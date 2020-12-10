@@ -90,6 +90,33 @@ NAV-BAR
     border-bottom: 2px solid black;
 }
 
+.nav-modal-open {
+    position: fixed;
+    left: 2%;
+    height: inherit;
+    width: 10vw;
+    border: 2px solid black;
+}
+
+.nav-modal-wrapper {
+    /* align-items: center;
+    display: flex;
+    font-size: 3vh; */
+    position: fixed;
+    /* background-color: white; */
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    /* color: white; */
+    justify-content: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 100px;
+    z-index: 10000;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
 @media only screen and (max-width: 1000px) {
     .nav-bar {
         position: relative;
@@ -169,17 +196,12 @@ PARA_IMAGE
 .para-img-ul {
     list-style-type: none;
     scroll-behavior: smooth;
-    /* padding: 0; */
-    /* margin: 10vh 0; */
     display: grid;
-    /* grid-template-columns: repeat(3, auto); */
     justify-content: center;
     align-items: middle;
     place-items: center;
-    /* height: 100vh; */
 }
 .para-solo {
-    /* padding-bottom: 1000px;*/
     width: 100%;
     height: 1500px;
     -o-object-fit: cover;
@@ -204,39 +226,6 @@ HERO
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
 }
-
-/* .hero2 {
-    background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.386)),
-        url('./imgs/ZOE.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 5%;
-    background-size: 50%;
-    min-height: 100vh;
-    margin-bottom: 20px;
-    transform: translateZ(-999px) scale(1.04);
-    z-index: 3;
-    box-shadow: 0 0 30px 0 white inset;
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-} */
 
 /**************
 LINKS
