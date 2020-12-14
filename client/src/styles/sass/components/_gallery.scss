@@ -16,7 +16,6 @@
 
     &__img {
         height: 75vh;
-        // border: 2px solid black;
 
         & img {
             height: 100%;
@@ -28,6 +27,8 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            -webkit-animation: fade-in 1s;
+            animation: fade-in 1s;
         }
     }
 

@@ -13,11 +13,13 @@ import Bio from './Bio.jsx';
 import '../styles/sass/main.scss';
 import AudioPlayer from './AudioPlayer.jsx';
 import Gallery from './Gallery.jsx';
+import VideoPlayer from './VideoPlayer.jsx';
 
 class App2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            autoScroll: true,
             connect: '',
             modal: false,
             navModal: false,
@@ -49,15 +51,24 @@ class App2 extends React.Component {
         );
     }
 
+    toggleScroll() {
+        this.setState({
+            autoScroll: false,
+        });
+    }
+
     render() {
-        const { modal, navModal } = this.state;
+        const { modal, navModal, autoScroll } = this.state;
         return (
             <div>
                 <NavBar displayNavModal={this.displayNavModal.bind(this)} />
                 <Hero />
                 <Bio />
-                <Gallery />
-                {/* <AudioPlayer /> */}
+                <Gallery
+                    autoScroll={autoScroll}
+                    toggleScroll={this.toggleScroll.bind(this)}
+                />
+                <VideoPlayer />
             </div>
         );
     }

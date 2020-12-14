@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 
-const Gallery = () => {
+const Gallery = ({ autoScroll, toggleScroll }) => {
     const [photos, setPhotos] = useState([1, 2, 3]);
-    const browse = (index) => {
+    let scroll;
+    if (autoScroll) {
+        scroll = setTimeout(() => browse(), 6000);
+    }
+
+    const browse = (index = 0) => {
+        if (index !== 0) {
+            toggleScroll();
+        } else {
+            index = 1;
+        }
         setPhotos(
             photos.map((i) => {
                 if (i + index > 4) {
@@ -15,6 +25,7 @@ const Gallery = () => {
             })
         );
     };
+
     return (
         <section className="section-gallery">
             <div className="row">

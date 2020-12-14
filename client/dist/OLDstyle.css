@@ -449,14 +449,13 @@ VIDEO PLAYER
 .video-player {
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    /* padding: 100px; */
     justify-content: space-evenly;
     align-items: center;
 }
 
 .video {
     margin: 50px 20px;
-    /* border-radius: 5vh 5vw; */
     height: 30vh;
     width: 90vw;
 }
