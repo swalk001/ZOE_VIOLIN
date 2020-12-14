@@ -64,6 +64,11 @@ class AudioPlayer extends React.Component {
         const { songList, isPlaying } = this.state;
         return (
             <div className="audio-player-background">
+                <img
+                    src="../imgs/VIOLIN.JPG"
+                    alt=""
+                    className="audio-player__img"
+                />
                 <h2
                     className="scroll-heading bio-wrapper-h2"
                     data-rate="-.09"

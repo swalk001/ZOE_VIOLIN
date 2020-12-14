@@ -1,0 +1,21 @@
+.bio {
+    transition: all 0.2s;
+    &__heading-box {
+        text-align: center;
+        transform: translate(0, -10rem);
+    }
+    &__heading {
+        color: $color-grey-dark;
+        opacity: 0.6;
+        font-size: 5rem;
+        font-weight: 100;
+        padding: 3rem 0;
+    }
+    &__text {
+        font-size: 1.9rem;
+        line-height: 2.7rem;
+        text-indent: 6rem;
+        font-weight: bolder;
+        // padding-bottom: 3rem;
+    }
+}

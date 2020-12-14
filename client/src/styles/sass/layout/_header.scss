@@ -1,0 +1,72 @@
+.nav-bar {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    height: 11rem;
+    width: 100vw;
+    z-index: 1000;
+
+    &__menu {
+        position: absolute;
+        margin: auto 0;
+        font-size: 1.6rem;
+        height: inherit;
+        width: 10rem;
+
+        & ion-icon {
+            @include absCenter;
+            font-size: 4rem;
+            font-weight: lighter;
+            transition: all 0.1s;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__heading {
+        @include absCenter;
+        font-size: 6rem;
+        letter-spacing: 0.16em;
+        line-height: 0.8em;
+        font-size: 3rem;
+        text-decoration: none;
+        & a:link,
+        & a:visited {
+            color: $color-grey-dark;
+            text-decoration: none;
+        }
+    }
+    &__ul {
+        display: inline;
+        text-align: center;
+        list-style: none;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        & li {
+            display: inline-block;
+            margin-left: 4rem;
+        }
+
+        & li a:link,
+        & li a:visited {
+            // padding: 0 0;
+            color: black;
+            text-decoration: none;
+            font-size: 90%;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s;
+        }
+        & li a:hover,
+        & li a:active {
+            border-bottom: 2px solid black;
+        }
+
+        // .main-nav-active {
+        //     border-bottom: 2px solid black;
+        // }
+    }
+}

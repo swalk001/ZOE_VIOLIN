@@ -8,8 +8,8 @@ html,
 body {
     background-color: rgb(255, 245, 245);
     font-family: 'Cormorant', serif;
-    font-weight: 300;
-    font-size: 20px;
+    /* font-weight: 300; */
+    font-size: 62.5%;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
     overflow-x: hidden !important;
@@ -333,11 +333,11 @@ AudioPlayer
 }
 
 .audio-player {
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
             rgba(60, 60, 60, 0.338),
             rgba(0, 0, 0, 0.702)
         ),
-        url('./imgs/VIOLIN.jpg');
+        url('./imgs/VIOLIN.jpg'); */
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
@@ -533,8 +533,8 @@ SONG LIST
     margin-top: 10vh;
     height: 90vh;
     width: 25vw;
-    background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.702)),
-        url('./imgs/ZOE_HAT.jpg');
+    /* background-image: linear-gradient(rgba(60, 60, 60, 0), rgba(0, 0, 0, 0.702)),
+        url('./imgs/ZOE_HAT.jpg'); */
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;

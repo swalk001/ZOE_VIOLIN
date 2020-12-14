@@ -2,14 +2,25 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        // <div class="parallax-section">
-        //     <div class="parallax-child-section">
-        //         <section class="fw-main-row" id="frontlashID"></section>
-        //     </div>
-        // </div>
-        <div className="hero-wrapper">
-            <img className="zoe-hero" src="../imgs/ZOE.JPG" alt="Zoe" />
-        </div>
+        <section className="section-hero">
+            <div className="hero">
+                <div className="row">
+                    <img
+                        className="hero__img scroll"
+                        data-rate=".8"
+                        data-direction="vertical"
+                        src="../imgs/ZOE.JPG"
+                        alt="Zoe"
+                    />
+                </div>
+            </div>
+            <span
+                className="hero__img-box scroll"
+                data-rate=".46"
+                data-direction="vertical"
+                alt="Zoe"
+            />
+        </section>
     );
 };
 

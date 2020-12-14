@@ -7,18 +7,15 @@ import scroll from './ScrollOptions.js';
 const NavBar = ({ displayNavModal }) => {
     return (
         <div className="nav-bar">
-            <button
-                className="nav-modal-open"
-                onClick={() => displayNavModal()}
-            >
-                ________ ______ ________
-            </button>
-            <h1 className="header-name">
+            <div className="nav-bar__menu" onClick={() => displayNavModal()}>
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <h1 className="nav-bar__heading">
                 <Link to="/" onClick={() => scroll.top()}>
                     ZOE WHITTAKER
                 </Link>
             </h1>
-            {/* <ul className="main-nav">
+            {/* <ul className="nav-bar__ul">
                 <li>
                     <Link to="/" onClick={() => scroll.top()}>
                         HOME

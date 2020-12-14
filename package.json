@@ -6,6 +6,7 @@
     "scripts": {
         "start": "node server/index.js",
         "start:dev": "nodemon server/index.js",
+        "watch:sass": "node-sass client/src/styles/sass/main.scss client/src/styles/style.css -w",
         "build:dev": "webpack --mode development --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -32,11 +33,15 @@
         "webpack-cli": "^4.2.0"
     },
     "devDependencies": {
+        "css-loader": "^5.0.1",
         "eslint": "^7.12.1",
         "eslint-config-airbnb": "^18.2.0",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-react": "^7.21.5",
-        "eslint-plugin-react-hooks": "^4.2.0"
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "node-sass": "^5.0.0",
+        "sass-loader": "^10.1.0",
+        "style-loader": "^2.0.0"
     }
 }

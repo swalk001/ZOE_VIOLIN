@@ -1,0 +1,20 @@
+// @import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// @import 'base/animations';
+@import 'base/base';
+// @import 'base/typography';
+// @import 'base/utilities';
+
+@import 'components/hero';
+@import 'components/bio';
+@import 'components/gallery';
+@import 'components/audio-player';
+
+@import 'layout/header';
+@import 'layout/grid';
+// @import 'layout/header';
+// @import 'layout/footer';
+// @import 'layout/popup';
+@import 'pages/home';

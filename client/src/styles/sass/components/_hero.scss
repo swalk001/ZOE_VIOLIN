@@ -1,0 +1,27 @@
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    &__img {
+        position: absolute;
+        background-image: linear-gradient($color-black, 0.5);
+        left: 0;
+        height: 150%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    &__img-box {
+        height: 100%;
+        background-color: rgba(red, 0.1);
+        scroll-behavior: smooth;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+        -webkit-clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+        clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+    }
+}
