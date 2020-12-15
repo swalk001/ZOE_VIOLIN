@@ -14,8 +14,6 @@ const VideoPlayer = () => (
             <div className="video-player__video-box">
                 <div className="video-player__video">
                     <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/-RTcRu7NuDQ"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -25,8 +23,6 @@ const VideoPlayer = () => (
                 </div>
                 <div className="video-player__video">
                     <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/wnTMPQX5c9I"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -36,8 +32,6 @@ const VideoPlayer = () => (
                 </div>
                 <div className="video-player__video">
                     <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/1zeoP-lk17s"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,6 +41,12 @@ const VideoPlayer = () => (
                 </div>
             </div>
         </div>
+        <span
+            className="video-player__img-box scroll"
+            data-rate="-.16"
+            data-direction="vertical"
+            alt="Zoe"
+        />
     </section>
 );
 

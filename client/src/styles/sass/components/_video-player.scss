@@ -18,16 +18,34 @@
         padding: 100px;
         justify-content: space-evenly;
         align-items: center;
+        // border: 3px solid red;
     }
 
     &__video {
-        // border: 3px solid red;
-        color: $color-grey-dark;
+        background-color: rgba(255, 255, 255, 0.112);
+        color: $color-black;
         text-align: center;
         font-size: 1.7rem;
-        font-weight: lighter;
-        // margin: 50px 20px;
-        // height: 30vh;
-        // width: 90vw;
+
+        & > iframe {
+            padding: 1rem;
+            width: 50rem;
+            height: 30rem;
+        }
+    }
+    &__img-box {
+        height: 250vh;
+        background-color: rgba(red, 0.1);
+        scroll-behavior: smooth;
+        position: absolute;
+        top: 250%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -2;
+
+        -webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+
+        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
     }
 }

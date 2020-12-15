@@ -7,7 +7,7 @@ const Hero = () => {
                 <div className="row">
                     <img
                         className="hero__img scroll"
-                        data-rate=".8"
+                        data-rate=".5"
                         data-direction="vertical"
                         src="../imgs/ZOE.JPG"
                         alt="Zoe"

@@ -3,26 +3,31 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
+    position: relative;
     &__img-box {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        // border: 2px solid orangered;
 
-        height: 75vh;
+        // height: 90vh;
         width: 80vw;
         overflow: hidden;
+        // border: 2px solid orangered;
     }
 
     &__img {
-        height: 75vh;
+        height: auto;
+        // border: 2px solid orangered;
 
         & img {
-            height: 100%;
+            // border: 2px solid orangered;
+            margin: 4rem 0;
+            height: 30rem;
             width: 100%;
-            -o-object-fit: contain;
-            object-fit: contain;
-            user-drag: none;
+            -o-object-fit: cover;
+            object-fit: cover;
+            // user-drag: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -55,5 +60,14 @@
             margin-left: 2rem;
         }
     }
+
+    &__icon ion-icon {
+        @include absCenter;
+        font-size: 5rem;
+        opacity: 0.6;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
-//

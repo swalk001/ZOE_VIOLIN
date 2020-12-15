@@ -20,20 +20,19 @@ class App2 extends React.Component {
         super(props);
         this.state = {
             autoScroll: true,
-            connect: '',
+            instagram: [],
             modal: false,
             navModal: false,
         };
     }
 
     componentDidMount() {
-        axios.get('/api/connect').then((data) => {
+        axios.get('/api/instagram').then((data) => {
             this.setState({
-                connect: data.data,
+                instagram: data.data,
             });
         });
         Effects.parallax();
-        // Object.keys(Effects).forEach((key) => Effects[key]());
     }
 
     displayModal() {
@@ -58,7 +57,7 @@ class App2 extends React.Component {
     }
 
     render() {
-        const { modal, navModal, autoScroll } = this.state;
+        const { modal, navModal, autoScroll, instagram } = this.state;
         return (
             <div>
                 <NavBar displayNavModal={this.displayNavModal.bind(this)} />
@@ -66,6 +65,7 @@ class App2 extends React.Component {
                 <Bio />
                 <Gallery
                     autoScroll={autoScroll}
+                    instagram={instagram}
                     toggleScroll={this.toggleScroll.bind(this)}
                 />
                 <VideoPlayer />

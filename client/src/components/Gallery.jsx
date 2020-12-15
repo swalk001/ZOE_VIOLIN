@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-const Gallery = ({ autoScroll, toggleScroll }) => {
-    const [photos, setPhotos] = useState([1, 2, 3]);
-    let scroll;
-    if (autoScroll) {
-        scroll = setTimeout(() => browse(), 6000);
-    }
+const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
+    const [photos, setPhotos] = useState([0, 1, 2, 3, 4, 5]);
+    // if (autoScroll) {
+    //     setTimeout(() => browse(), 6000);
+    // }
 
     const browse = (index = 0) => {
         if (index !== 0) {
@@ -15,10 +14,11 @@ const Gallery = ({ autoScroll, toggleScroll }) => {
         }
         setPhotos(
             photos.map((i) => {
-                if (i + index > 4) {
-                    return 1;
-                } else if (i + index < 1) {
-                    return 4;
+                console.log(photos);
+                if (i + index > instagram.length - 1) {
+                    return 0;
+                } else if (i + index < 0) {
+                    return instagram.length - 1;
                 } else {
                     return index + i;
                 }
@@ -46,12 +46,20 @@ const Gallery = ({ autoScroll, toggleScroll }) => {
                                     key={photo}
                                 >
                                     <img
-                                        src={`../imgs/ZOE_CHRISTIAN_PLAYING${photo}.jpg`}
-                                        alt="duo"
+                                        src={instagram[photo]}
+                                        alt="instagram"
                                     />
                                 </div>
                             );
                         })}
+                    </div>
+                    <div
+                        className="gallery__icon"
+                        onClick={() =>
+                            window.open('https://www.instagram.com/zoewviolin/')
+                        }
+                    >
+                        <ion-icon name="logo-instagram"></ion-icon>
                     </div>
                     <div
                         className="gallery__btn gallery__btn--next"
