@@ -20,7 +20,12 @@ class App2 extends React.Component {
         super(props);
         this.state = {
             autoScroll: true,
-            instagram: [],
+            instagram: [
+                {
+                    thumbnail: null,
+                    url: null,
+                },
+            ],
             modal: false,
             navModal: false,
         };
@@ -69,6 +74,7 @@ class App2 extends React.Component {
                     toggleScroll={this.toggleScroll.bind(this)}
                 />
                 <VideoPlayer />
+                <AudioPlayer />
             </div>
         );
     }

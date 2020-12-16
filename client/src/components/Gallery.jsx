@@ -5,7 +5,7 @@ const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
     // if (autoScroll) {
     //     setTimeout(() => browse(), 6000);
     // }
-
+    instagram = instagram.map((img) => [img.thumbnail, img.url]);
     const browse = (index = 0) => {
         if (index !== 0) {
             toggleScroll();
@@ -14,7 +14,6 @@ const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
         }
         setPhotos(
             photos.map((i) => {
-                console.log(photos);
                 if (i + index > instagram.length - 1) {
                     return 0;
                 } else if (i + index < 0) {
@@ -46,8 +45,21 @@ const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
                                     key={photo}
                                 >
                                     <img
-                                        src={instagram[photo]}
+                                        src={
+                                            instagram[photo]
+                                                ? instagram[photo][0]
+                                                : instagram[photo]
+                                        }
                                         alt="instagram"
+                                        onClick={() =>
+                                            window.open(
+                                                `https://www.instagram.com/zoewviolin/p/${
+                                                    instagram[photo]
+                                                        ? instagram[photo][1]
+                                                        : instagram[photo]
+                                                }/`
+                                            )
+                                        }
                                     />
                                 </div>
                             );

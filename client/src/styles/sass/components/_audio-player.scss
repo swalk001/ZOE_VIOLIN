@@ -1,93 +1,109 @@
-.audio-player {
-    background-image: linear-gradient(
-        rgba(60, 60, 60, 0.338),
-        rgba(0, 0, 0, 0.702)
-    );
-    // background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    /* transform: translateZ(-999px) scale(1.08); */
-    /* z-index: 3; */
-    /* left: 0; */
-    /* margin-bottom: 10vh; */
-    height: 59vh;
-    z-index: 3;
-}
-
-.audio-player-background {
-    // position: absolute;
-}
-
-.audio-controls {
+.audio {
+    @include absCenter;
     display: flex;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    background-size: cover;
     justify-content: center;
     align-items: center;
-}
+    height: 70rem;
+    width: 70rem;
+    z-index: 3;
+    border-radius: 50%;
+    border: 2px solid red;
 
-.audio-controls ion-icon {
-    display: flex;
-    padding: 3vh 0 2vh 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    color: rgba(245, 222, 179, 0.557);
-}
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     text-align: center;
+    //     justify-content: center;
+    //     align-items: baseline;
+    //     width: 80rem;
+    //     height: 80rem;
+    //     border-radius: 100%;
+    //     // background-color: #e53b3b;
+    //     background: linear-gradient(270deg, black 50%, transparent 50%),
+    //         linear-gradient(0deg, black 50%, lightgray 50%);
+    //     z-index: -1;
+    // }
 
-.audio-play ion-icon {
-    height: 20vh;
-    width: auto;
-    border-radius: 2px;
-}
+    &__img {
+        position: absolute;
+        width: 100%;
+    }
 
-.audio-play ion-icon:hover {
-    color: rgba(245, 222, 179, 0.9);
-    cursor: pointer;
-}
+    &__controls {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        width: 100vw;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        & ion-icon {
+            // border: 2px solid red;
+            display: flex;
+            padding: 3vh 0 2vh 0;
+            text-decoration: none;
+            color: rgba(255, 0, 0, 0.468);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 
-.audio-choice ion-icon {
-    height: 150px;
-    width: 150px;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.557);
-    border-radius: 200px;
-}
+            height: 20rem;
+            width: 20rem;
+            transition: all 0.5s;
 
-.audio-choice ion-icon:hover {
-    color: rgba(245, 222, 179, 0.9);
-    cursor: pointer;
-    border-color: rgba(245, 222, 179, 0.9);
-}
+            &:hover {
+                // color: rgb(0, 0, 0);
+                cursor: pointer;
+                color: rgb(240, 166, 166);
+            }
+        }
 
-.audio-songs {
-    margin: 0 0;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
+        &--play ion-icon {
+            border-radius: 2px;
+        }
+
+        &--choice ion-icon {
+            padding: 1rem;
+        }
+    }
+    &__songs {
+        display: none;
+        margin: 0 auto;
+
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+
+        & ul {
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.392);
+            border-radius: 10px;
+
+            width: 70%;
+            list-style: none;
+            height: 30vh;
+            overflow-y: scroll;
+        }
+
+        & li {
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+            font-size: 250%;
+            line-height: auto;
+            font-weight: bolder;
+            align-items: baseline;
+            cursor: pointer;
+        }
+    }
 }
 
 .audio-songs-wrapper {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-}
-.audio-songs ul {
-    /* border-top: 2em solid rgba(245, 222, 179, 0.455); */
-    /* border-bottom: 2em solid rgba(245, 222, 179, 0.455); */
-    list-style: none;
-    height: 30vh;
-    overflow-y: scroll;
-}
-
-.audio-songs li {
-    color: rgb(244, 206, 134);
-    margin-bottom: 10px;
-    font-size: 250%;
-    line-height: auto;
-    font-weight: bolder;
-    align-items: baseline;
-    /* height: 30px; */
-    cursor: pointer;
 }
 
 .active {

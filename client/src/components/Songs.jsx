@@ -3,7 +3,7 @@ import { Howl } from 'howler';
 
 const Songs = ({ songList, handlePlay, isPlaying }) => {
     return (
-        <div className="audio-songs">
+        <div className="audio__songs">
             <ul>
                 {songList.map((song) => {
                     return song === isPlaying ? (

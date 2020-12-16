@@ -15,5 +15,24 @@
 }
 
 .section-video-player {
-    margin: 15rem 0;
+    margin: 15rem 0 5rem 0;
+}
+
+.section-audio {
+    position: relative;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+    border: 2px solid red;
+
+    &::after {
+        content: '';
+        @include absCenter;
+        width: 80rem;
+        height: 80rem;
+        border-radius: 100%;
+        background: linear-gradient(90deg, black 50%, transparent 50%),
+            linear-gradient(0deg, lightgray 100%, black 50%);
+        z-index: -1;
+    }
 }

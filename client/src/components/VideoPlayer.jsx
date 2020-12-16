@@ -9,7 +9,7 @@ const VideoPlayer = () => (
                 data-rate="-.17"
                 data-direction="vertical"
             >
-                VIDEOS
+                MEDIA
             </h2>
             <div className="video-player__video-box">
                 <div className="video-player__video">

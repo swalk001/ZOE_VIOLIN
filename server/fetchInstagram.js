@@ -22,9 +22,12 @@ const fetchInstagram = () => {
     const urlEnd = `/&access_token=${access}`;
 
     images = images.map((image) => {
-        return axios
-            .get(url + image + urlEnd)
-            .then((data) => data.data.thumbnail_url);
+        return axios.get(url + image + urlEnd).then((data) => {
+            return {
+                thumbnail: data.data.thumbnail_url,
+                url: image,
+            };
+        });
     });
 
     return images;

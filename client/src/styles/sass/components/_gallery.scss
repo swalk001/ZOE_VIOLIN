@@ -9,31 +9,31 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-
-        // height: 90vh;
         width: 80vw;
         overflow: hidden;
-        // border: 2px solid orangered;
     }
 
     &__img {
         height: auto;
-        // border: 2px solid orangered;
 
         & img {
-            // border: 2px solid orangered;
             margin: 4rem 0;
             height: 30rem;
             width: 100%;
             -o-object-fit: cover;
             object-fit: cover;
-            // user-drag: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
             -webkit-animation: fade-in 1s;
             animation: fade-in 1s;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: translateY(-1rem) scale(1.04);
+                cursor: pointer;
+            }
         }
     }
 

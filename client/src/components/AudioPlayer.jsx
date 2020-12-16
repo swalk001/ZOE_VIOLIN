@@ -61,43 +61,35 @@ class AudioPlayer extends React.Component {
     }
 
     render() {
-        const { songList, isPlaying } = this.state;
+        const { songList, isPlaying, current } = this.state;
+        current ? console.log(current._duration) : 0;
         return (
-            <div className="audio-player-background">
-                <img
-                    src="../imgs/VIOLIN.JPG"
-                    alt=""
-                    className="audio-player__img"
-                />
-                <h2
-                    className="scroll-heading bio-wrapper-h2"
-                    data-rate="-.09"
-                    data-direction="vertical"
-                >
-                    AUDIO
-                </h2>
-                <div
-                    id="audio-player"
-                    className="audio-player scroll"
-                    data-rate="-.01"
-                    data-direction="vertical"
-                >
-                    <Controls
-                        isPlaying={isPlaying}
-                        handleStop={this.handleStop}
-                        handlePlay={this.handlePlay}
-                        handleNext={this.handleNext}
-                        handlePrev={this.handlePrev}
+            <section className="section-audio">
+                <div className="audio__border"></div>
+                <div className="audio">
+                    <img
+                        src="../imgs/VIOLIN.JPG"
+                        alt="violin"
+                        className="audio__img"
                     />
-                    <div className="audio-songs-wrapper">
-                        <Songs
-                            songList={songList}
-                            handlePlay={this.handlePlay}
+                    <div id="audio" className="audio__player">
+                        <Controls
                             isPlaying={isPlaying}
+                            handleStop={this.handleStop}
+                            handlePlay={this.handlePlay}
+                            handleNext={this.handleNext}
+                            handlePrev={this.handlePrev}
                         />
+                        <div className="audio__songs">
+                            <Songs
+                                songList={songList}
+                                handlePlay={this.handlePlay}
+                                isPlaying={isPlaying}
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }
