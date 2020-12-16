@@ -8,8 +8,11 @@ class AudioPlayer extends React.Component {
         super(props);
         this.state = {
             songList: samples,
+            audio: [],
             isPlaying: null,
             current: null,
+            start: 0,
+            progress: null,
         };
         this.handlePlay = this.handlePlay.bind(this);
         this.handleStop = this.handleStop.bind(this);
@@ -17,38 +20,63 @@ class AudioPlayer extends React.Component {
         this.handleNext = this.handleNext.bind(this);
     }
 
-    handleStop() {
-        const { current } = this.state;
+    componentDidMount() {
+        window.addEventListener('load', () => this.handleLoad());
+    }
 
-        current.stop();
-
+    handleLoad() {
+        const audio = samples.map((sample) => {
+            return new Howl({
+                src: `../audio/${sample}.mp3`,
+            });
+        });
         this.setState({
-            isPlaying: null,
+            audio,
         });
     }
 
-    handlePlay(audio = samples[0]) {
-        const { current } = this.state;
-        if (current !== null) {
-            current.stop();
-        }
+    handleStop() {
+        const { current, progress } = this.state;
 
-        const song = new Howl({
-            src: `../audio/${audio}.mp3`,
-        });
-
-        song.play();
+        current.stop();
+        clearInterval(progress);
+        this.progressBar(0);
         this.setState({
-            isPlaying: audio,
-            current: song,
+            isPlaying: null,
+            progress: null,
         });
+        this.hideProgressBar();
+    }
+
+    handlePlay(file = samples[0]) {
+        const { current, songList, audio, isPlaying } = this.state;
+        if (current !== null) {
+            this.handleStop();
+        }
+        if (!audio.length) {
+            return;
+        }
+        const song = audio[songList.indexOf(file)];
+        this.setState(
+            {
+                start: Date.now(),
+                isPlaying: file,
+                current: song,
+                progress: setInterval(
+                    () => this.progressBar(song._duration),
+                    10
+                ),
+            },
+            () => song.play()
+        );
+        this.displayProgressBar();
     }
 
     handleNext() {
         const { songList, isPlaying } = this.state;
-
         let curr = songList.indexOf(isPlaying);
         curr = curr === songList.length - 1 ? 0 : curr + 1;
+        this.handleStop();
         this.handlePlay(songList[curr]);
     }
 
@@ -57,15 +85,47 @@ class AudioPlayer extends React.Component {
 
         let curr = songList.indexOf(isPlaying);
         curr = curr === 0 ? songList.length - 1 : curr - 1;
+        this.handleStop();
         this.handlePlay(songList[curr]);
+    }
+
+    progressBar(dur) {
+        const { start } = this.state;
+        const time = (Date.now() - start) / 1000;
+        const elapsed = (time / dur) * 100;
+        const color = elapsed / 200;
+        const target = document.querySelectorAll('.audio__progress');
+        if (!dur) {
+            target[0].style.background = `linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.57) 100%,
+                rgba(255, 0, 0, 0.468) 0%
+            )`;
+        } else if (target[0] && time < dur) {
+            target[0].style.background = `linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.57) ${100 - elapsed}%,
+            rgba(255, 0, 0, ${0.4 + color}) 0%
+        )`;
+        }
+    }
+
+    displayProgressBar() {
+        const target = document.querySelectorAll('.audio__progress');
+        target[0].style.transform = `translate(-50%, -50%) scale(1.1 )`;
+    }
+
+    hideProgressBar() {
+        const target = document.querySelectorAll('.audio__progress');
+        target[0].style.transform = `translate(-50%, -50%) scale(1)`;
     }
 
     render() {
         const { songList, isPlaying, current } = this.state;
-        current ? console.log(current._duration) : 0;
+
         return (
             <section className="section-audio">
-                <div className="audio__border"></div>
+                <div className="audio__progress"></div>
                 <div className="audio">
                     <img
                         src="../imgs/VIOLIN.JPG"

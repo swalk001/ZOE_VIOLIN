@@ -21,59 +21,64 @@ const parallax = () => {
     });
 };
 
-const parallaxHeading = () => {
-    window.addEventListener('scroll', (e) => {
-        const target = document.querySelector('.scroll-heading');
+// const progressBar = () => {
+//     const target = document.querySelectorAll('.audio__progress');
+//     const duration =
+// }
 
-        let pos = (window.pageYOffset - 4800) * target.dataset.rate;
+// const parallaxHeading = () => {
+//     window.addEventListener('scroll', (e) => {
+//         const target = document.querySelector('.scroll-heading');
 
-        target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-    });
-};
+//         let pos = (window.pageYOffset - 4800) * target.dataset.rate;
 
-const parallaxHeading2 = () => {
-    window.addEventListener('scroll', (e) => {
-        const target = document.querySelector('.scroll-heading2');
+//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
+//     });
+// };
 
-        let pos = (window.pageYOffset - 6900) * target.dataset.rate;
+// const parallaxHeading2 = () => {
+//     window.addEventListener('scroll', (e) => {
+//         const target = document.querySelector('.scroll-heading2');
 
-        target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-    });
-};
+//         let pos = (window.pageYOffset - 6900) * target.dataset.rate;
 
-const parallaxHeading3 = () => {
-    window.addEventListener('scroll', (e) => {
-        const target = document.querySelector('.parallax-heading');
+//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
+//     });
+// };
 
-        const rect = target.getBoundingClientRect();
-        const elemTop = rect.top;
-        const elemBottom = rect.bottom;
+// const parallaxHeading3 = () => {
+//     window.addEventListener('scroll', (e) => {
+//         const target = document.querySelector('.parallax-heading');
 
-        const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+//         const rect = target.getBoundingClientRect();
+//         const elemTop = rect.top;
+//         const elemBottom = rect.bottom;
 
-        if (isVisible) {
-            let pos =
-                (document.documentElement.scrollHeight -
-                    window.pageYOffset -
-                    2123) *
-                target.dataset.rate;
-            target.style.transform = `translate3d(0px, ${-pos}px, 0px)`;
-        }
-    });
-};
+//         const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
 
-const parallaxImage = () => {
-    window.addEventListener('scroll', (e) => {
-        const target = document.querySelector('.scroll-img');
-        let pos = (window.pageYOffset - 5000) * target.dataset.rate;
-        target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-    });
-};
+//         if (isVisible) {
+//             let pos =
+//                 (document.documentElement.scrollHeight -
+//                     window.pageYOffset -
+//                     2123) *
+//                 target.dataset.rate;
+//             target.style.transform = `translate3d(0px, ${-pos}px, 0px)`;
+//         }
+//     });
+// };
+
+// const parallaxImage = () => {
+//     window.addEventListener('scroll', (e) => {
+//         const target = document.querySelector('.scroll-img');
+//         let pos = (window.pageYOffset - 5000) * target.dataset.rate;
+//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
+//     });
+// };
 
 module.exports = {
     parallax,
-    parallaxImage,
-    parallaxHeading,
-    parallaxHeading2,
-    parallaxHeading3,
+    // parallaxImage,
+    // parallaxHeading,
+    // parallaxHeading2,
+    // parallaxHeading3,
 };

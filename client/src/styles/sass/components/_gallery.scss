@@ -11,6 +11,7 @@
         justify-content: space-between;
         width: 80vw;
         overflow: hidden;
+        padding: 4rem;
     }
 
     &__img {
@@ -29,10 +30,12 @@
             -webkit-animation: fade-in 1s;
             animation: fade-in 1s;
             transition: all 0.3s;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
 
             &:hover {
                 transform: translateY(-1rem) scale(1.04);
                 cursor: pointer;
+                box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
             }
         }
     }
