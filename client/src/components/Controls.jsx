@@ -8,29 +8,29 @@ const Controls = ({
     handlePrev,
 }) => {
     return (
-        <div className="audio__controls">
-            <div className="audio__controls--choice">
+        <div className="audio2__controls">
+            <div className="audio2__controls--choice">
                 <ion-icon
-                    name="play-back-sharp"
+                    name="play-skip-back-circle-outline"
                     onClick={() => handlePrev()}
                 ></ion-icon>
             </div>
-            <div className="audio__controls--play">
+            <div className="audio2__controls--play">
                 {isPlaying === null ? (
                     <ion-icon
-                        name="play-circle-sharp"
+                        name="play-circle-outline"
                         onClick={() => handlePlay()}
                     ></ion-icon>
                 ) : (
                     <ion-icon
-                        name="stop-circle-sharp"
+                        name="stop-circle-outline"
                         onClick={() => handleStop()}
                     ></ion-icon>
                 )}
             </div>
-            <div className="audio__controls--choice">
+            <div className="audio2__controls--choice">
                 <ion-icon
-                    name="play-forward-sharp"
+                    name="play-skip-forward-circle-outline"
                     onClick={() => handleNext()}
                 ></ion-icon>
             </div>

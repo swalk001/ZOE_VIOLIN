@@ -135,7 +135,7 @@ NAV-BAR
 PARA-HERO
 **************/
 
-.para-hero {
+/* .para-hero {
     margin: 0;
     height: auto;
     font-size: 5em;
@@ -159,7 +159,7 @@ PARA-HERO
     align-items: middle;
     place-items: center;
     height: 100vh;
-}
+} */
 
 /* .para-hero span {
     width: 110px;
@@ -182,7 +182,7 @@ PARA-HERO
 PARA_IMAGE
 **************/
 
-.para-img {
+/* .para-img {
     height: 50vh;
     position: relative;
     overflow: hidden;
@@ -206,7 +206,7 @@ PARA_IMAGE
     height: 1500px;
     -o-object-fit: cover;
     object-fit: cover;
-}
+} */
 
 /**************
 HERO

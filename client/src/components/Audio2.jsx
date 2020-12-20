@@ -3,7 +3,7 @@ import Controls from './Controls.jsx';
 import Songs from './Songs.jsx';
 import samples from './Samples.js';
 
-class AudioPlayer extends React.Component {
+class Audio2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -97,7 +97,7 @@ class AudioPlayer extends React.Component {
         const time = (Date.now() - start) / 1000;
         const elapsed = (time / dur) * 100;
         const color = elapsed / 200;
-        const target = document.querySelectorAll('.audio__progress');
+        const target = document.querySelectorAll('.audio2__progress');
         if (!dur) {
             target[0].style.background = `linear-gradient(
                 180deg,
@@ -106,7 +106,7 @@ class AudioPlayer extends React.Component {
             )`;
         } else if (target[0] && time < dur) {
             target[0].style.background = `linear-gradient(
-            325deg,
+            270deg,
             rgba(255, 255, 255, 0.57) ${100 - elapsed}%,
             rgba(161, 152, 79, ${0.4 + color}) 0%
         )`;
@@ -114,36 +114,40 @@ class AudioPlayer extends React.Component {
     }
 
     displayProgressBar() {
-        const target = document.querySelectorAll('.audio__progress');
-        target[0].style.transform = `translate(-50%, -50%) scale(1.07) `;
+        const target = document.querySelectorAll('.audio2__progress');
+        target[0].style.transform = `scale(1) `;
     }
 
     hideProgressBar() {
-        const target = document.querySelectorAll('.audio__progress');
-        target[0].style.transform = `translate(-50%, -50%) scale(1)`;
+        const target = document.querySelectorAll('.audio2__progress');
+        target[0].style.transform = `scale(.1)`;
     }
 
     render() {
         const { songList, isPlaying, current } = this.state;
 
         return (
-            <section className="section-audio">
-                <div className="audio__progress"></div>
-                <div className="audio">
-                    <img
-                        src="../imgs/VIOLIN.JPG"
-                        alt="violin"
-                        className="audio__img"
-                    />
-                    <div id="audio" className="audio__player">
-                        <Controls
-                            isPlaying={isPlaying}
-                            handleStop={this.handleStop}
-                            handlePlay={this.handlePlay}
-                            handleNext={this.handleNext}
-                            handlePrev={this.handlePrev}
-                        />
-                        <div className="audio__songs">
+            <section className="section-audio2">
+                <div className="row">
+                    <div className="audio2">
+                        <div className="audio2__img-wrapper col-1-of-3">
+                            <img
+                                src="../imgs/VIOLIN.JPG"
+                                alt="violin"
+                                className="audio2__img"
+                            />
+                        </div>
+                        <div id="audio" className="audio2__player col-2-of-3">
+                            <Controls
+                                isPlaying={isPlaying}
+                                handleStop={this.handleStop}
+                                handlePlay={this.handlePlay}
+                                handleNext={this.handleNext}
+                                handlePrev={this.handlePrev}
+                            />
+                            <div className="audio2__progress col-2-of-3"></div>
+                        </div>
+                        <div className="audio2__songs col-2-of-3">
                             <Songs
                                 songList={songList}
                                 handlePlay={this.handlePlay}
@@ -156,4 +160,4 @@ class AudioPlayer extends React.Component {
         );
     }
 }
-export default AudioPlayer;
+export default Audio2;

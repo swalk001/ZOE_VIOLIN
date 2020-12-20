@@ -7,12 +7,14 @@
     &__heading {
         color: $color-grey-dark;
         opacity: 0.6;
+        font-family: 'Nunito';
         font-size: 5rem;
-        font-weight: 100;
         padding: 3rem 0;
     }
     &__text {
         font-size: 1.9rem;
+        color: $color-black;
+        opacity: 0.4;
         line-height: 2.7rem;
         text-indent: 6rem;
         font-weight: bolder;

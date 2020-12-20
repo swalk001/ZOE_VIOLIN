@@ -3,7 +3,7 @@ import axios from 'axios';
 import Hero from './Hero.jsx';
 // import NavBar from './NavBar.jsx';
 // import Contact from './Contact.jsx';
-// import SongList from './SongList.jsx';
+import SongList from './SongList.jsx';
 // import Home from './Home.jsx';
 // import Modal from './Modal.jsx';
 import Effects from './Effects.js';
@@ -12,8 +12,10 @@ import Bio from './Bio.jsx';
 // import NavModal from './NavModal.jsx';
 import '../styles/sass/main.scss';
 import AudioPlayer from './AudioPlayer.jsx';
+import Audio2 from './Audio2.jsx';
 import Gallery from './Gallery.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
+import ParaImage from './ParaImage.jsx';
 
 class App2 extends React.Component {
     constructor(props) {
@@ -37,7 +39,7 @@ class App2 extends React.Component {
                 instagram: data.data,
             });
         });
-        Effects.parallax();
+        // Effects.parallax();
     }
 
     displayModal() {
@@ -66,7 +68,7 @@ class App2 extends React.Component {
         return (
             <div>
                 <NavBar displayNavModal={this.displayNavModal.bind(this)} />
-                <Hero />
+                {/* <Hero /> */}
                 <Bio />
                 <Gallery
                     autoScroll={autoScroll}
@@ -74,7 +76,10 @@ class App2 extends React.Component {
                     toggleScroll={this.toggleScroll.bind(this)}
                 />
                 <VideoPlayer />
-                <AudioPlayer />
+                <Audio2 />
+                <SongList />
+                {/* <AudioPlayer /> */}
+                {/* <ParaImage /> */}
             </div>
         );
     }

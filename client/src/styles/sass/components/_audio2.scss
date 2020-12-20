@@ -1,56 +1,73 @@
-.audio {
-    @include absCenter;
-    display: flex;
+.audio2 {
+    position: relative;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     overflow: hidden;
-    background-size: cover;
-    justify-content: center;
-    // align-items: center;
     height: 80vh;
-    width: 70rem;
-    z-index: 3;
-    border-radius: 1rem;
-    // border: 1px solid red;
+    background: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.673) 50%,
+        rgba(0, 0, 0, 0.7) 50%
+    );
+    border-radius: 5rem;
+    box-shadow: 5rem 4.5rem 4rem rgba($color-black, 0.4);
 
     &__progress {
-        @include absCenter;
-        width: 70rem;
-        height: 80vh;
-        border-radius: 1rem;
+        // display: flex;
+        margin: 2rem auto;
+        bottom: 0;
+        height: 0.8rem;
+        width: 100vw;
+        border-radius: 0.5rem;
+
         background: linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.57) 100%,
             rgba(161, 152, 79, 0.66) 0%
         );
-        z-index: -1;
-        opacity: 0.7;
-        // transform: rotate(180deg);
+        z-index: 0;
+        opacity: 0.9;
+        transform: scale(0.1);
         transition: all 1s;
         // transition: rotate 0s;
     }
+    &__img-wrapper {
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+
+        right: 0;
+        display: flex;
+        height: inherit;
+        width: 42rem !important;
+
+        z-index: 100;
+    }
 
     &__img {
-        border: 1px solid red;
-        position: absolute;
-        margin-left: 8rem;
-        align-self: center;
-        // width: 100%;
+        // position: absolute;
+        opacity: 0.65;
+        right: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 1;
+        height: inherit;
+        width: 100%;
     }
 
     &__controls {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vh;
+        opacity: 0.7;
         -webkit-backdrop-filter: blur(10rem);
         backdrop-filter: blur(10rem);
 
         & ion-icon {
-            display: flex;
-            padding: 3vh 0 2vh 0;
+            // display: flex;
+            padding: 2rem 0 0 0;
             text-decoration: none;
-            color: #f5deb374;
+            // color: rgba(255, 0, 0, 0.468);
+            color: rgba(245, 222, 179, 0.591);
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -61,9 +78,8 @@
             transition: all 0.5s;
 
             &:hover {
-                // color: rgb(0, 0, 0);
                 cursor: pointer;
-                color: #f5deb3f1;
+                color: #f7e7ca;
             }
         }
 
@@ -76,32 +92,40 @@
             width: 13rem;
         }
     }
+
+    &__player {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.523);
+    }
     &__songs {
         display: flex;
-        z-index: 3;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
+        height: 89.5%;
+        width: 100%;
+        overflow: scroll;
+        // border: 2px solid purple;
 
         & ul {
             display: flex;
             flex-direction: column;
-            margin: 10rem auto;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             justify-content: left;
+            width: 100%;
             list-style: none;
-            height: 20%;
+            height: inherit;
             overflow-y: scroll;
             overflow-x: hidden;
-            // border: 2px solid red;
         }
 
         & li {
             display: flex;
             text-align: center;
+            opacity: 0.5;
+            // border: 2px solid red;
             color: rgb(255, 255, 255);
-            padding: 2rem 10rem;
+            padding: 2rem 5rem;
+            // height: 100%;
             width: 200%;
             font-size: 2.5rem;
             line-height: auto;

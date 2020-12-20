@@ -2,23 +2,23 @@ import React from 'react';
 
 const ParaImage = () => {
     return (
-        <div className="para-img">
-            <section className="para-img-section">
+        <section className="section-para-image">
+            <div className="para-imgage">
                 <ul className="para-img-ul">
                     <li
-                        className="scroll-img"
-                        data-rate=".14"
+                        className="scroll"
+                        data-rate="-.2"
                         data-direction="vertical"
                     >
                         <img
                             className="para-solo"
-                            src="../imgs/ZOE_PLAYING.jpg"
+                            src="../imgs/ZOE_HAT.jpg"
                             alt="solo"
                         />
                     </li>
                 </ul>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 };
 

@@ -43,7 +43,7 @@ const VideoPlayer = () => (
         </div>
         <span
             className="video-player__img-box scroll"
-            data-rate="-.16"
+            data-rate="-.3"
             data-direction="vertical"
             alt="Zoe"
         />

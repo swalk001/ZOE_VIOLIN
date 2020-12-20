@@ -46,13 +46,13 @@
         color: $color-grey-dark;
         height: 100%;
         width: 4rem;
-        background-color: rgba($color-white, 0.5);
+        // background-color: rgba($color-white, 0.5);
 
         & :hover {
+            transform: scale(1.3);
             transition: all 0.3s;
             cursor: pointer;
-            background-color: rgba($color-black, 0.1);
-            opacity: 1;
+            // background-color: rgba($color-black, 0.1);
         }
 
         &--prev {
@@ -64,13 +64,22 @@
         }
     }
 
-    &__icon ion-icon {
+    &__icon {
         @include absCenter;
         font-size: 5rem;
         opacity: 0.6;
+        transition: all 0.3s;
 
         &:hover {
             cursor: pointer;
+        }
+
+        & ion-icon {
+            transition: all 0.3s;
+
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
     }
 }

@@ -3,15 +3,17 @@ import { Howl } from 'howler';
 
 const Songs = ({ songList, handlePlay, isPlaying }) => {
     return (
-        <div className="audio__songs">
+        <div className="audio2__songs">
             <ul>
-                {songList.map((song) => {
+                {songList.map((song, i) => {
+                    const digit = i < 9 ? 0 : 1;
                     return song === isPlaying ? (
                         <li
-                            className="active"
+                            className="audio2__songs--active"
                             key={song}
                             onClick={(e) => handlePlay(e.target.innerHTML)}
                         >
+                            {/* <div className="audio__songs--number">{i + 1}</div> */}
                             {song}
                         </li>
                     ) : (
@@ -19,6 +21,7 @@ const Songs = ({ songList, handlePlay, isPlaying }) => {
                             key={song}
                             onClick={(e) => handlePlay(e.target.innerHTML)}
                         >
+                            {/* <div className="audio__songs--number">{i + 1}</div> */}
                             {song}
                         </li>
                     );
