@@ -7,7 +7,7 @@ const Bio = () => {
                 <div className="bio" id="bio">
                     <div className="bio__heading-box">
                         <h2
-                            className="bio__heading scroll"
+                            className="bio__heading scroll-horizontal"
                             data-rate=".2"
                             data-direction="vertical"
                         >

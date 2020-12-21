@@ -5,9 +5,10 @@
 @import 'base/animations';
 @import 'base/base';
 // @import 'base/typography';
-// @import 'base/utilities';
+@import 'base/utilities';
 
 @import 'components/hero';
+@import 'components/hero2';
 @import 'components/bio';
 @import 'components/gallery';
 @import 'components/audio-player';
@@ -15,10 +16,12 @@
 @import 'components/video-player';
 @import 'components/para-image';
 @import 'components/song-list';
+@import 'components/contact';
+@import 'components/form';
 
 @import 'layout/header';
 @import 'layout/grid';
-// @import 'layout/header';
-// @import 'layout/footer';
+@import 'layout/modal';
+@import 'layout/footer';
 // @import 'layout/popup';
 @import 'pages/home';

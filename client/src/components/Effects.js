@@ -21,6 +21,17 @@ const parallax = () => {
     });
 };
 
+const parallaxHorizontal = () => {
+    window.addEventListener('scroll', (e) => {
+        const targets = document.querySelectorAll('.scroll-horizontal');
+        targets.forEach((target) => {
+            target.style.transform = `translate3d(${
+                -(target.getBoundingClientRect().top - 300) / 4
+            }px, 0px, 0px)`;
+        });
+    });
+};
+
 // const progressBar = () => {
 //     const target = document.querySelectorAll('.audio__progress');
 //     const duration =
@@ -77,6 +88,7 @@ const parallax = () => {
 
 module.exports = {
     parallax,
+    parallaxHorizontal,
     // parallaxImage,
     // parallaxHeading,
     // parallaxHeading2,

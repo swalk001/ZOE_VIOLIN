@@ -1,0 +1,147 @@
+.hero2 {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    // justify-content: center;
+    // align-items: baseline;
+    // overflow: hidden;
+    // z-index: -1;
+    // border: 0.5rem solid red;
+
+    &__img-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        // height: 90%;
+        justify-content: space-evenly;
+
+        // width: 100vw;
+        // height: 100vh;
+        border: 1rem solid purple;
+
+        & h2 {
+            display: none;
+            // @include absCenter;
+            // top: 25%;
+            // height: auto;
+            // text-align: center;
+            // font-size: 6rem;
+            // color: rgba(255, 255, 255, 0.824);
+            // text-shadow: 2px 2px rgba(0, 0, 0, 0.468);
+        }
+    }
+
+    &__package {
+        display: flex;
+        justify-content: center;
+
+        width: 50vw;
+        align-items: center;
+        // height: 100vh;
+        // position: relative;
+        border: 1rem solid green;
+    }
+
+    &__img {
+        height: 100%;
+        width: inherit;
+        -o-object-fit: contain;
+        object-fit: contain;
+        // box-shadow: 2rem 2.5rem 4rem rgba($color-black, 0.5);
+        border: 1rem solid blue;
+    }
+    &__img-box {
+        height: 100%;
+        background-color: rgba(red, 0.1);
+        scroll-behavior: smooth;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+        -webkit-clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+        clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+    }
+}
+
+.wrapper {
+    height: 120vh;
+    overflow: hidden;
+    perspective: 2px;
+    // overflow-y: hidden;
+}
+.section {
+    position: relative;
+    height: 100%;
+    display: flex;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.81);
+    text-shadow: 0 0 1px #000;
+}
+
+.parallax::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    // border: 1rem solid blue;
+}
+
+.parallax::before {
+    content: ' ';
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    // border: 1rem solid blue;
+}
+
+.static {
+    background: whitesmoke;
+
+    // margin-top: 16rem;
+    height: 45vh;
+}
+
+.bg1::after {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.3) 50%
+        ),
+        url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_HAT.JPG');
+    background-position: center;
+    height: 100vh;
+}
+
+.bg2::after {
+    display: flex;
+    background-image: url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_STANDING.jpg');
+    background-position: center;
+    width: 50vw;
+    height: 40vh;
+    // @include absCenter;
+    // border: 1rem solid blue;
+}
+
+.bg2::before {
+    background-image: url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_CHRISTIAN.jpg');
+    background-position: center;
+    top: 70%;
+    width: 50vw;
+    height: 40vh;
+}

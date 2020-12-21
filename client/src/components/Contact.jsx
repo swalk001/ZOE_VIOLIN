@@ -55,8 +55,8 @@ const Contact = ({ displayModal }) => {
         }
     };
     return (
-        <section className="contact">
-            <div className="contact-wrapper">
+        <section className="section-contact">
+            <div className="contact">
                 <h2
                     className="parallax-heading"
                     data-rate="-.09"
@@ -64,23 +64,25 @@ const Contact = ({ displayModal }) => {
                 >
                     GET IN TOUCH
                 </h2>
-                <div id="contact" className="contact-form">
+                <div id="contact" className="contact__form">
                     <form>
                         <br></br>
                         <label>
-                            <div className="label-field">Name:</div>
+                            <div className="contatct__label">Name:</div>
                             <div id="form-name">&nbsp;</div>
                             <input
                                 type="text"
                                 onChange={(e) => setName(e.target.value)}
+                                required
                             ></input>
                         </label>
                         <label>
-                            <div className="label-field">E-mail:</div>
+                            <div className="contact__label">E-mail:</div>
                             <div id="form-email">&nbsp;</div>
                             <input
-                                type="text"
+                                type="email"
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             ></input>
                         </label>
 
@@ -90,6 +92,7 @@ const Contact = ({ displayModal }) => {
                             <textarea
                                 type="text"
                                 onChange={(e) => setMessage(e.target.value)}
+                                required
                             ></textarea>
                         </label>
                         <button

@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import Hero from './Hero.jsx';
+import Hero2 from './Hero2.jsx';
 // import NavBar from './NavBar.jsx';
-// import Contact from './Contact.jsx';
+import Contact from './Contact.jsx';
 import SongList from './SongList.jsx';
 // import Home from './Home.jsx';
-// import Modal from './Modal.jsx';
+import Modal from './Modal.jsx';
 import Effects from './Effects.js';
 import NavBar from './NavBar.jsx';
 import Bio from './Bio.jsx';
@@ -16,6 +17,8 @@ import Audio2 from './Audio2.jsx';
 import Gallery from './Gallery.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 import ParaImage from './ParaImage.jsx';
+import Form from './Form.jsx';
+import Footer from './Footer.jsx';
 
 class App2 extends React.Component {
     constructor(props) {
@@ -40,12 +43,16 @@ class App2 extends React.Component {
             });
         });
         // Effects.parallax();
+        Effects.parallaxHorizontal();
     }
 
     displayModal() {
-        this.setState({
-            modal: !this.state.modal,
-        });
+        this.setState(
+            {
+                modal: !this.state.modal,
+            },
+            () => console.log(this.state.modal)
+        );
     }
 
     displayNavModal() {
@@ -68,7 +75,11 @@ class App2 extends React.Component {
         return (
             <div>
                 <NavBar displayNavModal={this.displayNavModal.bind(this)} />
-                {/* <Hero /> */}
+                <Modal
+                    modal={modal}
+                    displayModal={this.displayModal.bind(this)}
+                />
+                <Hero2 />
                 <Bio />
                 <Gallery
                     autoScroll={autoScroll}
@@ -78,8 +89,8 @@ class App2 extends React.Component {
                 <VideoPlayer />
                 <Audio2 />
                 <SongList />
-                {/* <AudioPlayer /> */}
-                {/* <ParaImage /> */}
+                <Form displayModal={this.displayModal.bind(this)} />
+                <Footer />
             </div>
         );
     }

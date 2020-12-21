@@ -143,7 +143,7 @@ const SongList = () => {
                     </ul>
                 </div>
                 <div className="song-list__tab">
-                    <h3>POP ARRANGEMENTS</h3>
+                    <h3>POP</h3>
                 </div>
                 <div className="song-list__card ">
                     <ul>
@@ -291,7 +291,7 @@ const SongList = () => {
             </div>
             <span
                 className="song-list__img-box scroll"
-                data-rate="-.6"
+                data-rate="-.1"
                 data-direction="vertical"
             ></span>
         </section>

@@ -4,8 +4,7 @@ const VideoPlayer = () => (
     <section className="section-video-player">
         <div className="video-player">
             <h2
-                className="
-                scroll video-player__heading"
+                className="video-player__heading scroll-horizontal"
                 data-rate="-.17"
                 data-direction="vertical"
             >
@@ -15,6 +14,7 @@ const VideoPlayer = () => (
                 <div className="video-player__video">
                     <iframe
                         src="https://www.youtube.com/embed/-RTcRu7NuDQ"
+                        scrolling="no"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -24,6 +24,7 @@ const VideoPlayer = () => (
                 <div className="video-player__video">
                     <iframe
                         src="https://www.youtube.com/embed/wnTMPQX5c9I"
+                        scrolling="no"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -34,6 +35,7 @@ const VideoPlayer = () => (
                     <iframe
                         src="https://www.youtube.com/embed/1zeoP-lk17s"
                         frameBorder="0"
+                        scrolling="no"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
@@ -43,7 +45,7 @@ const VideoPlayer = () => (
         </div>
         <span
             className="video-player__img-box scroll"
-            data-rate="-.3"
+            data-rate="-.1"
             data-direction="vertical"
             alt="Zoe"
         />
