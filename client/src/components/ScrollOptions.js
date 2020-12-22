@@ -1,13 +1,9 @@
 export default {
     top: () => window.scrollTo(0, 0),
     spot: (id) => {
-        setTimeout(() => {
-            const el = document.getElementById(id);
-            el.scrollIntoView({
-                behavior: 'smooth',
-                block: 'end',
-                inline: 'nearest',
-            });
-        }, 50);
+        const el = document.getElementById(id);
+        const pos = el.getBoundingClientRect();
+        const scroll = window.pageYOffset + pos.top;
+        window.scrollTo(0, scroll - 110);
     },
 };

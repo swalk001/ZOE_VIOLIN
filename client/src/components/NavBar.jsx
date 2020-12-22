@@ -10,11 +10,7 @@ const NavBar = ({ displayNavModal }) => {
             <div className="nav-bar__menu" onClick={() => displayNavModal()}>
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
-            <h1 className="nav-bar__heading">
-                <Link to="/" onClick={() => scroll.top()}>
-                    ZOE WHITTAKER
-                </Link>
-            </h1>
+            <h1 className="nav-bar__heading">ZOE WHITTAKER</h1>
             {/* <ul className="nav-bar__ul">
                 <li>
                     <Link to="/" onClick={() => scroll.top()}>

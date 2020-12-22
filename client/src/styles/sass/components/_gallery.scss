@@ -11,7 +11,7 @@
         justify-content: space-between;
         width: 80vw;
         overflow: hidden;
-        padding: 4rem;
+        padding: 5rem;
     }
 
     &__img {
@@ -35,7 +35,7 @@
             &:hover {
                 transform: translateY(-1rem) scale(1.04);
                 cursor: pointer;
-                box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+                box-shadow: 0.75rem 2.5rem 4rem rgba($color-black, 0.5);
             }
         }
     }

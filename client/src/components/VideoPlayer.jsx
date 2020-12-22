@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VideoPlayer = () => (
-    <section className="section-video-player">
+    <section className="section-video-player" id="video-player">
         <div className="video-player">
             <h2
                 className="video-player__heading scroll-horizontal"

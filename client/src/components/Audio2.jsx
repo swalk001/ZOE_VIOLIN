@@ -127,7 +127,7 @@ class Audio2 extends React.Component {
         const { songList, isPlaying, current } = this.state;
 
         return (
-            <section className="section-audio2">
+            <section className="section-audio2" id="audio-player">
                 <div className="row">
                     <div className="audio2">
                         <div className="audio2__img-wrapper col-1-of-3">

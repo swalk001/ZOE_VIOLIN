@@ -17,7 +17,7 @@ const SongList = () => {
         });
     });
     return (
-        <section className="section-song-list">
+        <section className="section-song-list" id="song-list">
             <div className="song-list row">
                 <div className="song-list__tab song-list__tab--active">
                     <h3>CLASSICAL</h3>

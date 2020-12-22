@@ -16,7 +16,7 @@ const Form = ({ displayModal }) => {
         // );
     };
     return (
-        <section className="section-book">
+        <section className="section-book" id="contact">
             <div className="row">
                 <div className="book">
                     <div className="book__form">
@@ -100,13 +100,14 @@ const Form = ({ displayModal }) => {
                                     type="text"
                                     className="contact--textarea"
                                     onChange={(e) => setMessage(e.target.value)}
+                                    placeholder="Message"
                                     required
                                 ></textarea>
                             </label>
 
                             <div className="form__group">
                                 <button className="contact__form--button">
-                                    Reach Out &rarr;
+                                    SUBMIT
                                 </button>
                             </div>
                         </form>

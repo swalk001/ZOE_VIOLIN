@@ -12,7 +12,7 @@
         padding: 1.5rem 2rem;
         border-radius: 2px;
         border: none;
-        background-color: rgba($color-white, 0.5);
+        background-color: rgba($color-white, 0.8);
         border-bottom: 3px solid transparent;
         width: 100%;
         display: block;
@@ -109,8 +109,7 @@
     background-position: center;
     height: 60vh;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-
+    @include box-shadow;
     &__form {
         // overflow: hidden;
         // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);

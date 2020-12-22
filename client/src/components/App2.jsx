@@ -19,6 +19,7 @@ import VideoPlayer from './VideoPlayer.jsx';
 import ParaImage from './ParaImage.jsx';
 import Form from './Form.jsx';
 import Footer from './Footer.jsx';
+import NavModal from './NavModal.jsx';
 
 class App2 extends React.Component {
     constructor(props) {
@@ -60,7 +61,26 @@ class App2 extends React.Component {
             {
                 navModal: !this.state.navModal,
             },
-            () => console.log('nav-modal', this.state.navModal)
+            () => {
+                const target = document.getElementsByClassName('navigation');
+                target[0].classList.remove('navigation--close');
+                target[0].classList.add('navigation--open');
+            }
+        );
+    }
+
+    hideNavModal() {
+        const target = document.getElementsByClassName('navigation');
+        target[0].classList.add('navigation--close');
+        target[0].classList.remove('navigation--open');
+
+        console.log(target);
+        setTimeout(
+            () =>
+                this.setState({
+                    navModal: !this.state.navModal,
+                }),
+            500
         );
     }
 
@@ -75,6 +95,11 @@ class App2 extends React.Component {
         return (
             <div>
                 <NavBar displayNavModal={this.displayNavModal.bind(this)} />
+                <NavModal
+                    displayNavModal={this.displayNavModal.bind(this)}
+                    hideNavModal={this.hideNavModal.bind(this)}
+                    navModal={navModal}
+                />
                 <Modal
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}

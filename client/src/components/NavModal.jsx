@@ -1,49 +1,32 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
+import scroll from './ScrollOptions.js';
 
-const NavModal = ({ navModal, displayNavModal }) => {
+const NavModal = ({ navModal, displayNavModal, hideNavModal }) => {
+    const handleNav = (id = null) => {
+        hideNavModal();
+        if (!id) {
+            scroll.top();
+        } else {
+            scroll.spot(id);
+        }
+    };
     if (navModal) {
         return (
-            <div className="nav-modal-wrapper">
-                <ul className="main-nav">
-                    <li>
-                        <Link to="/" onClick={() => scroll.top()}>
-                            HOME
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" onClick={() => scroll.spot('bio')}>
-                            BIO
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="song-list" onClick={() => scroll.top()}>
+            <section className="section-navigation">
+                <div className="navigation navigation--open">
+                    <ul className="navigation__ul">
+                        <li onClick={() => handleNav()}>HOME</li>
+                        <li onClick={() => handleNav('bio')}>BIO</li>
+                        <li onClick={() => handleNav('video-player')}>VIDEO</li>
+                        <li onClick={() => handleNav('audio-player')}>AUDIO</li>
+                        <li onClick={() => handleNav('song-list')}>
                             SONG LIST
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/"
-                            onClick={() => scroll.spot('audio-player')}
-                        >
-                            AUDIO
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/"
-                            onClick={() => scroll.spot('video-player')}
-                        >
-                            VIDEO
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" onClick={() => scroll.spot('contact')}>
-                            CONTACT
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                        <li onClick={() => handleNav('contact')}>CONTACT</li>
+                    </ul>
+                </div>
+            </section>
         );
     } else {
         return <div></div>;
