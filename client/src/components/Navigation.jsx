@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Link } from '@reach/router';
 import scroll from './ScrollOptions.js';
 
-const NavModal = ({ navModal, displayNavModal, hideNavModal }) => {
+const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
     const handleNav = (id = null) => {
         hideNavModal();
         if (!id) {
@@ -15,6 +15,12 @@ const NavModal = ({ navModal, displayNavModal, hideNavModal }) => {
         return (
             <section className="section-navigation">
                 <div className="navigation navigation--open">
+                    <div
+                        className="navigation__exit"
+                        onClick={() => hideNavModal()}
+                    >
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
                     <ul className="navigation__ul">
                         <li onClick={() => handleNav()}>HOME</li>
                         <li onClick={() => handleNav('bio')}>BIO</li>
@@ -33,4 +39,4 @@ const NavModal = ({ navModal, displayNavModal, hideNavModal }) => {
     }
 };
 
-export default NavModal;
+export default Navigation;

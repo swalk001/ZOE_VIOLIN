@@ -8,9 +8,8 @@ import SongList from './SongList.jsx';
 // import Home from './Home.jsx';
 import Modal from './Modal.jsx';
 import Effects from './Effects.js';
-import NavBar from './NavBar.jsx';
+import Header from './Header.jsx';
 import Bio from './Bio.jsx';
-// import NavModal from './NavModal.jsx';
 import '../styles/sass/main.scss';
 import AudioPlayer from './AudioPlayer.jsx';
 import Audio2 from './Audio2.jsx';
@@ -19,7 +18,7 @@ import VideoPlayer from './VideoPlayer.jsx';
 import ParaImage from './ParaImage.jsx';
 import Form from './Form.jsx';
 import Footer from './Footer.jsx';
-import NavModal from './NavModal.jsx';
+import Navigation from './Navigation.jsx';
 
 class App2 extends React.Component {
     constructor(props) {
@@ -48,12 +47,9 @@ class App2 extends React.Component {
     }
 
     displayModal() {
-        this.setState(
-            {
-                modal: !this.state.modal,
-            },
-            () => console.log(this.state.modal)
-        );
+        this.setState({
+            modal: !this.state.modal,
+        });
     }
 
     displayNavModal() {
@@ -94,8 +90,8 @@ class App2 extends React.Component {
         const { modal, navModal, autoScroll, instagram } = this.state;
         return (
             <div>
-                <NavBar displayNavModal={this.displayNavModal.bind(this)} />
-                <NavModal
+                <Header displayNavModal={this.displayNavModal.bind(this)} />
+                <Navigation
                     displayNavModal={this.displayNavModal.bind(this)}
                     hideNavModal={this.hideNavModal.bind(this)}
                     navModal={navModal}

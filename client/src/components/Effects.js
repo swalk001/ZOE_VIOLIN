@@ -26,7 +26,7 @@ const parallaxHorizontal = () => {
         const targets = document.querySelectorAll('.scroll-horizontal');
         targets.forEach((target) => {
             target.style.transform = `translate3d(${
-                -(target.getBoundingClientRect().top - 300) / 4
+                -(target.getBoundingClientRect().top - 150) / 4
             }px, 0px, 0px)`;
         });
     });

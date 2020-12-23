@@ -2,13 +2,13 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import { Router } from '@reach/router';
 import axios from 'axios';
-import NavBar from './NavBar.jsx';
+import Header from './Header.jsx';
 import Contact from './Contact.jsx';
 import SongList from './SongList.jsx';
 import Home from './Home.jsx';
 import Modal from './Modal.jsx';
 import Effects from './Effects.js';
-import NavModal from './NavModal.jsx';
+import Navigation from './Navigation.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -52,11 +52,11 @@ class App extends React.Component {
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <NavModal
+                <Navigation
                     navModal={navModal}
                     displayNavModal={this.displayNavModal.bind(this)}
                 />
-                <NavBar
+                <Header
                     navModal={navModal}
                     displayNavModal={this.displayNavModal.bind(this)}
                 />
