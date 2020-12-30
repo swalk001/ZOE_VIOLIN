@@ -1,10 +1,14 @@
 .audio2 {
     position: relative;
+    display: flex;
+    flex-direction: column;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     overflow: hidden;
-    height: 70vh;
-    width: 80vw;
+    height: 60vh;
+    width: 70vw;
+    min-width: 100rem;
+
     background: linear-gradient(
         to right bottom,
         rgba(0, 0, 0, 0.673) 50%,
@@ -18,7 +22,7 @@
         margin: 2rem auto;
         bottom: 0;
         height: 0.8rem;
-        width: 100vw;
+        width: 50%;
         border-radius: 0.5rem;
 
         background: linear-gradient(
@@ -96,15 +100,13 @@
 
     &__player {
         display: flex;
+
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.523);
     }
     &__songs {
-        display: flex;
-        height: 89.5%;
+        height: 84.5%;
         width: 100%;
-        overflow: scroll;
-        // border: 2px solid purple;
 
         & ul {
             display: flex;
@@ -121,13 +123,10 @@
 
         & li {
             display: flex;
-            text-align: center;
+            justify-content: center;
             opacity: 0.5;
-            // border: 2px solid red;
             color: rgb(255, 255, 255);
             padding: 2rem 5rem;
-            // height: 100%;
-            width: 200%;
             font-size: 2.5rem;
             line-height: auto;
             font-weight: bolder;

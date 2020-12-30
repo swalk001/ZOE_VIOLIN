@@ -128,32 +128,32 @@ class Audio2 extends React.Component {
 
         return (
             <section className="section-audio2" id="audio-player">
-                <div className="row">
-                    <div className="audio2">
-                        <div className="audio2__img-wrapper col-1-of-3">
-                            <img
-                                src="../imgs/VIOLIN.JPG"
-                                alt="violin"
-                                className="audio2__img"
-                            />
-                        </div>
-                        <div id="audio" className="audio2__player col-2-of-3">
-                            <Controls
-                                isPlaying={isPlaying}
-                                handleStop={this.handleStop}
-                                handlePlay={this.handlePlay}
-                                handleNext={this.handleNext}
-                                handlePrev={this.handlePrev}
-                            />
-                            <div className="audio2__progress col-2-of-3"></div>
-                        </div>
-                        <div className="audio2__songs col-2-of-3">
-                            <Songs
-                                songList={songList}
-                                handlePlay={this.handlePlay}
-                                isPlaying={isPlaying}
-                            />
-                        </div>
+                {/* <div className="row"> */}
+                <div className="audio2">
+                    {/* <div className="audio2__img-wrapper col-1-of-3">
+                        <img
+                            src="../imgs/VIOLIN.JPG"
+                            alt="violin"
+                            className="audio2__img"
+                        />
+                    </div> */}
+                    <div id="audio" className="audio2__player col-2-of-3">
+                        <Controls
+                            isPlaying={isPlaying}
+                            handleStop={this.handleStop}
+                            handlePlay={this.handlePlay}
+                            handleNext={this.handleNext}
+                            handlePrev={this.handlePrev}
+                        />
+                        <div className="audio2__progress col-2-of-3"></div>
+                    </div>
+                    <div className="audio2__songs col-2-of-3">
+                        <Songs
+                            songList={songList}
+                            handlePlay={this.handlePlay}
+                            isPlaying={isPlaying}
+                        />
+                        {/* </div> */}
                     </div>
                 </div>
             </section>

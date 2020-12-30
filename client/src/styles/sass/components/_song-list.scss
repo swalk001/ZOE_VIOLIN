@@ -17,7 +17,6 @@
         text-align: center;
         padding: 0 2rem;
         transform: skew(20deg);
-        // @include box-shadow;
         background-color: $color-black;
         color: $color-white;
 
@@ -26,9 +25,7 @@
         }
 
         &--active {
-            // background-color: $color-white;
             background-color: rgba(161, 152, 79, 0.6);
-
             color: $color-black;
         }
 
@@ -47,7 +44,7 @@
             flex-direction: column;
             background-color: rgba(196, 188, 130, 0.99);
             border-radius: 2rem;
-            overflow: scroll;
+            overflow-y: scroll;
             height: 40rem;
             width: inherit;
             text-align: center;
