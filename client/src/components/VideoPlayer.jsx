@@ -18,11 +18,11 @@ const VideoPlayer = () => {
             <div className="video-player">
                 <div className="video-player__heading-box">
                     <h2
-                        className="video-player__heading scroll-horizontal"
+                        className="video-player__heading scroll-horizontal-right"
                         data-rate="-.17"
                         data-direction="vertical"
                     >
-                        MEDIA
+                        Media
                     </h2>
                 </div>
                 <div className="video-player__video-box">

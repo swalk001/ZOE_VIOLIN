@@ -1,9 +1,11 @@
 .nav-bar {
     // font-family: 'Cormorant', serif;
+    width: 100vw;
     background-color: transparent;
     color: #654a4e;
     top: 0;
     position: fixed;
+    display: flex;
     text-align: center;
     height: 10rem;
     width: 100vw;
@@ -35,10 +37,15 @@
         line-height: 0.8em;
         font-size: 4rem;
         text-decoration: none;
+        transition: all 0.2s;
         & a:link,
         & a:visited {
-            color: $color-grey-dark;
+            color: #654a4e;
             text-decoration: none;
+        }
+        transform: translate(27%, -50%);
+        right: 0;
+        &--animate {
         }
     }
     &__ul {

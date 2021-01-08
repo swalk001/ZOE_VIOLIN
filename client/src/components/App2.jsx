@@ -43,7 +43,8 @@ class App2 extends React.Component {
             });
         });
         // Effects.parallax();
-        Effects.parallaxHorizontal();
+        Effects.parallaxHorizontalLeft();
+        Effects.parallaxHorizontalRight();
     }
 
     displayModal() {

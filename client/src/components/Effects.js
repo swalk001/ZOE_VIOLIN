@@ -21,12 +21,26 @@ const parallax = () => {
     });
 };
 
-const parallaxHorizontal = () => {
+const parallaxHorizontalLeft = () => {
     window.addEventListener('scroll', (e) => {
-        const targets = document.querySelectorAll('.scroll-horizontal');
+        const targets = document.querySelectorAll('.scroll-horizontal-left');
         targets.forEach((target) => {
             target.style.transform = `translate3d(${
                 -(target.getBoundingClientRect().top - 150) / 8
+            }px, 0px, 0px)`;
+            target.style.opacity = `${
+                0.35 + target.getBoundingClientRect().top / 300
+            }`;
+        });
+    });
+};
+
+const parallaxHorizontalRight = () => {
+    window.addEventListener('scroll', (e) => {
+        const targets = document.querySelectorAll('.scroll-horizontal-right');
+        targets.forEach((target) => {
+            target.style.transform = `translate3d(${
+                (target.getBoundingClientRect().top - 150) / 8
             }px, 0px, 0px)`;
             target.style.opacity = `${
                 0.35 + target.getBoundingClientRect().top / 300
@@ -60,6 +74,7 @@ const isScrolledIntoViewFromTop = (el) => {
 
 module.exports = {
     parallax,
-    parallaxHorizontal,
+    parallaxHorizontalLeft,
+    parallaxHorizontalRight,
     isScrolledIntoViewFromTop,
 };

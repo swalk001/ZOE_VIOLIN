@@ -19,11 +19,11 @@ const Bio = () => {
                 <div className="bio" id="bio">
                     <div className="bio__heading-box">
                         <h2
-                            className="bio__heading scroll-horizontal"
+                            className="bio__heading scroll-horizontal-left"
                             data-rate=".2"
                             data-direction="vertical"
                         >
-                            BIO
+                            Bio
                         </h2>
                     </div>
                     <section className="bio__text">

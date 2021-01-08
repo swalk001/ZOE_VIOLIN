@@ -151,6 +151,28 @@
     }
 }
 
+@-webkit-keyframes fade-up-form {
+    0% {
+        opacity: 0;
+        transform: translate(0, 10rem);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0, 0rem);
+    }
+}
+
+@keyframes fade-up-form {
+    0% {
+        opacity: 0;
+        transform: translate(0, 10rem);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0, 0rem);
+    }
+}
+
 @-webkit-keyframes pop-in {
     0% {
         opacity: 0;

@@ -29,11 +29,11 @@ const Form = ({ displayModal }) => {
     return (
         <section className="section-book" id="contact">
             <h2
-                className="book__heading scroll-horizontal"
+                className="book__heading scroll-horizontal-left"
                 data-rate="-.17"
                 data-direction="vertical"
             >
-                CONTACT
+                Let's Talk
             </h2>
             <div className="row">
                 <div className="book">
@@ -125,7 +125,7 @@ const Form = ({ displayModal }) => {
 
                             <div className="form__group">
                                 <button className="contact__form--button">
-                                    SUBMIT
+                                    Connect
                                 </button>
                             </div>
                         </form>

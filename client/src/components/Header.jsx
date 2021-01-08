@@ -14,12 +14,21 @@ const Header = ({ displayNavModal }) => {
             } else if (start - end > 0) {
                 target.classList.remove('nb-hide');
             }
+            if (end > 200) {
+                const header = document.querySelector('.nav-bar__heading');
+                header.classList.add('nav-bar__heading--animate');
+            } else {
+                header.classList.remove('nav-bar__heading--animate');
+            }
         }, 50);
     });
     return (
         <div className="nav-bar">
-            <div className="nav-bar__menu" onClick={() => displayNavModal()}>
-                <ion-icon name="menu-outline"></ion-icon>
+            <div className="nav-bar__menu">
+                <ion-icon
+                    name="menu-outline"
+                    onClick={() => displayNavModal()}
+                ></ion-icon>
             </div>
             <h1 className="nav-bar__heading">Zoe Whittaker</h1>
         </div>
