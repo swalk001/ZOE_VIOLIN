@@ -2,7 +2,7 @@
     @include blur;
     background-color: rgba(245, 245, 245, 0.536);
     width: 20vw;
-    color: $color-grey-dark;
+    color: #654a4e;
     height: 100vh;
     transform: translateX(-100%);
 
@@ -10,9 +10,11 @@
         padding-top: 2rem;
         padding-left: 2rem;
         & ion-icon {
+            transition: all 0.2s;
             font-size: 5rem;
             &:hover {
                 cursor: pointer;
+                transform: scale(1.1) rotate(180deg);
             }
         }
     }
@@ -30,19 +32,19 @@
     }
 
     &__ul {
-        height: inherit;
+        height: 80vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         list-style: none;
 
         & li {
             font-size: 3rem;
-            padding: 1rem 2rem;
+            // padding: 1rem 2rem;
             font-weight: 300;
             border-bottom: 0.5rem solid transparent;
-            transition: all 0.2s;
+            // transition: all 0.2s ease-in;
             &:link,
             &:visited {
                 color: $color-white;
@@ -50,7 +52,7 @@
             }
             &:hover {
                 cursor: pointer;
-                border-bottom: 0.5rem solid rgba(0, 0, 0, 0.105);
+                border-bottom: 0.5rem solid #654a4e;
             }
         }
     }

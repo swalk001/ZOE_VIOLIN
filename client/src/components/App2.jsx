@@ -108,7 +108,7 @@ class App2 extends React.Component {
                     toggleScroll={this.toggleScroll.bind(this)}
                 />
                 <VideoPlayer />
-                <Audio2 />
+                {/* <Audio2 /> */}
                 <SongList />
                 <Form displayModal={this.displayModal.bind(this)} />
                 <Footer />

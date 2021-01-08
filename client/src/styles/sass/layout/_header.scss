@@ -1,14 +1,14 @@
 .nav-bar {
-    font-family: 'Cormorant', serif;
-
-    background-color: $color-white;
-    color: $color-grey-dark;
+    // font-family: 'Cormorant', serif;
+    background-color: transparent;
+    color: #654a4e;
     top: 0;
     position: fixed;
     text-align: center;
-    height: 11rem;
+    height: 10rem;
     width: 100vw;
     z-index: 1000;
+    transition: all 0.7s;
 
     &__menu {
         position: absolute;
@@ -24,15 +24,16 @@
             transition: all 0.1s;
             &:hover {
                 cursor: pointer;
+                transform: scale(1.1) translate(-48%, -48%);
             }
         }
     }
 
     &__heading {
         @include absCenter;
-        letter-spacing: 0.16em;
+        // letter-spacing: 0.1em;
         line-height: 0.8em;
-        font-size: 3rem;
+        font-size: 4rem;
         text-decoration: none;
         & a:link,
         & a:visited {
@@ -70,4 +71,9 @@
         //     border-bottom: 2px solid black;
         // }
     }
+}
+
+.nb-hide {
+    transform: translateY(-150%);
+    // opacity: 0;
 }

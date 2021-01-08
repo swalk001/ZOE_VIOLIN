@@ -1,23 +1,92 @@
 .song-list {
     display: flex;
-    width: 80%;
+    flex-direction: column;
     justify-content: center;
-    // justify-items: center;
-    // align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: Nunito;
     line-height: 3rem;
-    opacity: 0.5;
+    position: relative;
     transition: all 1s;
 
-    &__tab {
+    &--animate {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
+
+    &__audio {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        // -o-object-fit: cover;
+        // object-fit: cover;
+        left: 0;
+        // z-index: 1000;
+        // border: 1rem solid #c50000c7;
+    }
+
+    &__wrapper {
+        border: 1rem solid #ffffffc7;
+        position: relative;
+        display: flex;
+
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 60vh;
+        width: 90%;
+        @include box-shadow;
+    }
+
+    &__heading {
+        font-family: initial;
+        color: #ffffffc7;
+        font-size: 7rem;
+
+        position: absolute;
+        // top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-12deg);
+        &--top {
+            top: 2.5rem;
+
+            & :last-child {
+                font-size: 4rem;
+                color: #654a4e;
+                opacity: 0.5;
+            }
+        }
+
+        &--bottom {
+            bottom: -2rem;
+
+            & :first-child {
+                font-size: 4rem;
+                color: #654a4e;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__tab {
+        // display: flex;
+        font-family: initial;
         height: 5rem;
         width: 20rem;
+        align-self: center;
         border-radius: 2rem;
-        background-color: white;
         text-align: center;
-        padding: 0 2rem;
-        transform: skew(20deg);
-        background-color: $color-black;
+        padding: 0.7rem 2rem;
+        margin: 0.2rem 0 0 0;
+        transform: skew(12deg);
+        background-color: rgba(0, 0, 0, 0.5);
         color: $color-white;
 
         &:hover {
@@ -25,61 +94,71 @@
         }
 
         &--active {
-            background-color: rgba(161, 152, 79, 0.6);
-            color: $color-black;
+            background-color: #ffffffc7;
+            color: rgba(0, 0, 0, 0.5);
         }
 
         & h3 {
             transform: skew(-20deg);
-            font-size: 1.7rem;
+
+            font-size: 2rem;
         }
     }
 
     &__card {
         display: none;
+        text-align: center;
+        transition: all 2s;
+        border-radius: 1rem;
 
         &--active {
-            display: flex;
-            @include blur;
-            flex-direction: column;
-            background-color: rgba(196, 188, 130, 0.99);
-            border-radius: 2rem;
-            overflow-y: scroll;
-            height: 40rem;
-            width: inherit;
-            text-align: center;
-            top: 4rem;
-            transition: all 0.8s ease;
+            // border: 1rem solid red;
+            // display: none;
             position: absolute;
+            padding: 0.5rem;
+            background-color: #ffffffc7;
+            border-radius: 1rem;
+            overflow-y: scroll;
+            height: 100%;
+            max-height: 40rem;
+            width: 30vw;
+            right: 0;
             z-index: 10;
-            @include box-shadow;
+
+            &--animate {
+                // display: block;
+                -webkit-animation: open 2s ease-in-out;
+                animation: open 2s ease-in-out;
+            }
 
             & ul {
                 width: 100%;
-                height: 100%;
-                margin: 2rem 0;
+
+                // text-align: center;
+
+                margin: 0 0 2rem 0;
                 list-style: none;
                 position: relative;
 
                 & li {
-                    // color: rgba(255, 255, 255, 0.844);
-                    font-size: 2.1rem;
+                    color: #654a4e;
+                    font-size: 1.7rem;
                 }
             }
         }
     }
 
-    &__img-box {
-        height: 250vh;
-        background-color: rgba(red, 0.1);
-        scroll-behavior: smooth;
-        position: absolute;
-        top: 250%;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -2;
-        -webkit-clip-path: polygon(0% 0%, 100% 40%, 100% 60%, 0% 100%);
-        clip-path: polygon(0% 0%, 100% 40%, 100% 60%, 0% 100%);
-    }
+    // &__img-box {
+    //     height: 250vh;
+    //     background-color: rgba(red, 0.1);
+    //     scroll-behavior: smooth;
+    //     position: absolute;
+    //     top: 250%;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     z-index: -2;
+    //     -webkit-clip-path: polygon(0% 0%, 100% 40%, 100% 60%, 0% 100%);
+    //     clip-path: polygon(0% 0%, 100% 40%, 100% 60%, 0% 100%);
+    // }
 }

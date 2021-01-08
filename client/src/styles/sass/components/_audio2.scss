@@ -1,37 +1,41 @@
 .audio2 {
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
     overflow: hidden;
-    height: 60vh;
-    width: 70vw;
-    min-width: 100rem;
+    height: 52vh;
+    width: 30vw;
+    // min-width: 100rem;
+    border-radius: 1rem;
 
-    background: linear-gradient(
-        to right bottom,
-        rgba(0, 0, 0, 0.673) 50%,
-        rgba(0, 0, 0, 0.7) 50%
-    );
+    &--animate {
+        display: flex;
+        -webkit-animation: open 2s ease-in-out;
+        animation: open 2s ease-in-out;
+        // border: 1rem solid purple;
+    }
+
+    // background-color: #ffffffc7;
+
     // border-radius: 5rem;
-    box-shadow: 5rem 4.5rem 4rem rgba($color-black, 0.4);
-
+    // box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
     &__progress {
         // display: flex;
-        margin: 2rem auto;
+        margin: 0 auto 2rem auto;
         bottom: 0;
         height: 0.8rem;
-        width: 50%;
+        width: 80%;
         border-radius: 0.5rem;
-
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.57) 100%,
-            rgba(161, 152, 79, 0.66) 0%
-        );
+        background-color: #ffffffc7;
+        // background: linear-gradient(
+        //     180deg,
+        //     rgba(255, 255, 255, 0.57) 100%,
+        //     rgba(161, 152, 79, 0.66) 0%
+        // );
         z-index: 0;
-        opacity: 0.9;
+        // opacity: 0.9;
         transform: scale(0.1);
         transition: all 1s;
         // transition: rotate 0s;
@@ -63,28 +67,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0.7;
-        -webkit-backdrop-filter: blur(10rem);
-        backdrop-filter: blur(10rem);
+        // opacity: 0.7;
+        // -webkit-backdrop-filter: blur(10rem);
+        // backdrop-filter: blur(10rem);
 
         & ion-icon {
             // display: flex;
             padding: 2rem 0 0 0;
             text-decoration: none;
-            // color: rgba(255, 0, 0, 0.468);
-            color: rgba(245, 222, 179, 0.591);
+            color: #ffffffc7;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
 
-            height: 15rem;
-            width: 15rem;
-            transition: all 0.5s;
+            height: 12rem;
+            width: 12rem;
+            transition: all 0.2s;
 
             &:hover {
                 cursor: pointer;
-                color: #f7e7ca;
+                color: #ffffff;
             }
         }
 
@@ -93,16 +96,16 @@
         }
 
         &--choice ion-icon {
-            height: 13rem;
-            width: 13rem;
+            height: 10rem;
+            width: 10rem;
         }
     }
 
     &__player {
         display: flex;
-
+        height: auto;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.523);
+        background-color: rgba(0, 0, 0, 0.5);
     }
     &__songs {
         height: 84.5%;
@@ -111,36 +114,40 @@
         & ul {
             display: flex;
             flex-direction: column;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(10px);
             justify-content: left;
             width: 100%;
             list-style: none;
             height: inherit;
             overflow-y: scroll;
             overflow-x: hidden;
+            background-color: #ffffffc7;
         }
 
         & li {
             display: flex;
             justify-content: center;
-            opacity: 0.5;
-            color: rgb(255, 255, 255);
-            padding: 2rem 5rem;
-            font-size: 2.5rem;
-            line-height: auto;
-            font-weight: bolder;
+            // opacity: 0.5;
+            // background-color: #ffffffc7;
+
+            color: #654a4e;
+            padding: 0.5rem 0rem;
+            font-size: 2rem;
+            // line-height: auto;
+            // font-weight: bolder;
+            transition: all 0.2s;
             align-items: center;
             cursor: pointer;
-            box-shadow: 0 0.1rem 10rem rgba($color-black, 1);
+            // box-shadow: 0 0.1rem 10rem rgba($color-black, 1);
         }
 
         &--active {
-            background-color: rgba(161, 152, 79, 0.6);
+            background-color: #654a4e65;
         }
 
-        &--number {
-            padding-right: 4rem;
-        }
+        // &--number {
+        //     padding-right: 4rem;
+        // }
     }
 }

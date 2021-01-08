@@ -1,6 +1,18 @@
 import React from 'react';
+import { isScrolledIntoViewFromTop } from './Effects';
 
 const Bio = () => {
+    const target = document.getElementsByClassName('bio');
+    const section = document.getElementsByClassName('section-bio');
+
+    window.addEventListener('scroll', () => {
+        if (isScrolledIntoViewFromTop(section[0])) {
+            target[0].classList.add('bio--animate');
+        } else {
+            target[0].classList.remove('bio--animate');
+        }
+    });
+
     return (
         <section className="section-bio">
             <div className="row">

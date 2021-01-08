@@ -1,61 +1,59 @@
 import React from 'react';
-import Gallery from './Gallery.jsx';
 
-const Hero2 = ({ autoScroll, instagram, toggleScroll }) => {
+const Hero2 = () => {
     return (
-        // <section className="section-hero2">
-        //     <div className="hero2">
-        //         {/* <div className="row"> */}
-        //         <div className="hero2__img-wrapper">
-        //             <div className="hero2__package">
-        //                 <h2>
-        //                     SOLO <br></br>VIOLIN
-        //                 </h2>
-        //                 <img
-        //                     className="hero2__img"
-        //                     // data-rate=".7"
-        //                     data-direction="vertical"
-        //                     src="../imgs/ZOE_STANDING.JPG"
-        //                     alt="Zoe"
-        //                 />
-        //             </div>
-        //             <div className="hero2__package">
-        //                 <h2>
-        //                     DUO<br></br>VIOLIN + GUITAR
-        //                 </h2>
-        //                 <img
-        //                     className="hero2__img"
-        //                     // data-rate=".7"
-        //                     data-direction="vertical"
-        //                     src="../imgs/ZOE_CHRISTIAN.JPG"
-        //                     alt="Zoe"
-        //                 />
-        //             </div>
-        //             {/* </div> */}
-        //         </div>
-        //     </div>
-        //     <span
-        //         className="hero2__img-box scroll"
-        //         data-rate=".46"
-        //         data-direction="vertical"
-        //         alt="Zoe"
-        //     />
-        // </section>
-        <div className="wrapper">
-            <section className="section parallax bg1">
-                {/* <h1>Catered Music for Weddings & Events</h1> */}
-            </section>
-            <section className="section static">
-                <h1>Catered Music for Weddings & Events</h1>
-            </section>
-            <section className="section parallax bg2"></section>
+        <section className="section-hero2">
+            <div className="hero2">
+                {/* <h2>Curated</h2>
+                <h2>Music</h2> */}
+                <div className="row">
+                    <div className="hero2__img-wrapper">
+                        <div className="hero2__img">
+                            <div className="hero2__img--heading-left">
+                                <h2>
+                                    <div className="hero2__img--heading-left--first">
+                                        C
+                                    </div>
+                                    urated
+                                </h2>
+                                <h2>
+                                    <div className="hero2__img--heading-left--first">
+                                        M
+                                    </div>
+                                    usic
+                                </h2>
+                            </div>
+                            <div className="hero2__img--heading-middle">
+                                <h2>f</h2>
+                                <h2>o</h2>
+                                <h2>r</h2>
+                            </div>
+                            <div className="hero2__img--heading-right">
+                                <h2>
+                                    <div className="hero2__img--heading-left--first">
+                                        W
+                                    </div>
+                                    <span>eddings</span>
+                                </h2>
+                                <h2>+</h2>
+                                <h2>
+                                    <div className="hero2__img--heading-left--first">
+                                        E
+                                    </div>
+                                    <span>vents</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <span
                 className="hero2__img-box scroll"
                 data-rate=".46"
                 data-direction="vertical"
                 alt="Zoe"
             />
-        </div>
+        </section>
     );
 };
 

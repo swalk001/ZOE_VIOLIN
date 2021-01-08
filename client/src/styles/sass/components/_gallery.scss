@@ -1,9 +1,16 @@
 .gallery {
-    display: flex;
     width: 100%;
     flex-direction: row;
     align-items: center;
     position: relative;
+    transition: all 0.2s;
+    display: none;
+
+    &--animate {
+        display: flex;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
     &__img-box {
         display: flex;
         flex-wrap: wrap;
@@ -18,6 +25,9 @@
         height: auto;
 
         & img {
+            border: 1.4rem solid #ffffffc7;
+            padding: 1rem;
+
             margin: 4rem 0;
             height: 30rem;
             width: 100%;
@@ -30,7 +40,7 @@
             -webkit-animation: fade-in 1s;
             animation: fade-in 1s;
             transition: all 0.3s;
-            box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
 
             &:hover {
                 transform: translateY(-1rem) scale(1.04);
@@ -66,7 +76,8 @@
 
     &__icon {
         @include absCenter;
-        font-size: 5rem;
+        margin-top: 1rem;
+        font-size: 4rem;
         opacity: 0.6;
         transition: all 0.3s;
 
@@ -78,7 +89,7 @@
             transition: all 0.3s;
 
             &:hover {
-                transform: rotate(360deg);
+                transform: rotate(360deg) scale(1.2);
             }
         }
     }

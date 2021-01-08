@@ -7,17 +7,16 @@
     // -webkit-backdrop-filter: blur(20px);
     // backdrop-filter: blur(20px);
 }
+
 .section-hero {
-    display: none;
-    // flex-direction: row;
-    // justify-content: center;
-    // border: 2px solid purple;
+    border: 2px solid rgb(148, 125, 148);
 }
 
 .section-hero2 {
-    margin-top: 11rem;
-    overflow: hidden;
-    perspective: 2px;
+    // height: 100vh;
+    width: 100vw;
+    // overflow-x: hidden;
+    // border: 2rem solid green;
 }
 
 .section-bio {
@@ -45,27 +44,29 @@
     margin: 8rem 0 0 0;
     // transform: translateX(-15vw);
     z-index: 10;
-    // border: 2px solid red;
 }
 
 .section-audio2 {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    // height: 100%;
+    // opacity: 0.9;
     width: 100vw;
-    margin: 15rem 0 0 0;
+    // margin: 15rem 0 0 0;
     // border-radius: 10rem;
     // overflow: hidden;
     // transform: translateX(-15vw);
 }
 
 .section-song-list {
-    margin: 10rem 0 0 0;
-    // width: auto;
+    margin: -1rem 0 0 0;
     overflow: hidden;
-    position: relative;
-    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 .section-contact {
@@ -76,16 +77,16 @@
 }
 
 .section-book {
-    height: auto;
-    padding: 0 0 10rem 0;
+    height: 90vh;
+    background-color: #ffffffc7;
+    @include blur;
+    padding: 5.5rem 0 0 0;
 }
 
 .section-footer {
-    height: 30vh;
-    background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-    );
-    opacity: 0.9;
+    height: 100%;
+    // border: 2rem solid green;
+
+    background-image: linear-gradient(to right bottom, #e6ddde, $color-white);
+    // opacity: 1;
 }

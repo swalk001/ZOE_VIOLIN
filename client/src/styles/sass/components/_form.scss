@@ -3,7 +3,7 @@
 
     &__group:not(:last-child) {
         margin-bottom: 2rem;
-        width: 50%;
+        width: 52%;
     }
     &__input {
         font-size: 1.5rem;
@@ -12,9 +12,9 @@
         padding: 1.5rem 2rem;
         border-radius: 2px;
         border: none;
-        background-color: rgba($color-white, 0.8);
+        background-color: #654a4e11;
         border-bottom: 3px solid transparent;
-        width: 100%;
+        width: 105%;
         display: block;
         transition: all 0.3s;
 
@@ -25,7 +25,7 @@
         }
 
         &:focus:invalid {
-            border-bottom: 3px solid $color-secondary-dark;
+            border-bottom: 3px solid rgba(255, 0, 0, 0.598);
         }
 
         &::-webkit-input-placeholder {
@@ -84,7 +84,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color-primary;
+            // background-color: $color-primary;
             opacity: 0;
             transition: opacity 0.2s;
         }
@@ -96,22 +96,59 @@
 }
 
 .book {
-    // border: 2px solid transparent;
     overflow: hidden;
     background-image: linear-gradient(
-            105deg,
-            rgba($color-white, 0.9) 0%,
-            rgba($color-white, 0.9) 50%,
+            100deg,
+            rgba($color-white, 1) 0%,
+            rgba(#ffffff3f, 1) 55%,
             transparent 50%
         ),
-        url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/WEDDING.jpg');
-    background-size: 100%;
-    background-position: center;
+        url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/VIOLIN.jpg');
+    background-size: contain;
+    background-repeat: space;
+    background-position: right;
+    opacity: 0.9;
     height: 60vh;
-    border-radius: 3px;
+    // border-radius: 3px;
+    border: 2rem solid #e6ddde;
+    // padding: 5rem;
     @include box-shadow;
+
+    display: none;
+
+    &__heading {
+        width: 100%;
+        text-align: center;
+        color: #654a4e9a;
+        // opacity: 0.6;
+        font-size: 5rem;
+        z-index: -1;
+        margin-bottom: 2rem;
+        &::before {
+            content: '';
+            height: 0.1rem;
+            border: 4rem solid #e6ddde;
+            opacity: 0.7;
+            width: 22rem;
+            margin: -4rem 0rem 8rem -4rem;
+            position: absolute;
+            border-radius: 2rem;
+            z-index: -1;
+        }
+    }
+
+    &--animate {
+        display: block;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
+
     &__form {
         // overflow: hidden;
         // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     }
+}
+
+#email {
+    width: 101%;
 }

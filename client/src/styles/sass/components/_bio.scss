@@ -1,23 +1,38 @@
 .bio {
     transition: all 0.2s;
+
+    &--animate {
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
     &__heading-box {
         text-align: center;
-        // transform: translate(0, -10rem);
+        opacity: 0.6;
     }
     &__heading {
-        color: $color-grey-dark;
+        color: #654a4e;
         opacity: 0.6;
-        font-family: 'Nunito';
         font-size: 5rem;
-        padding: 0 0 3rem 0;
+        padding: 0 0 5rem 0;
+
+        &::before {
+            content: '';
+            height: 0.1rem;
+            width: 9rem;
+            margin: 1rem 0rem 1rem 3.8rem;
+            position: absolute;
+            border: 4rem solid rgba(245, 245, 245, 0.801);
+            border-radius: 2rem;
+            z-index: -1;
+        }
     }
     &__text {
         font-size: 1.9rem;
-        color: $color-black;
-        opacity: 0.4;
+        color: #654a4e;
+        opacity: 0.8;
         line-height: 2.7rem;
+        letter-spacing: 0.1rem;
         text-indent: 6rem;
         font-weight: bolder;
-        // padding-bottom: 3rem;
     }
 }

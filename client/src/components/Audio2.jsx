@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Controls from './Controls.jsx';
 import Songs from './Songs.jsx';
 import samples from './Samples.js';
+import { isScrolledIntoViewFromTop } from './Effects';
 
 class Audio2 extends React.Component {
     constructor(props) {
@@ -101,14 +102,14 @@ class Audio2 extends React.Component {
         if (!dur) {
             target[0].style.background = `linear-gradient(
                 180deg,
-                rgba(255, 255, 255, 0.57) 100%,
-                rgba(161, 152, 79, 0.66) 0%
+                #ffffffc7 100%,
+                rgb(101, 74, 78) 0%
             )`;
         } else if (target[0] && time < dur) {
             target[0].style.background = `linear-gradient(
             270deg,
-            rgba(255, 255, 255, 0.57) ${100 - elapsed}%,
-            rgba(161, 152, 79, ${0.4 + color}) 0%
+           #ffffffc7  ${100 - elapsed}%,
+           rgba(101, 74, 78, ${0.4 + color}) 0%
         )`;
         }
     }
@@ -125,6 +126,17 @@ class Audio2 extends React.Component {
 
     render() {
         const { songList, isPlaying, current } = this.state;
+
+        const target = document.getElementsByClassName('audio2');
+        const section = document.getElementsByClassName('section-audio2');
+
+        window.addEventListener('scroll', () => {
+            if (isScrolledIntoViewFromTop(section[0])) {
+                target[0].classList.add('audio2--animate');
+            } else {
+                target[0].classList.remove('audio2--animate');
+            }
+        });
 
         return (
             <section className="section-audio2" id="audio-player">

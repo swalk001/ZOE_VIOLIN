@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <section className="section-footer">
-            <div className="footer row">
+            <div className="footer">
                 <div className="footer__social col-1-of-2">
                     <img
                         className="footer__social--knot"
@@ -15,6 +15,8 @@ const Footer = () => {
                             )
                         }
                     ></img>
+                </div>
+                <div className="footer__social col-1-of-2">
                     <img
                         className="footer__social--wire"
                         alt="Wedding-Wire"
@@ -26,9 +28,10 @@ const Footer = () => {
                         }
                     ></img>
                 </div>
-                <div className="footer__text col-1-of-2">
-                    <p>Some footer text</p>
-                </div>
+
+                {/* <div className="footer__text col-1-of-2"> */}
+                {/* <p>Some footer text</p> */}
+                {/* </div> */}
             </div>
         </section>
     );

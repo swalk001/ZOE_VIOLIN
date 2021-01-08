@@ -24,11 +24,13 @@ const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
                     <ul className="navigation__ul">
                         <li onClick={() => handleNav()}>HOME</li>
                         <li onClick={() => handleNav('bio')}>BIO</li>
-                        <li onClick={() => handleNav('video-player')}>VIDEO</li>
-                        <li onClick={() => handleNav('audio-player')}>AUDIO</li>
-                        <li onClick={() => handleNav('song-list')}>
-                            SONG LIST
+                        <li onClick={() => handleNav('video-player')}>
+                            VIDEOS
                         </li>
+                        <li onClick={() => handleNav('audio-player')}>SONGS</li>
+                        {/* <li onClick={() => handleNav('song-list')}>
+                            SONG LIST
+                        </li> */}
                         <li onClick={() => handleNav('contact')}>CONTACT</li>
                     </ul>
                 </div>

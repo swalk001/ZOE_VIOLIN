@@ -1,56 +1,135 @@
 .hero2 {
-    display: flex;
-    width: 100vw;
-    height: 90vh;
-    // justify-content: center;
-    // align-items: baseline;
-    // overflow: hidden;
-    // z-index: -1;
-    // border: 0.5rem solid red;
+    padding: 9rem 10rem 5rem 10rem;
+    // font-family: 'Cormorant', serif;
 
     &__img-wrapper {
         display: flex;
-        flex-direction: row;
-        width: 100vw;
-        // height: 90%;
-        justify-content: space-evenly;
-
-        // width: 100vw;
-        // height: 100vh;
-        border: 1rem solid purple;
-
-        & h2 {
-            display: none;
-            // @include absCenter;
-            // top: 25%;
-            // height: auto;
-            // text-align: center;
-            // font-size: 6rem;
-            // color: rgba(255, 255, 255, 0.824);
-            // text-shadow: 2px 2px rgba(0, 0, 0, 0.468);
-        }
-    }
-
-    &__package {
-        display: flex;
+        // margin-top: 5rem;
+        height: 88vh;
         justify-content: center;
-
-        width: 50vw;
-        align-items: center;
-        // height: 100vh;
-        // position: relative;
-        border: 1rem solid green;
     }
 
     &__img {
-        height: 100%;
-        width: inherit;
-        -o-object-fit: contain;
-        object-fit: contain;
-        // box-shadow: 2rem 2.5rem 4rem rgba($color-black, 0.5);
-        border: 1rem solid blue;
+        display: flex;
+        flex-direction: row;
+        background-image: url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_HAT.JPG');
+        opacity: 0.84;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: inherit;
+        width: 100vw;
+        border: 1.4rem solid #ffffffc7;
+
+        // padding: 0 0 5rem 0;
+        // border: 1rem solid blue;
+
+        & h2 {
+            color: #fffffff1;
+            height: auto;
+            padding: 0;
+            top: 0;
+        }
+
+        &--heading-left {
+            height: auto;
+            line-height: 19rem;
+            width: 45%;
+
+            &--first {
+                display: inline;
+                font-size: 16rem;
+            }
+
+            & h2 {
+                margin: 3rem 0 0 1rem;
+                font-size: 10rem;
+
+                -webkit-animation: fade-slide-in-left 1s;
+                animation: fade-slide-in-left 1s;
+                transition: all 0.5s;
+
+                &:nth-child(2) {
+                    margin: -5rem 0 0 15rem;
+                    -webkit-animation: fade-slide-in-left 1.5s;
+                    animation: fade-slide-in-left 1.5s;
+                }
+            }
+        }
+
+        &--heading-middle {
+            // border: 1rem solid blue;
+            text-align: center;
+            height: auto;
+            width: 10%;
+            line-height: 5rem;
+
+            & h2 {
+                font-size: 9rem;
+
+                &:first-child {
+                    margin: 30rem 0 0 3rem;
+                    transform: translateX(-4rem);
+                    -webkit-animation: fade-slide-in-down 1.5s;
+                    animation: fade-slide-in-down 1.5s;
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(2rem);
+                    -webkit-animation: fade-in 1s ease-in;
+                    animation: fade-in 1s ease-in;
+                }
+
+                &:nth-child(3) {
+                    transform: translateX(7rem);
+                    -webkit-animation: fade-slide-in-up 1.5s;
+                    animation: fade-slide-in-up 1.5s;
+                }
+            }
+        }
+
+        &--heading-right {
+            // border: 1rem solid blue;
+            height: auto;
+            text-align: right;
+            width: 45%;
+            line-height: 7rem;
+            margin-right: 1rem;
+
+            & :nth-child(1) {
+                margin-right: -3rem;
+            }
+
+            & h2 {
+                transition: all 0.5s;
+                font-size: 10rem;
+
+                &:first-child {
+                    margin: 33rem 0 0 0;
+                }
+                -webkit-animation: fade-slide-in-right 1s;
+                animation: fade-slide-in-right 1s;
+
+                &:nth-child(2) {
+                    font-size: 7rem;
+                    // line-height: 3rem;
+                    margin: 3rem 15rem 6.5rem 0;
+                }
+
+                &:nth-child(3) {
+                    -webkit-animation: fade-slide-in-right 1.5s;
+                    animation: fade-slide-in-right 1.5s;
+                    margin: -8rem 0 0 10rem;
+
+                    & span {
+                        margin-left: 4rem;
+                    }
+                }
+            }
+        }
     }
     &__img-box {
+        display: none;
         height: 100%;
         background-color: rgba(red, 0.1);
         scroll-behavior: smooth;
@@ -62,86 +141,4 @@
         -webkit-clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
         clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
     }
-}
-
-.wrapper {
-    height: 120vh;
-    overflow: hidden;
-    perspective: 2px;
-    // overflow-y: hidden;
-}
-.section {
-    position: relative;
-    height: 100%;
-    display: flex;
-    font-size: 5rem;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.81);
-    text-shadow: 0 0 1px #000;
-}
-
-.parallax::after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-    // border: 1rem solid blue;
-}
-
-.parallax::before {
-    content: ' ';
-    position: absolute;
-
-    right: 0;
-    bottom: 0;
-
-    height: 100vh;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    z-index: -1;
-    // border: 1rem solid blue;
-}
-
-.static {
-    background: whitesmoke;
-
-    // margin-top: 16rem;
-    height: 45vh;
-}
-
-.bg1::after {
-    background-image: linear-gradient(
-            to right bottom,
-            rgba(0, 0, 0, 0.3) 50%,
-            rgba(0, 0, 0, 0.3) 50%
-        ),
-        url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_HAT.JPG');
-    background-position: center;
-    height: 100vh;
-}
-
-.bg2::after {
-    display: flex;
-    background-image: url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_STANDING.jpg');
-    background-position: center;
-    width: 50vw;
-    height: 40vh;
-    // @include absCenter;
-    // border: 1rem solid blue;
-}
-
-.bg2::before {
-    background-image: url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_CHRISTIAN.jpg');
-    background-position: center;
-    top: 70%;
-    width: 50vw;
-    height: 40vh;
 }

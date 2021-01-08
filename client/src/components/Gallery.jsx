@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import { isScrolledIntoViewFromTop } from './Effects';
 
 const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
     const [photos, setPhotos] = useState([0, 1, 2, 3, 4, 5]);
-    // if (autoScroll) {
-    //     setTimeout(() => browse(), 6000);
-    // }
+
     instagram = instagram.map((img) => [img.thumbnail, img.url]);
     const browse = (index = 0) => {
         if (index !== 0) {
@@ -24,6 +23,17 @@ const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
             })
         );
     };
+
+    const target = document.getElementsByClassName('gallery');
+    const section = document.getElementsByClassName('section-gallery');
+
+    window.addEventListener('scroll', () => {
+        if (isScrolledIntoViewFromTop(section[0])) {
+            target[0].classList.add('gallery--animate');
+        } else {
+            target[0].classList.remove('gallery--animate');
+        }
+    });
 
     return (
         <section className="section-gallery">

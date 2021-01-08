@@ -26,71 +26,40 @@ const parallaxHorizontal = () => {
         const targets = document.querySelectorAll('.scroll-horizontal');
         targets.forEach((target) => {
             target.style.transform = `translate3d(${
-                -(target.getBoundingClientRect().top - 150) / 4
+                -(target.getBoundingClientRect().top - 150) / 8
             }px, 0px, 0px)`;
+            target.style.opacity = `${
+                0.35 + target.getBoundingClientRect().top / 300
+            }`;
         });
     });
 };
 
-// const progressBar = () => {
-//     const target = document.querySelectorAll('.audio__progress');
-//     const duration =
-// }
+const isScrolledIntoViewFromTop = (el) => {
+    let rect = el.getBoundingClientRect();
+    let elemTop = rect.top;
+    let elemBottom = rect.bottom;
+    // Only completely visible elements return true:
+    let isVisible = elemTop <= window.innerHeight;
+    // Partially visible elements return true:
+    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
+};
 
-// const parallaxHeading = () => {
-//     window.addEventListener('scroll', (e) => {
-//         const target = document.querySelector('.scroll-heading');
-
-//         let pos = (window.pageYOffset - 4800) * target.dataset.rate;
-
-//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-//     });
-// };
-
-// const parallaxHeading2 = () => {
-//     window.addEventListener('scroll', (e) => {
-//         const target = document.querySelector('.scroll-heading2');
-
-//         let pos = (window.pageYOffset - 6900) * target.dataset.rate;
-
-//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-//     });
-// };
-
-// const parallaxHeading3 = () => {
-//     window.addEventListener('scroll', (e) => {
-//         const target = document.querySelector('.parallax-heading');
-
-//         const rect = target.getBoundingClientRect();
-//         const elemTop = rect.top;
-//         const elemBottom = rect.bottom;
-
-//         const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
-
-//         if (isVisible) {
-//             let pos =
-//                 (document.documentElement.scrollHeight -
-//                     window.pageYOffset -
-//                     2123) *
-//                 target.dataset.rate;
-//             target.style.transform = `translate3d(0px, ${-pos}px, 0px)`;
-//         }
-//     });
-// };
-
-// const parallaxImage = () => {
-//     window.addEventListener('scroll', (e) => {
-//         const target = document.querySelector('.scroll-img');
-//         let pos = (window.pageYOffset - 5000) * target.dataset.rate;
-//         target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
-//     });
+// const isScrolledIntoView = (el) => {
+//     let rect = el.getBoundingClientRect();
+//     let elemTop = rect.top;
+//     let elemBottom = rect.bottom;
+//     console.log(elemTop, elemBottom, window.innerHeight);
+//     // Only completely visible elements return true:
+//     let isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+//     // Partially visible elements return true:
+//     //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+//     return isVisible;
 // };
 
 module.exports = {
     parallax,
     parallaxHorizontal,
-    // parallaxImage,
-    // parallaxHeading,
-    // parallaxHeading2,
-    // parallaxHeading3,
+    isScrolledIntoViewFromTop,
 };

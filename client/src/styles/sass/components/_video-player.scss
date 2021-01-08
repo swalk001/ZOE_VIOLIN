@@ -1,27 +1,42 @@
 .video-player {
-    // position: relative;
+    display: none;
+
+    &--animate {
+        display: block;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
+
+    &__heading-box {
+        opacity: 0.6;
+    }
     &__heading {
-        font-family: 'Nunito';
-        // position: absolute;
         width: 100%;
-        // margin: 26rem 0;
         text-align: center;
-        color: $color-grey-dark;
+        color: #654a4e;
         opacity: 0.6;
         font-size: 5rem;
-        // font-weight: 100;
         z-index: -1;
+
+        &::before {
+            content: '';
+            height: 0.1rem;
+            width: 19rem;
+            margin: 1rem 0rem 1rem 8rem;
+            position: absolute;
+            border: 4rem solid rgba(245, 245, 245, 0.801);
+            border-radius: 2rem;
+            z-index: -1;
+        }
     }
 
     &__video-box {
         display: flex;
         flex-direction: row;
-        padding-top: 10rem;
+        padding-top: 5rem;
         justify-content: space-evenly;
         align-items: center;
         width: 100vw;
-
-        // border: 3px solid red;
     }
 
     &__video {
@@ -31,25 +46,25 @@
         font-size: 0rem;
 
         & > iframe {
-            // padding: 1rem;
+            border: 1.4rem solid #ffffffc7;
             width: 30vw;
             height: 30rem;
-            box-shadow: 5rem 4.5rem 4rem rgba($color-black, 0.4);
+            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
         }
     }
-    &__img-box {
-        height: 250vh;
-        background-color: rgba(red, 0.1);
-        scroll-behavior: smooth;
-        position: absolute;
-        top: 250%;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -2;
+    // &__img-box {
+    //     height: 250vh;
+    //     background-color: rgba(red, 0.1);
+    //     scroll-behavior: smooth;
+    //     position: absolute;
+    //     top: 250%;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     z-index: -2;
 
-        -webkit-clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%);
+    //     -webkit-clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%);
 
-        clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%);
-    }
+    //     clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%);
+    // }
 }

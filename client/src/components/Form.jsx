@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { isScrolledIntoViewFromTop } from './Effects';
 
 const Form = ({ displayModal }) => {
     const [name, setName] = useState('');
@@ -15,8 +16,25 @@ const Form = ({ displayModal }) => {
         //     process.env.USER_ID
         // );
     };
+    const target = document.getElementsByClassName('book');
+    const section = document.getElementsByClassName('section-book');
+
+    window.addEventListener('scroll', () => {
+        if (isScrolledIntoViewFromTop(section[0])) {
+            target[0].classList.add('book--animate');
+        } else {
+            target[0].classList.remove('book--animate');
+        }
+    });
     return (
         <section className="section-book" id="contact">
+            <h2
+                className="book__heading scroll-horizontal"
+                data-rate="-.17"
+                data-direction="vertical"
+            >
+                CONTACT
+            </h2>
             <div className="row">
                 <div className="book">
                     <div className="book__form">
