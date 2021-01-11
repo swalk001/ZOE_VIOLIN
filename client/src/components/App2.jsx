@@ -71,7 +71,6 @@ class App2 extends React.Component {
         target[0].classList.add('navigation--close');
         target[0].classList.remove('navigation--open');
 
-        console.log(target);
         setTimeout(
             () =>
                 this.setState({

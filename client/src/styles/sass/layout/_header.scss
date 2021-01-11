@@ -11,6 +11,7 @@
     width: 100vw;
     z-index: 1000;
     transition: all 0.7s;
+    // border: 1rem solid red;
 
     &__menu {
         position: absolute;
@@ -18,6 +19,10 @@
         font-size: 1.6rem;
         height: inherit;
         width: 10rem;
+
+        @include respond(phone) {
+            left: -1rem;
+        }
 
         & ion-icon {
             @include absCenter;
@@ -36,6 +41,13 @@
         // letter-spacing: 0.1em;
         line-height: 0.8em;
         font-size: 4rem;
+        @include respond(phone) {
+            font-size: 2.5rem;
+            right: 5rem;
+            display: flex;
+            justify-self: end;
+        }
+
         text-decoration: none;
         transition: all 0.2s;
         & a:link,

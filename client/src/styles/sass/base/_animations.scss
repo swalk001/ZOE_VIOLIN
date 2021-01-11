@@ -107,6 +107,28 @@
     }
 }
 
+@-webkit-keyframes fade-slide-in-up-mobile {
+    0% {
+        opacity: 0;
+        transform: translate(3rem, 10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(3rem, 0rem);
+    }
+}
+
+@keyframes fade-slide-in-up-mobile {
+    0% {
+        opacity: 0;
+        transform: translate(3rem, 10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(3rem, 0rem);
+    }
+}
+
 @-webkit-keyframes fade-slide-in-down {
     0% {
         opacity: 0;
@@ -126,6 +148,28 @@
     100% {
         opacity: 1;
         transform: translate(-4rem, 0rem);
+    }
+}
+
+@-webkit-keyframes fade-slide-in-down-mobile {
+    0% {
+        opacity: 0;
+        transform: translate(-3rem, -10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-3rem, 0rem);
+    }
+}
+
+@keyframes fade-slide-in-down-mobile {
+    0% {
+        opacity: 0;
+        transform: translate(-3rem, -10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-3rem, 0rem);
     }
 }
 

@@ -21,6 +21,12 @@
         width: 100vw;
         border: 1.4rem solid #ffffffc7;
 
+        @include respond(phone) {
+            background-size: cover;
+            // flex-direction: column;
+            // height: 100%;
+        }
+
         // padding: 0 0 5rem 0;
         // border: 1rem solid blue;
 
@@ -35,15 +41,29 @@
             height: auto;
             line-height: 19rem;
             width: 45%;
+            // border: 1rem solid blue;
+
+            @include respond(phone) {
+                line-height: 16rem;
+                height: 33vh;
+            }
 
             &--first {
                 display: inline;
                 font-size: 16rem;
+
+                @include respond(phone) {
+                    font-size: 7rem;
+                }
             }
 
             & h2 {
-                margin: 3rem 0 0 1rem;
+                margin: 0 0 0 1rem;
                 font-size: 10rem;
+                @include respond(phone) {
+                    font-size: 5rem;
+                    margin: 2rem 0 0 1rem;
+                }
 
                 -webkit-animation: fade-slide-in-left 1s;
                 animation: fade-slide-in-left 1s;
@@ -53,6 +73,10 @@
                     margin: -5rem 0 0 15rem;
                     -webkit-animation: fade-slide-in-left 1.5s;
                     animation: fade-slide-in-left 1.5s;
+
+                    @include respond(phone) {
+                        margin: -10rem 0 0 8rem;
+                    }
                 }
             }
         }
@@ -63,49 +87,96 @@
             height: auto;
             width: 10%;
             line-height: 5rem;
+            opacity: 0.8;
+
+            @include respond(phone) {
+                margin-left: 12rem;
+                height: 33vh;
+            }
 
             & h2 {
                 font-size: 9rem;
 
+                @include respond(phone) {
+                    font-size: 4rem;
+                    line-height: 4rem;
+                }
+
                 &:first-child {
-                    margin: 30rem 0 0 3rem;
+                    margin: 14rem 0 0 0;
                     transform: translateX(-4rem);
                     -webkit-animation: fade-slide-in-down 1.5s;
                     animation: fade-slide-in-down 1.5s;
+
+                    @include respond(phone) {
+                        margin: 9rem 0 0 0;
+                        transform: translateX(-3rem);
+                        -webkit-animation: fade-slide-in-down-mobile 1.5s;
+                        animation: fade-slide-in-down-mobile 1.5s;
+                    }
                 }
 
                 &:nth-child(2) {
                     transform: translateX(2rem);
                     -webkit-animation: fade-in 1s ease-in;
                     animation: fade-in 1s ease-in;
+                    @include respond(phone) {
+                        transform: none;
+                    }
                 }
 
                 &:nth-child(3) {
                     transform: translateX(7rem);
                     -webkit-animation: fade-slide-in-up 1.5s;
                     animation: fade-slide-in-up 1.5s;
+
+                    @include respond(phone) {
+                        transform: translateX(3rem);
+                        -webkit-animation: fade-slide-in-up-mobile 1.5s;
+                        animation: fade-slide-in-up-mobile 1.5s;
+                    }
                 }
             }
         }
 
         &--heading-right {
-            // border: 1rem solid blue;
             height: auto;
             text-align: right;
             width: 45%;
             line-height: 7rem;
             margin-right: 1rem;
+            // border: 1rem solid blue;
+
+            @include respond(phone) {
+                line-height: 4rem;
+                height: 33vh;
+                position: absolute;
+                @include absCenter;
+                margin-left: 4rem;
+            }
 
             & :nth-child(1) {
                 margin-right: -3rem;
+
+                @include respond(phone) {
+                    margin-right: -1rem;
+                }
             }
 
             & h2 {
                 transition: all 0.5s;
                 font-size: 10rem;
 
+                @include respond(phone) {
+                    font-size: 5rem;
+                }
+
                 &:first-child {
-                    margin: 33rem 0 0 0;
+                    margin: 15rem 0 0 0;
+
+                    @include respond(phone) {
+                        margin: 0rem 0 0 0rem;
+                    }
                 }
                 -webkit-animation: fade-slide-in-right 1s;
                 animation: fade-slide-in-right 1s;
@@ -113,21 +184,55 @@
                 &:nth-child(2) {
                     font-size: 7rem;
                     // line-height: 3rem;
-                    margin: 3rem 15rem 6.5rem 0;
+                    margin: 0 20rem 6.5rem 0;
+
+                    @include respond(phone) {
+                        font-size: 5rem;
+                        margin: 1rem 14rem 7.5rem 0;
+                    }
                 }
 
                 &:nth-child(3) {
                     -webkit-animation: fade-slide-in-right 1.5s;
                     animation: fade-slide-in-right 1.5s;
-                    margin: -8rem 0 0 10rem;
+                    margin: -8rem 3rem 0 0;
+
+                    @include respond(phone) {
+                        margin: -10rem 0rem 0 8rem;
+                    }
 
                     & span {
-                        margin-left: 4rem;
+                        margin-left: 3rem;
+                        @include respond(phone) {
+                            margin-left: 1rem;
+                        }
                     }
                 }
             }
         }
     }
+
+    &__packages {
+        color: #fffffff1;
+        font-size: 4rem;
+        // border: 1rem solid blue;
+        position: absolute;
+        bottom: 2vh;
+        left: 10vw;
+
+        @include respond(phone) {
+            font-size: 3.5rem;
+            text-align: center;
+            @include absCenter;
+            margin-top: 30vh;
+            width: 100%;
+        }
+
+        & ul {
+            list-style: none;
+        }
+    }
+
     &__img-box {
         display: none;
         height: 100%;

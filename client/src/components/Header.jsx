@@ -14,8 +14,8 @@ const Header = ({ displayNavModal }) => {
             } else if (start - end > 0) {
                 target.classList.remove('nb-hide');
             }
+            const header = document.querySelector('.nav-bar__heading');
             if (end > 200) {
-                const header = document.querySelector('.nav-bar__heading');
                 header.classList.add('nav-bar__heading--animate');
             } else {
                 header.classList.remove('nav-bar__heading--animate');

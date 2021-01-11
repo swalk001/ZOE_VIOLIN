@@ -43,16 +43,23 @@ const Hero2 = () => {
                                     <span>vents</span>
                                 </h2>
                             </div>
+                            <div className="hero2__packages">
+                                <ul>
+                                    <li>Solo-Violin</li>
+                                    <li>Violin-Guitar Duo</li>
+                                    <li>Violin-Piano Duo</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <span
+            {/* <span
                 className="hero2__img-box scroll"
                 data-rate=".46"
                 data-direction="vertical"
                 alt="Zoe"
-            />
+            /> */}
         </section>
     );
 };

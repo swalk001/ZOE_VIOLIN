@@ -22,16 +22,16 @@ const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
                         <ion-icon name="close-outline"></ion-icon>
                     </div>
                     <ul className="navigation__ul">
-                        <li onClick={() => handleNav()}>HOME</li>
-                        <li onClick={() => handleNav('bio')}>BIO</li>
+                        <li onClick={() => handleNav()}>Home</li>
+                        <li onClick={() => handleNav('bio')}>Bio</li>
                         <li onClick={() => handleNav('video-player')}>
-                            VIDEOS
+                            Videos
                         </li>
-                        <li onClick={() => handleNav('audio-player')}>SONGS</li>
+                        <li onClick={() => handleNav('audio-player')}>Songs</li>
                         {/* <li onClick={() => handleNav('song-list')}>
                             SONG LIST
                         </li> */}
-                        <li onClick={() => handleNav('contact')}>CONTACT</li>
+                        <li onClick={() => handleNav('contact')}>Contact</li>
                     </ul>
                 </div>
             </section>

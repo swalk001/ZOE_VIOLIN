@@ -10,6 +10,10 @@
     // margin: 1rem 0;
     width: auto;
 
+    @include respond(phone) {
+        width: 100vw;
+    }
+
     &__exit {
         // padding-top: 2rem;
         // padding-left: 2rem;
@@ -25,6 +29,10 @@
             &:hover {
                 cursor: pointer;
                 transform: scale(1.2) rotate(180deg);
+            }
+
+            @include respond(phone) {
+                margin-left: 2rem;
             }
         }
     }
@@ -72,6 +80,11 @@
 
             &:last-child {
                 margin-right: 2.9rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+                margin: 1rem;
             }
         }
     }
