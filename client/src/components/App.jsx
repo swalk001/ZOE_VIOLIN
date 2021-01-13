@@ -1,32 +1,46 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
-import { Router } from '@reach/router';
 import axios from 'axios';
-import Header from './Header.jsx';
+import Hero from './Hero.jsx';
+import Hero2 from './Hero2.jsx';
 import Contact from './Contact.jsx';
 import SongList from './SongList.jsx';
-import Home from './Home.jsx';
 import Modal from './Modal.jsx';
 import Effects from './Effects.js';
+import Header from './Header.jsx';
+import Bio from './Bio.jsx';
+import '../styles/sass/main.scss';
+import AudioPlayer from './AudioPlayer.jsx';
+import Audio2 from './Audio2.jsx';
+import Gallery from './Gallery.jsx';
+import VideoPlayer from './VideoPlayer.jsx';
+import Form from './Form.jsx';
+import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            connect: '',
+            autoScroll: true,
+            instagram: [
+                {
+                    thumbnail: null,
+                    url: null,
+                },
+            ],
             modal: false,
             navModal: false,
         };
     }
 
     componentDidMount() {
-        axios.get('/api/connect').then((data) => {
+        axios.get('/api/instagram').then((data) => {
             this.setState({
-                connect: data.data,
+                instagram: data.data,
             });
         });
-        Object.keys(Effects).forEach((key) => Effects[key]());
+        Effects.parallaxHorizontalLeft();
+        Effects.parallaxHorizontalRight();
     }
 
     displayModal() {
@@ -40,34 +54,60 @@ class App extends React.Component {
             {
                 navModal: !this.state.navModal,
             },
-            () => console.log('nav-modal', this.state.navModal)
+            () => {
+                const target = document.getElementsByClassName('navigation');
+                target[0].classList.remove('navigation--close');
+                target[0].classList.add('navigation--open');
+            }
         );
     }
 
+    hideNavModal() {
+        const target = document.getElementsByClassName('navigation');
+        target[0].classList.add('navigation--close');
+        target[0].classList.remove('navigation--open');
+
+        setTimeout(
+            () =>
+                this.setState({
+                    navModal: !this.state.navModal,
+                }),
+            500
+        );
+    }
+
+    toggleScroll() {
+        this.setState({
+            autoScroll: false,
+        });
+    }
+
     render() {
-        const { modal, navModal } = this.state;
+        const { modal, navModal, autoScroll, instagram } = this.state;
         return (
-            <div className="main-wrapper">
+            <div>
+                <Header displayNavModal={this.displayNavModal.bind(this)} />
+                <Navigation
+                    displayNavModal={this.displayNavModal.bind(this)}
+                    hideNavModal={this.hideNavModal.bind(this)}
+                    navModal={navModal}
+                />
                 <Modal
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <Navigation
-                    navModal={navModal}
-                    displayNavModal={this.displayNavModal.bind(this)}
+                <Hero2 />
+                <Bio />
+                <Gallery
+                    autoScroll={autoScroll}
+                    instagram={instagram}
+                    toggleScroll={this.toggleScroll.bind(this)}
                 />
-                <Header
-                    navModal={navModal}
-                    displayNavModal={this.displayNavModal.bind(this)}
-                />
-                <Router primary={false}>
-                    <Home
-                        path="/"
-                        displayModal={this.displayModal.bind(this)}
-                        modal={modal}
-                    />
-                    <SongList path="song-list" />
-                </Router>
+                <VideoPlayer />
+                {/* <Audio2 /> */}
+                <SongList />
+                <Form displayModal={this.displayModal.bind(this)} />
+                <Footer />
             </div>
         );
     }
