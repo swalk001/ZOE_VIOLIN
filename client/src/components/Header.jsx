@@ -1,5 +1,4 @@
 import React from 'react';
-import AudioPlayer from './AudioPlayer.jsx';
 import { Router, Link } from '@reach/router';
 import scroll from './ScrollOptions.js';
 

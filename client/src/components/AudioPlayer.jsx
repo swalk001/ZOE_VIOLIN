@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Controls from './Controls.jsx';
 import Songs from './Songs.jsx';
 import samples from './Samples.js';
+import { isScrolledIntoViewFromTop } from './Effects';
 
 class AudioPlayer extends React.Component {
     constructor(props) {
@@ -22,7 +23,6 @@ class AudioPlayer extends React.Component {
 
     componentDidMount() {
         this.handleLoad();
-        // window.addEventListener('load', () => this.handleLoad());
     }
 
     handleLoad() {
@@ -57,8 +57,6 @@ class AudioPlayer extends React.Component {
         if (!audio.length) {
             return;
         }
-        console.log(file);
-        // console.log(songList);
         const song = audio[songList.indexOf(file)];
         this.setState(
             {
@@ -97,45 +95,50 @@ class AudioPlayer extends React.Component {
         const time = (Date.now() - start) / 1000;
         const elapsed = (time / dur) * 100;
         const color = elapsed / 200;
-        const target = document.querySelectorAll('.audio__progress');
+        const target = document.querySelectorAll('.audio2__progress');
         if (!dur) {
             target[0].style.background = `linear-gradient(
                 180deg,
-                rgba(255, 255, 255, 0.57) 100%,
-                rgba(161, 152, 79, 0.66) 0%
+                #ffffffc7 100%,
+                rgb(101, 74, 78) 0%
             )`;
         } else if (target[0] && time < dur) {
             target[0].style.background = `linear-gradient(
-            325deg,
-            rgba(255, 255, 255, 0.57) ${100 - elapsed}%,
-            rgba(161, 152, 79, ${0.4 + color}) 0%
+            270deg,
+           #ffffffc7  ${100 - elapsed}%,
+           rgba(101, 74, 78, ${0.4 + color}) 0%
         )`;
         }
     }
 
     displayProgressBar() {
-        const target = document.querySelectorAll('.audio__progress');
-        target[0].style.transform = `translate(-50%, -50%) scale(1.07) `;
+        const target = document.querySelectorAll('.audio2__progress');
+        target[0].style.transform = `scale(1) `;
     }
 
     hideProgressBar() {
-        const target = document.querySelectorAll('.audio__progress');
-        target[0].style.transform = `translate(-50%, -50%) scale(1)`;
+        const target = document.querySelectorAll('.audio2__progress');
+        target[0].style.transform = `scale(.1)`;
     }
 
     render() {
         const { songList, isPlaying, current } = this.state;
 
+        const target = document.getElementsByClassName('audio2');
+        const section = document.getElementsByClassName('section-audio2');
+
+        window.addEventListener('scroll', () => {
+            if (isScrolledIntoViewFromTop(section[0])) {
+                target[0].classList.add('audio2--animate');
+            } else {
+                target[0].classList.remove('audio2--animate');
+            }
+        });
+
         return (
-            <section className="section-audio">
-                <div className="audio__progress"></div>
-                <div className="audio">
-                    <img
-                        src="../imgs/VIOLIN.JPG"
-                        alt="violin"
-                        className="audio__img"
-                    />
-                    <div id="audio" className="audio__player">
+            <section className="section-audio2" id="audio-player">
+                <div className="audio2">
+                    <div id="audio" className="audio2__player col-2-of-3">
                         <Controls
                             isPlaying={isPlaying}
                             handleStop={this.handleStop}
@@ -143,13 +146,14 @@ class AudioPlayer extends React.Component {
                             handleNext={this.handleNext}
                             handlePrev={this.handlePrev}
                         />
-                        <div className="audio__songs">
-                            <Songs
-                                songList={songList}
-                                handlePlay={this.handlePlay}
-                                isPlaying={isPlaying}
-                            />
-                        </div>
+                        <div className="audio2__progress col-2-of-3"></div>
+                    </div>
+                    <div className="audio2__songs col-2-of-3">
+                        <Songs
+                            songList={songList}
+                            handlePlay={this.handlePlay}
+                            isPlaying={isPlaying}
+                        />
                     </div>
                 </div>
             </section>

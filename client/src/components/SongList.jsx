@@ -1,5 +1,5 @@
 import React from 'react';
-import Audio2 from './Audio2.jsx';
+import AudioPlayer from './AudioPlayer.jsx';
 import { isScrolledIntoViewFromTop } from './Effects';
 
 const SongList = () => {
@@ -49,7 +49,7 @@ const SongList = () => {
                         Songs<span>&rarr;</span>
                     </div>
                     <div className="song-list__audio">
-                        <Audio2 />
+                        <AudioPlayer />
                     </div>
                     <div className="song-list__tab song-list__tab--active">
                         <h3>Classical</h3>

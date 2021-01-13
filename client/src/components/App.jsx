@@ -1,16 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import Hero from './Hero.jsx';
-import Hero2 from './Hero2.jsx';
-import Contact from './Contact.jsx';
 import SongList from './SongList.jsx';
 import Modal from './Modal.jsx';
 import Effects from './Effects.js';
 import Header from './Header.jsx';
 import Bio from './Bio.jsx';
 import '../styles/sass/main.scss';
-import AudioPlayer from './AudioPlayer.jsx';
-import Audio2 from './Audio2.jsx';
 import Gallery from './Gallery.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 import Form from './Form.jsx';
@@ -96,7 +92,7 @@ class App extends React.Component {
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <Hero2 />
+                <Hero />
                 <Bio />
                 <Gallery
                     autoScroll={autoScroll}
@@ -104,7 +100,6 @@ class App extends React.Component {
                     toggleScroll={this.toggleScroll.bind(this)}
                 />
                 <VideoPlayer />
-                {/* <Audio2 /> */}
                 <SongList />
                 <Form displayModal={this.displayModal.bind(this)} />
                 <Footer />
