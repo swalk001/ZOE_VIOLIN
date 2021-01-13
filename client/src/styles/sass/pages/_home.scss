@@ -1,11 +1,8 @@
 .section-navigation {
     position: fixed;
-    // height: 100%;
-    // width: auto;
+
     overflow: hidden;
     z-index: 10000;
-    // -webkit-backdrop-filter: blur(20px);
-    // backdrop-filter: blur(20px);
 }
 
 .section-hero {
@@ -13,10 +10,7 @@
 }
 
 .section-hero2 {
-    // height: 100vh;
     width: 100vw;
-    // overflow-x: hidden;
-    // border: 2rem solid green;
 }
 
 .section-bio {
@@ -31,19 +25,18 @@
     align-items: center;
     height: 70rem;
     margin: $gutter-horizontal 0;
-    // overflow: hidden;
 
     @include respond(phone) {
         margin: 0;
-        // height: 100vh;
+
         justify-content: center;
         border: 1rem solid transparent;
     }
 }
 
 .section-video-player {
-    // margin: 15rem 0 0 0;
     overflow: hidden;
+    padding-bottom: 3rem;
 }
 
 .section-audio {
@@ -52,7 +45,7 @@
     align-items: baseline;
     height: 100vh;
     margin: 8rem 0 0 0;
-    // transform: translateX(-15vw);
+
     z-index: 10;
 }
 
@@ -71,7 +64,7 @@
     align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
 
     @include respond(phone) {
         height: auto;
@@ -82,7 +75,7 @@
 .section-contact {
     display: flex;
     text-align: center;
-    // height: auto;
+
     justify-content: center;
 }
 
@@ -99,8 +92,6 @@
 
 .section-footer {
     height: 100%;
-    // border: 2rem solid green;
 
     background-image: linear-gradient(to right bottom, #e6ddde, $color-white);
-    // opacity: 1;
 }
