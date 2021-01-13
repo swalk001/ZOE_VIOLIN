@@ -3,6 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fetchInstagram = require('./fetchInstagram');
+const puppeteer = require('puppeteer');
+const fetch = require('./puppeteer');
+const db = require('../database/index.js');
 
 const app = express();
 
@@ -14,7 +17,17 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/instagram', (req, res) => {
-    Promise.all(fetchInstagram()).then((imgs) => res.send(imgs));
+    // newImages().then((data) => console.log(data));
+    fetch();
+    db.retrieveImages((err, images) => {
+        if (err) {
+            console.log(err);
+            Promise.all(fetchInstagram()).then((imgs) => res.send(imgs));
+        } else {
+            res.send(images);
+        }
+    });
+    // Promise.all(fetchInstagram()).then((imgs) => res.send(imgs));
 });
 
 app.listen(PORT, () => {

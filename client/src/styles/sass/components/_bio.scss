@@ -31,8 +31,23 @@
         color: #654a4e;
         opacity: 0.8;
         line-height: 2.7rem;
-        letter-spacing: 0.08rem;
+        // letter-spacing: 0.08rem;
         text-indent: 6rem;
-        font-weight: bolder;
+        padding: 0 2rem;
+
+        @include respond(phone) {
+            text-indent: 3rem;
+            line-height: 3.5rem;
+
+            font-size: 2rem;
+        }
+
+        & p {
+            @include respond(phone) {
+                display: flex;
+                width: 100% !important;
+                margin-bottom: 3rem;
+            }
+        }
     }
 }

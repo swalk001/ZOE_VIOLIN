@@ -10,6 +10,11 @@
     position: relative;
     transition: all 1s;
 
+    @include respond(phone) {
+        height: 125vh;
+        // display: block;
+    }
+
     &--animate {
         display: flex;
         flex-direction: column;
@@ -17,6 +22,9 @@
         align-items: center;
         -webkit-animation: fade-up 1s;
         animation: fade-up 1s;
+        @include respond(phone) {
+            flex-direction: row;
+        }
     }
 
     &__audio {
@@ -28,7 +36,11 @@
         // object-fit: cover;
         left: 0;
         // z-index: 1000;
-        // border: 1rem solid #c50000c7;
+
+        @include respond(phone) {
+            height: auto;
+            top: 12rem;
+        }
     }
 
     &__wrapper {
@@ -43,6 +55,12 @@
         height: 60vh;
         width: 90%;
         @include box-shadow;
+
+        @include respond(phone) {
+            align-items: baseline;
+            height: auto;
+            padding-top: 0;
+        }
     }
 
     &__heading {
@@ -51,26 +69,42 @@
         font-size: 7rem;
 
         position: absolute;
-        // top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) skew(-12deg);
+
         &--top {
             top: 2.5rem;
+
+            @include respond(phone) {
+                bottom: 0rem;
+                top: unset;
+            }
 
             & :last-child {
                 font-size: 4rem;
                 color: #654a4e;
                 opacity: 0.5;
+
+                @include respond(phone) {
+                    display: none;
+                }
             }
         }
 
         &--bottom {
             bottom: -2rem;
+            @include respond(phone) {
+                top: 6rem;
+                bottom: unset;
+            }
 
             & :first-child {
                 font-size: 4rem;
                 color: #654a4e;
                 opacity: 0.5;
+                @include respond(phone) {
+                    display: none;
+                }
             }
         }
     }
@@ -89,6 +123,10 @@
         background-color: rgba(0, 0, 0, 0.5);
         color: $color-white;
 
+        @include respond(phone) {
+            transform: skew(12deg) translateY(2rem);
+        }
+
         &:hover {
             cursor: pointer;
         }
@@ -99,7 +137,7 @@
         }
 
         & h3 {
-            transform: skew(-20deg);
+            transform: translateY(-0.5rem) skew(-20deg);
 
             font-size: 2rem;
         }
@@ -124,6 +162,13 @@
             width: 30vw;
             right: 0;
             z-index: 10;
+
+            @include respond(phone) {
+                bottom: 7rem;
+                width: 100%;
+                // position: relative;
+                padding: 1rem;
+            }
 
             &--animate {
                 // display: block;

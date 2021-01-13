@@ -32,10 +32,18 @@
     height: 70rem;
     margin: $gutter-horizontal 0;
     // overflow: hidden;
+
+    @include respond(phone) {
+        margin: 0;
+        // height: 100vh;
+        justify-content: center;
+        border: 1rem solid transparent;
+    }
 }
 
 .section-video-player {
     // margin: 15rem 0 0 0;
+    overflow: hidden;
 }
 
 .section-audio {
@@ -52,12 +60,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    // opacity: 0.9;
     width: 100vw;
-    // margin: 15rem 0 0 0;
-    // border-radius: 10rem;
-    // overflow: hidden;
-    // transform: translateX(-15vw);
 }
 
 .section-song-list {
@@ -69,6 +72,11 @@
 
     width: 100vw;
     height: 100vh;
+
+    @include respond(phone) {
+        height: auto;
+        margin: 1rem 0;
+    }
 }
 
 .section-contact {
@@ -83,6 +91,10 @@
     background-color: #ffffffc7;
     @include blur;
     padding: 5.5rem 0 0 0;
+
+    @include respond(phone) {
+        height: auto;
+    }
 }
 
 .section-footer {

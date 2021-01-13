@@ -19,17 +19,32 @@
         width: 80vw;
         overflow: hidden;
         padding: 5rem;
+        @include respond(phone) {
+            // width: 90vw;
+            padding: 0;
+            justify-content: space-evenly;
+            align-items: baseline;
+
+            // border: 1rem solid black;
+        }
     }
 
     &__img {
         height: auto;
+
+        @include respond(phone) {
+            display: flex;
+            width: 27vw !important;
+            // border: 1rem solid olive;
+            justify-content: center;
+        }
 
         & img {
             border: 1.4rem solid #ffffffc7;
             padding: 1rem;
 
             margin: 4rem 0;
-            height: 30rem;
+            height: 32rem;
             width: 100%;
             -o-object-fit: cover;
             object-fit: cover;
@@ -41,6 +56,15 @@
             animation: fade-in 1s;
             transition: all 0.3s;
             box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+
+            @include respond(phone) {
+                border: 1rem solid #ffffffc7;
+                border: none;
+                margin: 2rem 0;
+                width: 30vw !important;
+                height: 17rem;
+                padding: 0rem;
+            }
 
             &:hover {
                 transform: translateY(-1rem) scale(1.04);
@@ -66,11 +90,11 @@
         }
 
         &--prev {
-            margin-right: 2rem;
+            margin-right: 0rem;
         }
 
         &--next {
-            margin-left: 2rem;
+            margin-left: 0rem;
         }
     }
 
@@ -80,6 +104,12 @@
         font-size: 4rem;
         opacity: 0.6;
         transition: all 0.3s;
+
+        @include respond(phone) {
+            top: 0;
+            margin: 0;
+            margin: 0 0 $gutter-horizontal 0;
+        }
 
         &:hover {
             cursor: pointer;
