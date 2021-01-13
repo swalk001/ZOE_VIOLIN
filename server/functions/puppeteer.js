@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const axios = require('axios');
-const db = require('../database/index.js');
+const db = require('../../database/index');
 
 const fetch = () => {
     return () => {

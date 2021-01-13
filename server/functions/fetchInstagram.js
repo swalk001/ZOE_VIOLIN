@@ -1,6 +1,5 @@
 const axios = require('axios');
 const puppeteer = require('puppeteer');
-const newImages = require('./puppeteer');
 
 const fetchInstagram = () => {
     const access = process.env.ACCESS_TOKEN;

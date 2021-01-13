@@ -2,9 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const fetchInstagram = require('./fetchInstagram');
+const fetchInstagram = require('./functions/fetchInstagram');
 const puppeteer = require('puppeteer');
-const fetch = require('./puppeteer');
+const fetch = require('./functions/puppeteer');
 const db = require('../database/index.js');
 
 const app = express();
