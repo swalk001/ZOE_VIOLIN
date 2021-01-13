@@ -1,5 +1,5 @@
 import React from 'react';
-import { isScrolledIntoViewFromTop } from './Effects';
+import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Bio = () => {
     const target = document.getElementsByClassName('bio');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { isScrolledIntoViewFromTop } from './Effects';
+import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Form = ({ displayModal }) => {
     const [name, setName] = useState('');

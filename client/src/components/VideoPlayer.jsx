@@ -1,5 +1,5 @@
 import React from 'react';
-import { isScrolledIntoViewFromTop } from './Effects';
+import { isScrolledIntoViewFromTop } from '../js/Effects';
 
 const VideoPlayer = () => {
     const target = document.getElementsByClassName('video-player');

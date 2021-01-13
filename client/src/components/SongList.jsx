@@ -1,6 +1,6 @@
 import React from 'react';
 import AudioPlayer from './AudioPlayer.jsx';
-import { isScrolledIntoViewFromTop } from './Effects';
+import { isScrolledIntoViewFromTop } from '../js/Effects';
 
 const SongList = () => {
     const tabs = document.querySelectorAll('.song-list__tab');

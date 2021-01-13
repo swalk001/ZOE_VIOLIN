@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
-import scroll from './ScrollOptions.js';
+import scroll from '../js/ScrollOptions.js';
 
 const Header = ({ displayNavModal }) => {
     window.addEventListener('scroll', () => {

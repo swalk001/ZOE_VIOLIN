@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
-import scroll from './ScrollOptions.js';
+import scroll from '../js/ScrollOptions.js';
 
 const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
     const handleNav = (id = null) => {
@@ -28,9 +28,7 @@ const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
                             Videos
                         </li>
                         <li onClick={() => handleNav('audio-player')}>Songs</li>
-                        {/* <li onClick={() => handleNav('song-list')}>
-                            SONG LIST
-                        </li> */}
+
                         <li onClick={() => handleNav('contact')}>Contact</li>
                     </ul>
                 </div>

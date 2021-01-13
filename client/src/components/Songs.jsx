@@ -13,7 +13,6 @@ const Songs = ({ songList, handlePlay, isPlaying }) => {
                             key={song}
                             onClick={(e) => handlePlay(e.target.innerHTML)}
                         >
-                            {/* <div className="audio__songs--number">{i + 1}</div> */}
                             {song}
                         </li>
                     ) : (
@@ -21,7 +20,6 @@ const Songs = ({ songList, handlePlay, isPlaying }) => {
                             key={song}
                             onClick={(e) => handlePlay(e.target.innerHTML)}
                         >
-                            {/* <div className="audio__songs--number">{i + 1}</div> */}
                             {song}
                         </li>
                     );

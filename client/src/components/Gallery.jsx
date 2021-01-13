@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { isScrolledIntoViewFromTop } from './Effects';
+import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
     const [photos, setPhotos] = useState([0, 1, 2, 3, 4, 5]);

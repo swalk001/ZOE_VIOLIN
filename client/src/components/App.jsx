@@ -3,7 +3,7 @@ import axios from 'axios';
 import Hero from './Hero.jsx';
 import SongList from './SongList.jsx';
 import Modal from './Modal.jsx';
-import Effects from './Effects.js';
+import Effects from '../js/Effects.js';
 import Header from './Header.jsx';
 import Bio from './Bio.jsx';
 import '../styles/sass/main.scss';

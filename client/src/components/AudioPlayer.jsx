@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Controls from './Controls.jsx';
 import Songs from './Songs.jsx';
-import samples from './Samples.js';
-import { isScrolledIntoViewFromTop } from './Effects';
+import samples from '../js/Samples.js';
+import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 class AudioPlayer extends React.Component {
     constructor(props) {

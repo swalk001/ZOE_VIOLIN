@@ -4,8 +4,6 @@ const Hero = () => {
     return (
         <section className="section-hero2">
             <div className="hero2">
-                {/* <h2>Curated</h2>
-                <h2>Music</h2> */}
                 <div className="row">
                     <div className="hero2__img-wrapper">
                         <div className="hero2__img">
@@ -54,12 +52,6 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            {/* <span
-                className="hero2__img-box scroll"
-                data-rate=".46"
-                data-direction="vertical"
-                alt="Zoe"
-            /> */}
         </section>
     );
 };
