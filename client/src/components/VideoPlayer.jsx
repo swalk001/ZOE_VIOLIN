@@ -58,12 +58,6 @@ const VideoPlayer = () => {
                     </div>
                 </div>
             </div>
-            {/* <span
-                className="video-player__img-box scroll"
-                data-rate="-.1"
-                data-direction="vertical"
-                alt="Zoe"
-            /> */}
         </section>
     );
 };
