@@ -8,13 +8,12 @@ const Form = ({ displayModal }) => {
     const [message, setMessage] = useState('');
     const sendEmail = (data) => {
         displayModal();
-        console.log(data);
-        // emailjs.send(
-        //     process.env.SERVICE_ID,
-        //     process.env.TEMPLATE_ID,
-        //     data,
-        //     process.env.USER_ID
-        // );
+        emailjs.send(
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID,
+            data,
+            process.env.USER_ID
+        );
     };
     const target = document.getElementsByClassName('book');
     const section = document.getElementsByClassName('section-book');
@@ -80,40 +79,8 @@ const Form = ({ displayModal }) => {
                                     Email Address
                                 </label>
                             </div>
-                            {/* <div className="form__group u-margin-bottom-medium">
-                                <div className="form__radio-group">
-                                    <input
-                                        type="radio"
-                                        className="form__radio-input"
-                                        id="small"
-                                        name="size"
-                                    />
-                                    <label
-                                        htmlFor="small"
-                                        className="form__radio-label"
-                                    >
-                                        <span className="form__radio-button"></span>
-                                        Solo
-                                    </label>
-                                </div>
-                                <div className="form__radio-group">
-                                    <input
-                                        type="radio"
-                                        className="form__radio-input"
-                                        id="large"
-                                        name="size"
-                                    />
-                                    <label
-                                        htmlFor="large"
-                                        className="form__radio-label"
-                                    >
-                                        <span className="form__radio-button"></span>
-                                        Duo
-                                    </label>
-                                </div>
-                            </div> */}
+
                             <label>
-                                {/* <div id="form-message">&nbsp;</div> */}
                                 <textarea
                                     type="text"
                                     className="contact--textarea"
