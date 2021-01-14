@@ -1,0 +1,117 @@
+.contact {
+    &__form {
+        width: 100%;
+        height: 100%;
+        border: 0.5rem solid purple;
+        text-align: left;
+        // font-family: Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        justify-content: center;
+        min-width: 92vw;
+        height: auto;
+
+        &--button {
+            margin: 1rem 0 2rem 18%;
+            background-color: $color-white;
+            color: $color-grey-dark;
+            border: 0.2rem solid #654a4e5d;
+            outline: none;
+            font-size: 180%;
+            width: 16rem;
+            padding: 1vh 0;
+            height: auto;
+            text-align: center;
+            border-radius: 5px;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        &--button:hover {
+            opacity: 1;
+            background-color: #654a4e;
+            color: $color-white;
+            cursor: pointer;
+            transform: translateY(-1.5px) scale(1.03);
+        }
+
+        &--button a:link,
+        &--button a:visited {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 90%;
+        }
+
+        input {
+            height: 5vh;
+            // width: 50vw;
+            bottom: 0;
+            font-size: 10%;
+            font-weight: lighter;
+            text-align: left;
+            background: white;
+            outline: none;
+            resize: none;
+            transition: all 0.3s;
+        }
+    }
+    & > h2 {
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 3em;
+        // margin: 5vh 0;
+    }
+
+    & label {
+        font-size: 200%;
+        /* margin: 2vh 0; */
+    }
+
+    &--textarea {
+        border: 0.5rem solid transparent;
+
+        margin: 0 0;
+        padding: 1rem 1.5rem;
+        width: 50%;
+        height: 15vh;
+        background-color: #654a4e11;
+        font-size: 1.8rem;
+        font-family: inherit;
+        opacity: 0.7;
+        outline: none;
+        resize: none;
+    }
+}
+
+.label-field {
+    margin: 1vh 0 0 0;
+    padding: 0;
+}
+
+#form-name,
+#form-email,
+#form-message {
+    color: rgba(255, 0, 0, 0.618);
+    margin: 0.1vh 0 0.5vh 0;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.animate-pop-in {
+    -webkit-animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+}
+
+.modal-h1 {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.modal-h2 {
+    font-size: 90%;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+    margin-bottom: 20vh;
+}

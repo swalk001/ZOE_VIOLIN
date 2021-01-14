@@ -1,0 +1,97 @@
+.section-navigation {
+    position: fixed;
+
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.section-hero {
+    border: 2px solid rgb(148, 125, 148);
+}
+
+.section-hero2 {
+    width: 100vw;
+}
+
+.section-bio {
+    overflow: hidden;
+    background-color: #ffffffc7;
+    padding: 5rem 0;
+}
+
+.section-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70rem;
+    margin: $gutter-horizontal 0;
+
+    @include respond(phone) {
+        margin: 0;
+
+        justify-content: center;
+        border: 1rem solid transparent;
+    }
+}
+
+.section-video-player {
+    overflow: hidden;
+    padding-bottom: 3rem;
+}
+
+.section-audio {
+    position: relative;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+    margin: 8rem 0 0 0;
+
+    z-index: 10;
+}
+
+.section-audio2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+}
+
+.section-song-list {
+    margin: -1rem 0 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 80vh;
+
+    @include respond(phone) {
+        height: auto;
+        margin: 1rem 0;
+    }
+}
+
+.section-contact {
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+}
+
+.section-book {
+    height: 90vh;
+    background-color: #ffffffc7;
+    @include blur;
+    padding: 5.5rem 0 0 0;
+
+    @include respond(phone) {
+        height: auto;
+    }
+}
+
+.section-footer {
+    height: 100%;
+
+    background-image: linear-gradient(to right bottom, #e6ddde, $color-white);
+}

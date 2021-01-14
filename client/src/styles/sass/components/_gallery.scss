@@ -1,0 +1,126 @@
+.gallery {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+    display: none;
+
+    &--animate {
+        display: flex;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+    }
+    &__img-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        overflow: hidden;
+        padding: 5rem;
+        @include respond(phone) {
+            // width: 90vw;
+            padding: 0;
+            justify-content: space-evenly;
+            align-items: baseline;
+
+            // border: 1rem solid black;
+        }
+    }
+
+    &__img {
+        height: auto;
+
+        @include respond(phone) {
+            display: flex;
+            width: 27vw !important;
+            // border: 1rem solid olive;
+            justify-content: center;
+        }
+
+        & img {
+            border: 1.4rem solid #ffffffc7;
+            padding: 1rem;
+
+            margin: 4rem 0;
+            height: 32rem;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-animation: fade-in 1s;
+            animation: fade-in 1s;
+            transition: all 0.3s;
+            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+
+            @include respond(phone) {
+                border: 1rem solid #ffffffc7;
+                border: none;
+                margin: 2rem 0;
+                width: 30vw !important;
+                height: 17rem;
+                padding: 0rem;
+            }
+
+            &:hover {
+                transform: translateY(-1rem) scale(1.04);
+                cursor: pointer;
+                box-shadow: 0.75rem 2.5rem 4rem rgba($color-black, 0.5);
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        font-size: 5rem;
+        color: $color-grey-dark;
+        height: 100%;
+        width: 4rem;
+        // background-color: rgba($color-white, 0.5);
+
+        & :hover {
+            transform: scale(1.3);
+            transition: all 0.3s;
+            cursor: pointer;
+            // background-color: rgba($color-black, 0.1);
+        }
+
+        &--prev {
+            margin-right: 0rem;
+        }
+
+        &--next {
+            margin-left: 0rem;
+        }
+    }
+
+    &__icon {
+        @include absCenter;
+        margin-top: 1rem;
+        font-size: 4rem;
+        opacity: 0.6;
+        transition: all 0.3s;
+
+        @include respond(phone) {
+            top: 0;
+            margin: 0;
+            margin: 0 0 $gutter-horizontal 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & ion-icon {
+            transition: all 0.3s;
+
+            &:hover {
+                transform: rotate(360deg) scale(1.2);
+            }
+        }
+    }
+}

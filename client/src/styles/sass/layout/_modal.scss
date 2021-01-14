@@ -1,0 +1,56 @@
+.contact-modal-wrapper {
+    align-items: center;
+    display: flex;
+    font-size: 3vh;
+    height: 100vh;
+    background-color: #e6ddde4f;
+    color: #654a4e;
+    width: 100vw;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    transform-style: preserve-3d;
+    // perspective: 100px;
+    z-index: 10000;
+}
+
+.contact-modal-wrapper::before {
+    -webkit-animation: fade-slide-down 1s 0.5s cubic-bezier(0, 0.5, 0, 1)
+        forwards;
+    animation: fade-slide-down 1s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+    // background: linear-gradient(
+    //     to bottom,
+    //     rgba(0, 0, 0, 0),
+    //     rgba(0, 0, 0, 0.8)
+    // );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    content: '';
+    opacity: 1;
+    position: absolute;
+    height: 50vh;
+    top: 20%;
+    right: 0;
+    // bottom: 0;
+    left: 0;
+    // z-index: -;
+}
+
+.animate-pop-in {
+    -webkit-animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+}
+
+.modal-h1 {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.modal-h2 {
+    font-size: 90%;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+    margin-bottom: 20vh;
+}

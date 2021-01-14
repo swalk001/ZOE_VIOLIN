@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    height: 12rem;
+
+    &__text {
+        display: flex;
+        justify-content: center;
+    }
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &--knot {
+            width: 8rem;
+
+            @include respond(phone) {
+                width: 6rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &--wire {
+            height: 6rem;
+
+            @include respond(phone) {
+                height: 4rem;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
