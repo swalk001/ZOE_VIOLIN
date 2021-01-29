@@ -12,6 +12,7 @@ import VideoPlayer from './VideoPlayer.jsx';
 import Form from './Form.jsx';
 import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
+import Banner from './Banner.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -92,7 +93,8 @@ class App extends React.Component {
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <Hero />
+                <Banner />
+                {/* <Hero /> */}
                 <Bio />
                 <Gallery
                     autoScroll={autoScroll}

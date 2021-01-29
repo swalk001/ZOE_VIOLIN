@@ -68,8 +68,8 @@
                     margin: 2rem 0 0 1rem;
                 }
 
-                -webkit-animation: fade-slide-in-left 1s;
-                animation: fade-slide-in-left 1s;
+                -webkit-animation: fade-slide-in-left 2s;
+                animation: fade-slide-in-left 2s;
                 transition: all 0.5s;
 
                 &:nth-child(2) {
@@ -108,8 +108,8 @@
                 &:first-child {
                     margin: 14rem 0 0 0;
                     transform: translateX(-4rem);
-                    -webkit-animation: fade-slide-in-down 1.5s;
-                    animation: fade-slide-in-down 1.5s;
+                    -webkit-animation: fade-slide-in-down 2.5s;
+                    animation: fade-slide-in-down 2.5s;
 
                     @include respond(phone) {
                         margin: 11rem 0 0 0;

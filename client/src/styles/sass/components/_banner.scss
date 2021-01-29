@@ -1,0 +1,11 @@
+.banner {
+    height: auto;
+    // width: auto;
+    overflow: hidden;
+    &__img {
+        height: 150vh;
+        width: 100vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}

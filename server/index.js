@@ -18,7 +18,7 @@ app.use('/', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/instagram', (req, res) => {
     // newImages().then((data) => console.log(data));
-    fetch();
+    // fetch();
     db.retrieveImages((err, images) => {
         if (err) {
             console.log(err);
