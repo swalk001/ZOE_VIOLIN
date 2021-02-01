@@ -13,6 +13,7 @@ import Form from './Form.jsx';
 import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
 import Banner from './Banner.jsx';
+import Header2 from './Header2.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -83,7 +84,7 @@ class App extends React.Component {
         const { modal, navModal, autoScroll, instagram } = this.state;
         return (
             <div>
-                <Header displayNavModal={this.displayNavModal.bind(this)} />
+                {/* <Header displayNavModal={this.displayNavModal.bind(this)} />
                 <Navigation
                     displayNavModal={this.displayNavModal.bind(this)}
                     hideNavModal={this.hideNavModal.bind(this)}
@@ -92,7 +93,8 @@ class App extends React.Component {
                 <Modal
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
-                />
+                /> */}
+                <Header2 />
                 <Banner />
                 {/* <Hero /> */}
                 <Bio />

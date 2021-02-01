@@ -1,0 +1,54 @@
+.header {
+    width: 100vw;
+    height: 7rem;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+    font-family: 'Nunito', serif;
+
+    transition: all 0.2s;
+    border-bottom: 0.15rem solid #fff2e9;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+
+    &--trans {
+        background-color: #fff2e9;
+        color: black;
+    }
+
+    &__nav {
+        align-self: flex-end;
+        padding: 2rem;
+    }
+
+    &__nav--list {
+        // border: 2px solid gold;
+    }
+
+    &__nav--item {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-right: 5rem;
+        padding-bottom: 0.8rem;
+        border: none;
+
+        &:hover {
+            border-bottom: 2px solid black;
+            cursor: pointer;
+        }
+    }
+
+    // &__badge {
+    //     justify-self: flex-start;
+    //     padding-left: 5rem;
+
+    //     & img {
+    //         cursor: pointer;
+    //         height: 10rem;
+    //         width: auto;
+    //         padding: 1rem;
+    //         padding-right: 3rem;
+    //     }
+    // }
+}

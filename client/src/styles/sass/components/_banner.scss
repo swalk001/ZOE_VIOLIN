@@ -1,11 +1,30 @@
 .banner {
-    height: auto;
-    // width: auto;
+    height: 100vh;
     overflow: hidden;
+    position: relative;
+    transition: all 1s;
+
     &__img {
         height: 150vh;
         width: 100vw;
         -o-object-fit: cover;
         object-fit: cover;
+        -webkit-animation: fade-in 2s;
+        animation: fade-in 2s;
+    }
+
+    &__heading {
+        position: absolute;
+        text-align: center;
+        width: 60rem;
+        right: 5rem;
+        opacity: 0;
+        top: 25rem;
+        line-height: 0.9;
+        font-size: 11rem;
+        -webkit-animation: fade-in 2s 2s;
+        animation: fade-in 2s 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
     }
 }

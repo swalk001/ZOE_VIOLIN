@@ -5,6 +5,9 @@
     z-index: 10000;
 }
 
+.section-header {
+}
+
 .section-hero {
     border: 2px solid rgb(148, 125, 148);
 }
@@ -43,7 +46,8 @@
 
 .section-video-player {
     overflow: hidden;
-    padding-bottom: 3rem;
+    background-color: #ffffffc7;
+    padding: 8rem 0 10rem 0;
 }
 
 .section-audio {
