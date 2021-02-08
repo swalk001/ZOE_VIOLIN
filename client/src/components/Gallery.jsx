@@ -75,14 +75,14 @@ const Gallery = ({ autoScroll, toggleScroll, instagram }) => {
                             );
                         })}
                     </div>
-                    <div
+                    {/* <div
                         className="gallery__icon"
                         onClick={() =>
                             window.open('https://www.instagram.com/zoewviolin/')
                         }
                     >
                         <ion-icon name="logo-instagram"></ion-icon>
-                    </div>
+                    </div> */}
                     <div
                         className="gallery__btn gallery__btn--next"
                         onClick={() => {

@@ -14,6 +14,8 @@ import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
 import Banner from './Banner.jsx';
 import Header2 from './Header2.jsx';
+import Instagram from './Instagram.jsx';
+import Description from './Description.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -37,8 +39,8 @@ class App extends React.Component {
                 instagram: data.data,
             });
         });
-        Effects.parallaxHorizontalLeft();
-        Effects.parallaxHorizontalRight();
+        // Effects.parallaxHorizontalLeft();
+        // Effects.parallaxHorizontalRight();
     }
 
     displayModal() {
@@ -98,11 +100,13 @@ class App extends React.Component {
                 <Banner />
                 {/* <Hero /> */}
                 <Bio />
-                <Gallery
+                <Description instagram={instagram} />
+                {/* <Instagram instagram={instagram} /> */}
+                {/* <Gallery
                     autoScroll={autoScroll}
                     instagram={instagram}
                     toggleScroll={this.toggleScroll.bind(this)}
-                />
+                /> */}
                 <VideoPlayer />
                 <SongList />
                 <Form displayModal={this.displayModal.bind(this)} />

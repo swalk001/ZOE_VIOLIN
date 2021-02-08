@@ -1,10 +1,14 @@
 .bio {
     transition: all 0.2s;
-    font-family: 'Nunito', serif;
+    // font-family: 'Nunito', serif;
+    // display: flex;
+    position: relative;
 
     &--animate {
         -webkit-animation: fade-up 1s;
         animation: fade-up 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
     }
     &__heading-box {
         text-align: center;
@@ -13,8 +17,8 @@
     &__heading {
         color: black;
 
-        opacity: 0.6;
-        font-size: 5rem;
+        // opacity: 0.6;
+        font-size: 6rem;
         padding: 0 0 5rem 0;
 
         &::before {
@@ -30,27 +34,28 @@
         }
     }
     &__text {
-        font-size: 1.75rem;
+        font-size: 2rem;
+        font-weight: 500;
         color: black;
         opacity: 0.8;
         line-height: 2.7rem;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.06rem;
         text-indent: 6rem;
         padding: 0 2rem;
 
-        @include respond(phone) {
-            text-indent: 3rem;
-            line-height: 3.5rem;
+        // @include respond(phone) {
+        //     text-indent: 3rem;
+        //     line-height: 3.5rem;
 
-            font-size: 2rem;
-        }
+        //     font-size: 2rem;
+        // }
 
-        & p {
-            @include respond(phone) {
-                display: flex;
-                width: 100% !important;
-                margin-bottom: 3rem;
-            }
-        }
+        // & p {
+        //     @include respond(phone) {
+        //         display: flex;
+        //         width: 100% !important;
+        //         margin-bottom: 3rem;
+        //     }
+        // }
     }
 }

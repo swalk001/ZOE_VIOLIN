@@ -28,7 +28,7 @@ const Form = ({ displayModal }) => {
     return (
         <section className="section-book" id="contact">
             <h2
-                className="book__heading scroll-horizontal-left"
+                className="book__heading scroll-horizontal-right"
                 data-rate="-.17"
                 data-direction="vertical"
             >

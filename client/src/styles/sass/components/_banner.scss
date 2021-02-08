@@ -11,6 +11,7 @@
         object-fit: cover;
         -webkit-animation: fade-in 2s;
         animation: fade-in 2s;
+        transform: scale(1);
     }
 
     &__heading {
@@ -18,13 +19,83 @@
         text-align: center;
         width: 60rem;
         right: 5rem;
-        opacity: 0;
+        // opacity: 0;
         top: 25rem;
         line-height: 0.9;
-        font-size: 11rem;
-        -webkit-animation: fade-in 2s 2s;
-        animation: fade-in 2s 2s;
+        font-size: 13rem;
+        font-weight: 500;
+        // -webkit-animation: fade-in 2s 2s;
+        // animation: fade-in 2s 2s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
+        transition: all 0.2s;
+
+        & span {
+            display: inline-block;
+            opacity: 0;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards !important;
+            transition: all 0.2s;
+        }
+
+        & :nth-child(1) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(2) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(3) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(5) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
+
+        & :nth-child(6) {
+            -webkit-animation: fade-slide-in-down 2.6s ease-in-out;
+            animation: fade-slide-in-down 2.6s ease-in-out;
+        }
+
+        & :nth-child(7) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(8) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(9) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
+
+        & :nth-child(10) {
+            -webkit-animation: fade-slide-in-down 2.2s ease-in-out;
+            animation: fade-slide-in-down 2.2s ease-in-out;
+        }
+
+        & :nth-child(11) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(12) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(13) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
     }
 }
