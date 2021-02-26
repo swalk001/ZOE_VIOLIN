@@ -35,7 +35,6 @@
         @include respond(phone) {
             display: flex;
             width: 27vw !important;
-            // border: 1rem solid olive;
             justify-content: center;
         }
 

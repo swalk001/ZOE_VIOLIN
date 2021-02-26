@@ -19,16 +19,19 @@
         text-align: center;
         width: 80rem;
         right: 0rem;
-        // text-align: right;
         top: 10rem;
         line-height: 0.7;
         font-size: 18rem;
         font-weight: 500;
-        // -webkit-animation: fade-in 2s 2s;
-        // animation: fade-in 2s 2s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
         transition: all 0.2s;
+
+        @include respond(phone) {
+            font-size: 10rem;
+            top: 25rem;
+            left: 4rem;
+        }
 
         & span {
             display: inline-block;

@@ -29,7 +29,6 @@ class App extends React.Component {
                 },
             ],
             modal: false,
-            navModal: false,
             showMusic: false,
         };
     }
@@ -106,6 +105,10 @@ class App extends React.Component {
                 {/* <SongList /> */}
                 <MusicPlayer showMusic={showMusic} />
                 <Form displayModal={this.displayModal.bind(this)} />
+                <Modal
+                    modal={modal}
+                    displayModal={this.displayModal.bind(this)}
+                />
                 <Footer />
             </div>
         );

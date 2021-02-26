@@ -10,10 +10,17 @@
     transform: translate(0, 7rem);
     z-index: 1000;
     transition: all 0.5s ease-in-out;
-    // font-family: ;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    background: linear-gradient(344deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
+
+    @include respond(phone) {
+        height: 60vh;
+    }
+    @include respond(tab-port) {
+        height: 65vh;
+    }
 
     &--hide {
         transform: translate(100%, 7rem);
@@ -22,7 +29,6 @@
     &__songs {
         height: 45rem;
         overflow-y: scroll;
-        // background-color: rgba(255, 255, 255, 0.568);
         background: rgb(47, 47, 47);
         background: linear-gradient(
             344deg,
@@ -54,7 +60,7 @@
     }
 
     &__playing {
-        font-size: 1rem;
+        font-size: 1.25rem;
         grid-area: 7/2/7/8;
         display: flex;
         height: 2rem;
@@ -84,14 +90,19 @@
         color: white;
         justify-content: center;
         align-items: flex-start;
-        margin-top: 1rem;
+        padding: 1rem 0 1rem 0;
+        // background: linear-gradient(
+        //     344deg,
+        //     rgb(0, 0, 0) 0%,
+        //     rgb(39, 39, 39) 100%
+        // );
 
         & ion-icon {
             display: flex;
             align-items: center;
-            // justify-self: center;
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             height: 5rem;
+            cursor: pointer;
         }
 
         &--prev ion-icon {

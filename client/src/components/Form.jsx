@@ -8,12 +8,12 @@ const Form = ({ displayModal }) => {
     const [message, setMessage] = useState('');
     const sendEmail = (data) => {
         displayModal();
-        emailjs.send(
-            process.env.SERVICE_ID,
-            process.env.TEMPLATE_ID,
-            data,
-            process.env.USER_ID
-        );
+        // emailjs.send(
+        //     process.env.SERVICE_ID,
+        //     process.env.TEMPLATE_ID,
+        //     data,
+        //     process.env.USER_ID
+        // );
     };
     const target = document.getElementsByClassName('book');
     const section = document.getElementsByClassName('section-book');
@@ -28,7 +28,7 @@ const Form = ({ displayModal }) => {
     return (
         <section className="section-book" id="contact">
             <h2
-                className="book__heading scroll-horizontal-right"
+                className="book__heading"
                 data-rate="-.17"
                 data-direction="vertical"
             >

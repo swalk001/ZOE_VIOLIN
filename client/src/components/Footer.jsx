@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <section className="section-footer">
             <div className="footer">
-                <div className="footer__social col-1-of-2">
+                <div className="footer__social">
                     <img
                         className="footer__social--knot"
                         alt="As Seen on The Knot"
@@ -16,7 +16,7 @@ const Footer = () => {
                         }
                     ></img>
                 </div>
-                <div className="footer__social col-1-of-2">
+                <div className="footer__social">
                     <img
                         className="footer__social--wire"
                         alt="Wedding-Wire"
@@ -27,6 +27,19 @@ const Footer = () => {
                             )
                         }
                     ></img>
+                </div>
+                <div className="footer__social">
+                    <a
+                        target="_blank"
+                        href="https://www.weddingwire.com/biz/zoe-solo-violinist/06c424cd71f91cc7.html"
+                        title="WeddingWire Couples' Choice Award Winner 2021"
+                    >
+                        <img
+                            className="footer__social--award"
+                            alt="Zoe, Solo Violinist"
+                            src="https://cdn1.weddingwire.com/img/badges/2021/badge-weddingawards_en_US.png"
+                        />
+                    </a>
                 </div>
 
                 {/* <div className="footer__text col-1-of-2"> */}

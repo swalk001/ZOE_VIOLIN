@@ -11,6 +11,11 @@
     // align-items: flex-start;
     position: relative;
 
+    @include respond(phone) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
     &__heading {
         font-size: 4rem;
         color: white;
@@ -42,12 +47,15 @@
             font-size: 7rem;
             font-style: italic;
             padding: 0 0.5rem;
-            // border: 2px solid red;
         }
     }
 
     &__img {
         overflow: hidden;
+        @include respond(phone) {
+            width: 33.33333vw;
+        }
+
         & img {
             background-color: white;
             width: 25vw;
@@ -56,6 +64,9 @@
             object-fit: cover;
             cursor: pointer;
             transition: all 1s;
+            @include respond(phone) {
+                width: 33vw;
+            }
 
             &:hover {
                 transform: scale(1.1);

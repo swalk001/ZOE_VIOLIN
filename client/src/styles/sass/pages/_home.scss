@@ -123,9 +123,9 @@
 }
 
 .section-book {
-    height: 90vh;
-    background-color: #ffffffc7;
-    @include blur;
+    height: 85vh;
+    // background-color: #ffffffc7;
+    // @include blur;
     padding: 5.5rem 0 0 0;
 
     @include respond(phone) {
@@ -136,5 +136,4 @@
 .section-footer {
     height: 100%;
     overflow: hidden;
-    // background-image: linear-gradient(to right bottom, #e6ddde, $color-white);
 }

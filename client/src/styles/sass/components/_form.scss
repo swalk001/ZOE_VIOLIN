@@ -84,7 +84,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // background-color: $color-primary;
             opacity: 0;
             transition: opacity 0.2s;
         }
@@ -107,30 +106,29 @@
     background-size: contain;
     background-position: right;
     height: 60vh;
-    border: 2rem solid #e6ddde;
-    box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
-    @include box-shadow;
+
+    // box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+    // @include box-shadow;
 
     display: none;
 
     &__heading {
         width: 100%;
         text-align: center;
-        // color: #654a4e9a;
-        // opacity: 0.6;
-        font-size: 5rem;
-        z-index: -1;
+        font-size: 6rem;
         margin-bottom: 8rem;
+        position: relative;
+
         &::before {
             content: '';
             height: 0.1rem;
-            border: 4rem solid #fff2e9;
+            border: 4rem solid #fff;
             opacity: 0.7;
             width: 22rem;
-            margin: 2rem 0rem 0rem 4rem;
+            margin: 0.75rem 0rem 0rem 4rem;
             position: absolute;
-            border-radius: 2rem;
             z-index: -1;
+            border-radius: 2rem;
             box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
         }
     }
@@ -149,4 +147,8 @@
 
 #email {
     width: 101%;
+}
+
+.contact-modal-wrapper {
+    @include absCenter;
 }
