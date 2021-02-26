@@ -16,12 +16,12 @@ import Banner from './Banner.jsx';
 import Header2 from './Header2.jsx';
 import Instagram from './Instagram.jsx';
 import Description from './Description.jsx';
+import MusicPlayer from './MusicPlayer.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            autoScroll: true,
             instagram: [
                 {
                     thumbnail: null,
@@ -30,6 +30,7 @@ class App extends React.Component {
             ],
             modal: false,
             navModal: false,
+            showMusic: false,
         };
     }
 
@@ -39,8 +40,6 @@ class App extends React.Component {
                 instagram: data.data,
             });
         });
-        // Effects.parallaxHorizontalLeft();
-        // Effects.parallaxHorizontalRight();
     }
 
     displayModal() {
@@ -82,23 +81,19 @@ class App extends React.Component {
         });
     }
 
+    toggleMusic() {
+        const { showMusic } = this.state;
+        this.setState({
+            showMusic: !showMusic,
+        });
+    }
+
     render() {
-        const { modal, navModal, autoScroll, instagram } = this.state;
+        const { modal, navModal, instagram, showMusic } = this.state;
         return (
             <div>
-                {/* <Header displayNavModal={this.displayNavModal.bind(this)} />
-                <Navigation
-                    displayNavModal={this.displayNavModal.bind(this)}
-                    hideNavModal={this.hideNavModal.bind(this)}
-                    navModal={navModal}
-                />
-                <Modal
-                    modal={modal}
-                    displayModal={this.displayModal.bind(this)}
-                /> */}
-                <Header2 />
+                <Header2 toggleMusic={this.toggleMusic.bind(this)} />
                 <Banner />
-                {/* <Hero /> */}
                 <Bio />
                 <Description instagram={instagram} />
                 {/* <Instagram instagram={instagram} /> */}
@@ -107,8 +102,9 @@ class App extends React.Component {
                     instagram={instagram}
                     toggleScroll={this.toggleScroll.bind(this)}
                 /> */}
-                <VideoPlayer />
-                <SongList />
+                {/* <VideoPlayer /> */}
+                {/* <SongList /> */}
+                <MusicPlayer showMusic={showMusic} />
                 <Form displayModal={this.displayModal.bind(this)} />
                 <Footer />
             </div>

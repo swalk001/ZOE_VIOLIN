@@ -55,7 +55,7 @@ const fetch = () => {
             });
             return Promise.all(images)
                 .then((data) => db.insertImages(data))
-                .catch((err) => console.log('caught', err));
+                .catch((err) => console.log(err));
         });
     };
 };

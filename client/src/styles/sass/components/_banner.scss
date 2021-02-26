@@ -17,12 +17,12 @@
     &__heading {
         position: absolute;
         text-align: center;
-        width: 60rem;
-        right: 5rem;
-        // opacity: 0;
-        top: 25rem;
-        line-height: 0.9;
-        font-size: 13rem;
+        width: 80rem;
+        right: 0rem;
+        // text-align: right;
+        top: 10rem;
+        line-height: 0.7;
+        font-size: 18rem;
         font-weight: 500;
         // -webkit-animation: fade-in 2s 2s;
         // animation: fade-in 2s 2s;
@@ -49,6 +49,8 @@
         }
 
         & :nth-child(3) {
+            margin-right: 2rem;
+
             -webkit-animation: fade-slide-in-down 2s ease-in-out;
             animation: fade-slide-in-down 2s ease-in-out;
         }

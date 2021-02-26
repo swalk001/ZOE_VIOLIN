@@ -1,3 +1,111 @@
+@-webkit-keyframes music-note-1 {
+    0% {
+        transform: translate3d(0, -15%, 0);
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, 15%, 0);
+    }
+    75% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -15%, 0);
+    }
+}
+
+@keyframes music-note-1 {
+    0% {
+        transform: translate3d(0, -15%, 10rem);
+    }
+    25% {
+        transform: translate3d(0, 0, 5rem);
+    }
+    50% {
+        transform: translate3d(0, 15%, 0);
+    }
+    75% {
+        transform: translate3d(0, 0, 5rem);
+    }
+    100% {
+        transform: translate3d(0, -15%, 10rem);
+    }
+}
+
+@-webkit-keyframes music-note-2 {
+    0% {
+        transform: translate3d(0, 0%, 0);
+    }
+    25% {
+        transform: translate3d(0, -15%, 0);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        transform: translate3d(0, 15%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes music-note-2 {
+    0% {
+        transform: translate3d(0, 0%, 0);
+    }
+    25% {
+        transform: translate3d(0, -15%, 0);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        transform: translate3d(0, 15%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes music-note-3 {
+    0% {
+        transform: translate3d(0, 15%, 0);
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -15%, 0);
+    }
+    75% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 15%, 0);
+    }
+}
+
+@keyframes music-note-3 {
+    0% {
+        transform: translate3d(0, 15%, 0);
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -15%, 0);
+    }
+    75% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 15%, 0);
+    }
+}
+
 @-webkit-keyframes moveSlideshow {
     100% {
         transform: translateX(-576.5rem);
