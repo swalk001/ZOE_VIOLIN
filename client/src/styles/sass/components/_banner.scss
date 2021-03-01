@@ -1,11 +1,106 @@
 .banner {
-    height: auto;
-    // width: auto;
+    height: 100vh;
     overflow: hidden;
+    position: relative;
+    transition: all 1s;
+
     &__img {
         height: 150vh;
         width: 100vw;
         -o-object-fit: cover;
         object-fit: cover;
+        -webkit-animation: fade-in 2s;
+        animation: fade-in 2s;
+        transform: scale(1);
+    }
+
+    &__heading {
+        position: absolute;
+        text-align: center;
+        width: 80rem;
+        right: 0rem;
+        top: 10rem;
+        line-height: 0.7;
+        font-size: 18rem;
+        font-weight: 500;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        transition: all 0.2s;
+
+        @include respond(phone) {
+            font-size: 10rem;
+            top: 25rem;
+            left: 4rem;
+        }
+
+        & span {
+            display: inline-block;
+            opacity: 0;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards !important;
+            transition: all 0.2s;
+        }
+
+        & :nth-child(1) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(2) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(3) {
+            margin-right: 2rem;
+
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(5) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
+
+        & :nth-child(6) {
+            -webkit-animation: fade-slide-in-down 2.6s ease-in-out;
+            animation: fade-slide-in-down 2.6s ease-in-out;
+        }
+
+        & :nth-child(7) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(8) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(9) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
+
+        & :nth-child(10) {
+            -webkit-animation: fade-slide-in-down 2.2s ease-in-out;
+            animation: fade-slide-in-down 2.2s ease-in-out;
+        }
+
+        & :nth-child(11) {
+            -webkit-animation: fade-slide-in-up 1.7s ease-in-out;
+            animation: fade-slide-in-up 1.7s ease-in-out;
+        }
+
+        & :nth-child(12) {
+            -webkit-animation: fade-slide-in-down 2s ease-in-out;
+            animation: fade-slide-in-down 2s ease-in-out;
+        }
+
+        & :nth-child(13) {
+            -webkit-animation: fade-slide-in-up 2s ease-in-out;
+            animation: fade-slide-in-up 2s ease-in-out;
+        }
     }
 }

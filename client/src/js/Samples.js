@@ -1,4 +1,4 @@
-const songList = [
+const samples = [
     'Bittersweet Symphony by The Verve',
     'Bouree by J.S. Bach',
     'Canon by Pachelbel',
@@ -17,4 +17,4 @@ const songList = [
     'Wonderful Tonight by Eric Clapton',
 ];
 
-export default songList;
+export default samples;

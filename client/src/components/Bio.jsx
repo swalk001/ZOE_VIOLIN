@@ -23,7 +23,7 @@ const Bio = () => {
                             data-rate=".2"
                             data-direction="vertical"
                         >
-                            Bio
+                            b<span>io</span>
                         </h2>
                     </div>
                     <section className="bio__text">

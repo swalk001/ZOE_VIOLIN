@@ -5,6 +5,13 @@
     z-index: 10000;
 }
 
+.section-header {
+}
+
+.section-music {
+    overflow: hidden;
+}
+
 .section-hero {
     border: 2px solid rgb(148, 125, 148);
 }
@@ -14,7 +21,6 @@
 }
 
 .section-banner {
-    // border: 2px solid red;
     height: 100vh;
     // width: auto;
     overflow: hidden;
@@ -22,28 +28,58 @@
 
 .section-bio {
     overflow: hidden;
-    background-color: #ffffffc7;
-    padding: 5rem 0;
+    background-color: #ffffff;
+    padding: 7rem 0 8rem 0;
 }
 
-.section-gallery {
+.section-instagram {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    height: 70rem;
-    margin: $gutter-horizontal 0;
-
-    @include respond(phone) {
-        margin: 0;
-
-        justify-content: center;
-        border: 1rem solid transparent;
+    // justify-content: ;
+    height: auto;
+    width: auto;
+    // overflow: hidden;
+    margin-top: 16rem;
+    padding: 20rem 0 0rem 0;
+    position: relative;
+    // border: 2px solid red;
+    &--animate {
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        // border: 2px solid red;
     }
 }
 
+.section-description {
+    overflow: hidden;
+    // background-color: black;
+
+    height: 150rem;
+    // margin: 15rem 0;
+}
+
+// .section-gallery {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     height: 70rem;
+//     margin: $gutter-horizontal 0;
+
+//     @include respond(phone) {
+//         margin: 0;
+
+//         justify-content: center;
+//         border: 1rem solid transparent;
+//     }
+// }
+
 .section-video-player {
     overflow: hidden;
-    padding-bottom: 3rem;
+    // background-color: #ffffffc7;
+    // margin: 5rem 0;
+    // height: 80vh;
 }
 
 .section-audio {
@@ -58,7 +94,7 @@
 
 .section-audio2 {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 100vw;
 }
@@ -87,9 +123,9 @@
 }
 
 .section-book {
-    height: 90vh;
-    background-color: #ffffffc7;
-    @include blur;
+    height: 85vh;
+    // background-color: #ffffffc7;
+    // @include blur;
     padding: 5.5rem 0 0 0;
 
     @include respond(phone) {
@@ -99,6 +135,5 @@
 
 .section-footer {
     height: 100%;
-
-    background-image: linear-gradient(to right bottom, #e6ddde, $color-white);
+    overflow: hidden;
 }

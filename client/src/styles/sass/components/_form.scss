@@ -84,7 +84,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // background-color: $color-primary;
             opacity: 0;
             transition: opacity 0.2s;
         }
@@ -105,35 +104,32 @@
         ),
         url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/VIOLIN.jpg');
     background-size: contain;
-    // background-repeat: space;
     background-position: right;
-    opacity: 0.9;
     height: 60vh;
-    // border-radius: 3px;
-    border: 2rem solid #e6ddde;
-    // padding: 5rem;
-    @include box-shadow;
+
+    // box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+    // @include box-shadow;
 
     display: none;
 
     &__heading {
         width: 100%;
         text-align: center;
-        color: #654a4e9a;
-        // opacity: 0.6;
-        font-size: 5rem;
-        z-index: -1;
-        margin-bottom: 2rem;
+        font-size: 6rem;
+        margin-bottom: 8rem;
+        position: relative;
+
         &::before {
             content: '';
             height: 0.1rem;
-            border: 4rem solid #e6ddde;
+            border: 4rem solid #fff;
             opacity: 0.7;
             width: 22rem;
-            margin: -4rem 0rem 8rem -4rem;
+            margin: 0.75rem 0rem 0rem 4rem;
             position: absolute;
-            border-radius: 2rem;
             z-index: -1;
+            border-radius: 2rem;
+            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
         }
     }
 
@@ -151,4 +147,8 @@
 
 #email {
     width: 101%;
+}
+
+.contact-modal-wrapper {
+    @include absCenter;
 }

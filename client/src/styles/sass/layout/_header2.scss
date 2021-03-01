@@ -1,0 +1,133 @@
+.header {
+    width: 100vw;
+    height: 7rem;
+    background-color: rgba(255, 255, 255, 0.336);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.1rem);
+    position: fixed;
+    z-index: 1001;
+    font-family: 'Nunito', serif;
+
+    transition: all 0.5s ease-in-out;
+    // border-bottom: 0.15rem solid #fff2e9;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+
+    &--trans {
+        // background-color: #fff;
+        // color: black;
+        transform: translate(0, -100%);
+    }
+
+    &__nav {
+        align-self: flex-end;
+        padding: 2rem;
+    }
+
+    &__nav--list {
+    }
+
+    &__nav--item {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-right: 5rem;
+        padding-bottom: 0.8rem;
+        border: none;
+
+        &:hover {
+            border-bottom: 2px solid black;
+            cursor: pointer;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__badge {
+        @include absCenter;
+        justify-self: left;
+        align-self: center;
+        // margin-left: 2rem;
+        shape-rendering: geometricprecision;
+        cursor: pointer;
+        height: 3.5rem;
+        width: 3.5rem;
+        transition: all 0.3s;
+
+        &-container {
+            width: 10rem;
+            position: relative;
+            transition: all 0.3s;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.507);
+            }
+        }
+
+        &:hover {
+        }
+
+        &--insta {
+            &:hover {
+                fill: #125688;
+            }
+        }
+        &--tube {
+            &:hover {
+                fill: #fb3958;
+            }
+        }
+    }
+
+    &__music-player {
+        display: flex;
+        width: 10rem;
+        justify-content: center;
+
+        &-badges {
+            display: flex;
+            height: 100%;
+            width: inherit;
+            font-size: 1.75rem;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.507);
+                cursor: pointer;
+
+                & .header__music-player-badges--1 {
+                    -webkit-animation: music-note-1 1.5s infinite;
+                    animation: music-note-1 1.5s infinite;
+                    animation-timing-function: ease-in-out;
+                    -webkit-animation-timing-function: ease-in-out;
+                }
+                & .header__music-player-badges--2 {
+                    -webkit-animation: music-note-2 1.5s infinite;
+                    animation: music-note-2 1.5s infinite;
+                    animation-timing-function: ease-in-out;
+                    -webkit-animation-timing-function: ease-in-out;
+                }
+                & .header__music-player-badges--3 {
+                    -webkit-animation: music-note-3 1.5s infinite;
+                    animation: music-note-3 1.5s infinite;
+                    animation-timing-function: ease-in-out;
+                    -webkit-animation-timing-function: ease-in-out;
+                }
+            }
+
+            &--1 {
+                transform: translate3d(0, -15%, 0);
+            }
+            &--2 {
+            }
+            &--3 {
+                transform: translate3d(0, 15%, 0);
+            }
+        }
+    }
+}
