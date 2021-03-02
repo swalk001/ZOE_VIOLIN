@@ -1,3 +1,3 @@
 # ZOE_VIOLIN
 
-Website for Wedding musicians.
+Website for wedding musicians.
