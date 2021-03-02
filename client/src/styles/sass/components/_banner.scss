@@ -38,8 +38,7 @@
         @include respond(phone) {
             font-size: 10rem;
             @include absCenter;
-            top: 25rem;
-            // left: -6rem;
+            top: 17rem;
         }
 
         & span {

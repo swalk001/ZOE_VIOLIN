@@ -3,12 +3,12 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-
     height: 12rem;
 
     &__text {
         display: flex;
         justify-content: center;
+        margin-bottom: 1rem;
     }
     &__social {
         display: flex;
@@ -20,7 +20,7 @@
             width: 8rem;
 
             @include respond(phone) {
-                width: 6rem;
+                width: 5rem;
             }
 
             &:hover {
@@ -31,7 +31,7 @@
             height: 4rem;
 
             @include respond(phone) {
-                height: 4rem;
+                height: 3rem;
             }
             &:hover {
                 cursor: pointer;
@@ -40,6 +40,10 @@
 
         &--award {
             height: 8rem;
+
+            @include respond(phone) {
+                height: 6rem;
+            }
         }
     }
 }

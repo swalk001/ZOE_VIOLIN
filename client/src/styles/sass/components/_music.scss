@@ -15,11 +15,11 @@
     grid-template-rows: repeat(8, 1fr);
     background: linear-gradient(344deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
 
-    @include respond(phone) {
-        height: 60vh;
-    }
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         height: 65vh;
+    }
+    @include respond(phone) {
+        height: 75vh;
     }
 
     &--hide {
@@ -37,14 +37,15 @@
         );
         grid-area: 1/1/7/9;
 
-        @include respond(phone) {
-            height: 50rem;
-        }
         @include respond(tab-land) {
-            height: 40rem;
+            height: 55rem;
         }
         @include respond(tab-port) {
             height: 50rem;
+        }
+
+        @include respond(phone) {
+            height: 45rem;
         }
 
         &-ul {

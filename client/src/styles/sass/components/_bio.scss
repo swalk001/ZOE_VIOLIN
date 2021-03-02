@@ -1,7 +1,5 @@
 .bio {
     transition: all 0.2s;
-    // font-family: 'Nunito', serif;
-    // display: flex;
     position: relative;
 
     &--animate {
@@ -12,12 +10,10 @@
     }
     &__heading-box {
         text-align: center;
-        // opacity: 0.6;
     }
     &__heading {
         color: black;
 
-        // opacity: 0.6;
         font-size: 6rem;
         padding: 0 0 5rem 0;
 
@@ -43,19 +39,19 @@
         text-indent: 6rem;
         padding: 0 2rem;
 
-        // @include respond(phone) {
-        //     text-indent: 3rem;
-        //     line-height: 3.5rem;
+        @include respond(phone) {
+            text-indent: 3rem;
+            line-height: 3.5rem;
 
-        //     font-size: 2rem;
-        // }
+            font-size: 2rem;
+        }
 
-        // & p {
-        //     @include respond(phone) {
-        //         display: flex;
-        //         width: 100% !important;
-        //         margin-bottom: 3rem;
-        //     }
-        // }
+        & p {
+            @include respond(phone) {
+                display: flex;
+                width: 100% !important;
+                margin-bottom: 3rem;
+            }
+        }
     }
 }
