@@ -1,5 +1,4 @@
 import React from 'react';
-import AudioPlayer from './AudioPlayer.jsx';
 import Controls from './Controls.jsx';
 import Songs from './Songs.jsx';
 import samples from '../js/Samples.js';
@@ -158,5 +157,4 @@ class MusicPlayer extends React.Component {
         );
     }
 }
-
 export default MusicPlayer;

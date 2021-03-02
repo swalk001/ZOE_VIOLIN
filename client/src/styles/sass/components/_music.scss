@@ -3,7 +3,7 @@
     width: 40rem;
     background-color: rgb(36, 36, 36);
     color: white;
-    opacity: 0.95;
+    border-radius: 20px;
     position: fixed;
     right: 0;
     top: 0;
@@ -15,11 +15,11 @@
     grid-template-rows: repeat(8, 1fr);
     background: linear-gradient(344deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
 
-    @include respond(phone) {
-        height: 60vh;
-    }
     @include respond(tab-port) {
         height: 65vh;
+    }
+    @include respond(phone) {
+        height: 75vh;
     }
 
     &--hide {
@@ -36,6 +36,17 @@
             rgb(39, 39, 39) 100%
         );
         grid-area: 1/1/7/9;
+
+        @include respond(tab-land) {
+            height: 55rem;
+        }
+        @include respond(tab-port) {
+            height: 50rem;
+        }
+
+        @include respond(phone) {
+            height: 45rem;
+        }
 
         &-ul {
             height: 100%;

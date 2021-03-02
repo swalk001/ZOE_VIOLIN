@@ -1,5 +1,4 @@
 import React from 'react';
-import AudioPlayer from './AudioPlayer.jsx';
 import { isScrolledIntoViewFromTop } from '../js/Effects';
 
 const SongList = () => {

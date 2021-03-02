@@ -41,10 +41,9 @@ const Footer = () => {
                         />
                     </a>
                 </div>
-
-                {/* <div className="footer__text col-1-of-2"> */}
-                {/* <p>Some footer text</p> */}
-                {/* </div> */}
+            </div>
+            <div className="footer__text col-1-of-2">
+                <p>Site built by Steven Walker</p>
             </div>
         </section>
     );
