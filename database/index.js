@@ -58,6 +58,5 @@ const insertImages = (imgs) => {
         }
     });
 };
-
 module.exports.retrieveImages = retrieveImages;
 module.exports.insertImages = insertImages;
