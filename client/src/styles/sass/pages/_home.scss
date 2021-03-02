@@ -127,6 +127,7 @@
     // background-color: #ffffffc7;
     // @include blur;
     padding: 5.5rem 0 0 0;
+    overflow: hidden;
 
     @include respond(phone) {
         height: auto;
@@ -135,5 +136,6 @@
 
 .section-footer {
     height: 100%;
+    margin-top: 2rem;
     overflow: hidden;
 }
