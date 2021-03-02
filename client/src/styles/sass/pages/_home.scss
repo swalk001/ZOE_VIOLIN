@@ -49,13 +49,11 @@
 
 .section-book {
     height: 85vh;
-    // background-color: #ffffffc7;
-    // @include blur;
     padding: 5.5rem 0 0 0;
     overflow: hidden;
 
     @include respond(phone) {
-        height: auto;
+        height: 70vh;
     }
 }
 

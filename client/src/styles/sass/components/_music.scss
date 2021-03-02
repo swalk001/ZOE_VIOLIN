@@ -3,7 +3,7 @@
     width: 40rem;
     background-color: rgb(36, 36, 36);
     color: white;
-    opacity: 0.95;
+    border-radius: 20px;
     position: fixed;
     right: 0;
     top: 0;
@@ -18,7 +18,7 @@
     @include respond(phone) {
         height: 60vh;
     }
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         height: 65vh;
     }
 
@@ -36,6 +36,16 @@
             rgb(39, 39, 39) 100%
         );
         grid-area: 1/1/7/9;
+
+        @include respond(phone) {
+            height: 50rem;
+        }
+        @include respond(tab-land) {
+            height: 40rem;
+        }
+        @include respond(tab-port) {
+            height: 50rem;
+        }
 
         &-ul {
             height: 100%;

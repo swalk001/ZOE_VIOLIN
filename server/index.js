@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/instagram', (req, res) => {
-    fetch();
+    // fetch();
     db.retrieveImages((err, images) => {
         if (err) {
             console.log(err);
