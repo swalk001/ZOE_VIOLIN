@@ -12,6 +12,10 @@
         -webkit-animation: fade-in 2s;
         animation: fade-in 2s;
         transform: scale(1);
+
+        @include respond(phone) {
+            height: 100vh;
+        }
     }
 
     &__heading {
@@ -27,10 +31,15 @@
         animation-fill-mode: forwards;
         transition: all 0.2s;
 
+        @include respond(tab-port) {
+            font-size: 14rem;
+        }
+
         @include respond(phone) {
             font-size: 10rem;
+            @include absCenter;
             top: 25rem;
-            left: 4rem;
+            // left: -6rem;
         }
 
         & span {

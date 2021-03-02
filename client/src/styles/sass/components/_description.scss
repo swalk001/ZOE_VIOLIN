@@ -29,13 +29,12 @@
         transition: color 0.4s;
         z-index: 10;
 
-        // &--light {
-        //     color: white;
-        // }
+        @include respond(phone) {
+            top: 29rem;
+        }
 
         &--dark {
             color: black;
-            // z-index: 1000;
         }
 
         &--animate-out {
@@ -65,7 +64,7 @@
             cursor: pointer;
             transition: all 1s;
             @include respond(phone) {
-                width: 33vw;
+                width: 33.333333vw;
             }
 
             &:hover {
