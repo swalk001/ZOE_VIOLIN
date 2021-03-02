@@ -21,15 +21,10 @@ const Description = ({ instagram }) => {
         );
     });
 
-    //HEADING
     window.addEventListener('scroll', (e) => {
         const section = document.querySelector('.section-description');
         const heading = document.querySelector('.description__heading');
         const dark = document.querySelector('.description__heading--dark');
-
-        // console.log(section.getBoundingClientRect().bottom);
-        // console.log(heading.getBoundingClientRect().top < 100);
-        // console.log(window.innerHeight);
 
         if (section.getBoundingClientRect().bottom < window.innerHeight) {
             heading.style.opacity = `${
@@ -59,23 +54,10 @@ const Description = ({ instagram }) => {
         });
     });
 
-    //IMAGES
-    // window.addEventListener('scroll', (e) => {
-    //     const imgs = document.querySelectorAll('.description__img');
-    //     imgs.forEach((img) => {
-    //         if (isScrolledIntoView(img)) {
-    //             const fade =
-    //                 (window.innerHeight - img.getBoundingClientRect().top) /
-    //                 window.innerHeight;
-    //             img.style.opacity = `${fade}`;
-    //         }
-    //     });
-    // });
-
     return (
         <div className="section-description">
             <div className="description">
-                <div className="description__heading ">
+                <div id="gallery" className="description__heading ">
                     <h2>
                         Curated <span>music</span> for <br></br>weddings and
                         events.
@@ -88,20 +70,7 @@ const Description = ({ instagram }) => {
                     </h2>
                 </div>
                 {instagram}
-                {/* <div className="description__img">
-                    <img
-                        src="../imgs/ZOE_PLAYING.jpg"
-                        alt="solo"
-                        className="description__img--1"
-                    />
-                </div> */}
             </div>
-            {/* <div className="description__text">
-                <p>
-                    Offering solo violin and guitar duo. Electric and acoustic
-                    to fit any space!
-                </p>
-            </div> */}
         </div>
     );
 };

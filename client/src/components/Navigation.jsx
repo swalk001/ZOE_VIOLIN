@@ -38,5 +38,4 @@ const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
         return <div></div>;
     }
 };
-
 export default Navigation;

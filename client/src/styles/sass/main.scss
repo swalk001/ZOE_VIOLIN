@@ -1,28 +1,20 @@
-// @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
 @import 'base/animations';
 @import 'base/base';
-// @import 'base/typography';
+
 @import 'base/utilities';
 
-@import 'components/hero';
-@import 'components/hero2';
 @import 'components/banner';
 @import 'components/bio';
 @import 'components/description';
-@import 'components/gallery';
-@import 'components/instagram';
-@import 'components/audio-player';
-@import 'components/audio2';
-@import 'components/video-player';
+
 @import 'components/music';
 @import 'components/song-list';
 @import 'components/contact';
 @import 'components/form';
 
-@import 'layout/header';
 @import 'layout/header2';
 @import 'layout/grid';
 @import 'layout/modal';

@@ -9,14 +9,11 @@
     font-family: 'Nunito', serif;
 
     transition: all 0.5s ease-in-out;
-    // border-bottom: 0.15rem solid #fff2e9;
     color: black;
     display: flex;
     justify-content: space-between;
 
     &--trans {
-        // background-color: #fff;
-        // color: black;
         transform: translate(0, -100%);
     }
 
@@ -26,14 +23,16 @@
     }
 
     &__nav--list {
+        display: flex;
     }
 
     &__nav--item {
+        list-style: none;
         font-size: 1.9rem;
         font-weight: 700;
         margin-right: 5rem;
-        padding-bottom: 0.8rem;
-        border: none;
+        // padding-bottom: 0.8rem;
+        border: 2px solid transparent;
 
         &:hover {
             border-bottom: 2px solid black;

@@ -157,5 +157,4 @@ class MusicPlayer extends React.Component {
         );
     }
 }
-
 export default MusicPlayer;

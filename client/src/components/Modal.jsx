@@ -21,5 +21,4 @@ const Modal = ({ displayModal, modal }) => {
         return <div></div>;
     }
 };
-
 export default Modal;
