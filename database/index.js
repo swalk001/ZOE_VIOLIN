@@ -44,7 +44,6 @@ const insertImages = (imgs) => {
                 } else {
                     imgs.forEach((img) => {
                         const query = `INSERT into images(url, thumbnail) VALUES ('${img.url}', '${img.thumbnail}');`;
-
                         con.query(query, (err, results) => {
                             if (err) {
                                 console.log(err);
