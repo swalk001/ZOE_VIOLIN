@@ -1,23 +1,5 @@
-.section-navigation {
-    position: fixed;
-
-    overflow: hidden;
-    z-index: 10000;
-}
-
-.section-header {
-}
-
 .section-music {
     overflow: hidden;
-}
-
-.section-hero {
-    border: 2px solid rgb(148, 125, 148);
-}
-
-.section-hero2 {
-    width: 100vw;
 }
 
 .section-banner {
@@ -32,71 +14,14 @@
     padding: 7rem 0 8rem 0;
 }
 
-.section-instagram {
-    display: flex;
-    align-items: center;
-    // justify-content: ;
-    height: auto;
-    width: auto;
-    // overflow: hidden;
-    margin-top: 16rem;
-    padding: 20rem 0 0rem 0;
-    position: relative;
-    // border: 2px solid red;
-    &--animate {
-        -webkit-animation: fade-up 1s;
-        animation: fade-up 1s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        // border: 2px solid red;
-    }
-}
-
 .section-description {
     overflow: hidden;
-    // background-color: black;
 
     height: 150rem;
-    // margin: 15rem 0;
 }
-
-// .section-gallery {
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     height: 70rem;
-//     margin: $gutter-horizontal 0;
-
-//     @include respond(phone) {
-//         margin: 0;
-
-//         justify-content: center;
-//         border: 1rem solid transparent;
-//     }
-// }
 
 .section-video-player {
     overflow: hidden;
-    // background-color: #ffffffc7;
-    // margin: 5rem 0;
-    // height: 80vh;
-}
-
-.section-audio {
-    position: relative;
-    justify-content: center;
-    align-items: baseline;
-    height: 100vh;
-    margin: 8rem 0 0 0;
-
-    z-index: 10;
-}
-
-.section-audio2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
 }
 
 .section-song-list {

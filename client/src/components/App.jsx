@@ -29,7 +29,7 @@ class App extends React.Component {
     componentDidMount() {
         axios.get('/api/instagram').then((data) => {
             this.setState({
-                instagram: data.data,
+                instagram: data.data.reverse(),
             });
         });
     }
