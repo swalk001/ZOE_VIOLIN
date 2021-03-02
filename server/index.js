@@ -12,22 +12,18 @@ const app = express();
 const PORT = 3001;
 
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/api/instagram', (req, res) => {
-    // newImages().then((data) => console.log(data));
-    // fetch();
+    fetch();
     db.retrieveImages((err, images) => {
         if (err) {
             console.log(err);
-            Promise.all(fetchInstagram()).then((imgs) => res.send(imgs));
         } else {
             res.send(images);
         }
     });
-    // Promise.all(fetchInstagram()).then((imgs) => res.send(imgs));
 });
 
 app.listen(PORT, () => {
