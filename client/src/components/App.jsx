@@ -23,13 +23,16 @@ class App extends React.Component {
             ],
             modal: false,
             showMusic: false,
+            updated: null,
         };
     }
 
     componentDidMount() {
         axios.get('/api/instagram').then((data) => {
+            console.log(data);
             this.setState({
                 instagram: data.data.reverse(),
+                updated: data.data[0].updated,
             });
         });
     }

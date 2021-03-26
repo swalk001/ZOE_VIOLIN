@@ -32,6 +32,7 @@ const insertImages = (imgs) => {
     const create = `CREATE TABLE images (
       url varchar(20) NOT NULL,
       thumbnail varchar(500) NOT NULL,
+      updated bigint(200) NOT NULL,
       PRIMARY KEY (URL)
     );`;
     con.query(drop, (err, results) => {
@@ -42,8 +43,9 @@ const insertImages = (imgs) => {
                 if (err) {
                     console.log(err);
                 } else {
+                    const date = Date.now();
                     imgs.forEach((img) => {
-                        const query = `INSERT into images(url, thumbnail) VALUES ('${img.url}', '${img.thumbnail}');`;
+                        const query = `INSERT into images(url, thumbnail, updated) VALUES ('${img.url}', '${img.thumbnail}','${date}');`;
                         con.query(query, (err, results) => {
                             if (err) {
                                 console.log(err);

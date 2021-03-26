@@ -116,7 +116,7 @@
         url('https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/VIOLIN.jpg');
     background-size: contain;
     background-position: right;
-    height: 60vh;
+    height: 50rem;
 
     @include respond(phone) {
         background-image: linear-gradient(

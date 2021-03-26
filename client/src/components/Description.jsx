@@ -34,24 +34,23 @@ const Description = ({ instagram }) => {
             }`;
         } else if (section.getBoundingClientRect().top < 0) {
             heading.style.position = 'fixed';
-            heading.style.opacity = '1';
         } else {
             heading.style.position = 'absolute';
-            dark.style.opacity = `${
-                section.getBoundingClientRect().top / 300 - 0.1
+            heading.style.opacity = `${
+                1 - section.getBoundingClientRect().top / 600
             }`;
         }
 
         //IMAGES
-        const imgs = document.querySelectorAll('.description__img');
-        imgs.forEach((img) => {
-            if (isScrolledIntoView(img)) {
-                const fade =
-                    (window.innerHeight - img.getBoundingClientRect().top) /
-                    window.innerHeight;
-                img.style.opacity = `${fade}`;
-            }
-        });
+        // const imgs = document.querySelectorAll('.description__img');
+        // imgs.forEach((img) => {
+        //     if (isScrolledIntoView(img)) {
+        //         const fade =
+        //             (window.innerHeight - img.getBoundingClientRect().top) /
+        //             window.innerHeight;
+        //         img.style.opacity = `${fade}`;
+        //     }
+        // });
     });
 
     return (
@@ -63,12 +62,12 @@ const Description = ({ instagram }) => {
                         events.
                     </h2>
                 </div>
-                <div className="description__heading description__heading--dark">
+                {/* <div className="description__heading description__heading--dark">
                     <h2>
                         Curated <span>music</span> for <br></br>weddings and
                         events.
                     </h2>
-                </div>
+                </div> */}
                 {instagram}
             </div>
         </div>
