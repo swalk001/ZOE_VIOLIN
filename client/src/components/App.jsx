@@ -10,6 +10,7 @@ import Footer from './Footer.jsx';
 import Banner from './Banner.jsx';
 import Description from './Description.jsx';
 import MusicPlayer from './MusicPlayer.jsx';
+import ContactForm from './ContactForm.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -97,6 +98,7 @@ class App extends React.Component {
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
+                <ContactForm />
                 <Footer />
             </div>
         );
