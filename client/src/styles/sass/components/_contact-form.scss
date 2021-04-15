@@ -1,2 +1,121 @@
 .contact-form {
+    display: flex;
+    justify-content: center;
+    font-size: 2.1rem;
+
+    &--animate {
+        // display: flex;
+        // -webkit-animation: fade-up-form 1s;
+        // animation: fade-up-form 1s;
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    &__wrapper {
+        height: auto;
+        width: 60%;
+
+        @include respond(phone) {
+            width: 95%;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        text-align: center;
+        font-size: 6rem;
+        margin: 0 0 6rem -2rem;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 0.1rem;
+            border: 4rem solid #fff;
+            // opacity: 0.7;
+            width: 22rem;
+            margin: 0.75rem 0rem 0rem 4rem;
+            position: absolute;
+            z-index: -1;
+            border-radius: 2rem;
+            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+        }
+    }
+
+    &__info {
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-bottom: 8rem;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        // border: 2px solid red;
+    }
+
+    &__name {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        &--input {
+            width: 49.75%;
+        }
+    }
+
+    &__email {
+        width: 100%;
+    }
+
+    &__message {
+        width: 100%;
+    }
+
+    &__button {
+        font-family: inherit;
+        font-size: 2.2rem;
+        height: 7rem;
+        width: 15rem;
+        background-color: transparent;
+        border: 2px solid black;
+        transition: 0.2s all;
+        outline: none;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    & textarea {
+        width: 100%;
+        min-height: 15rem;
+        resize: vertical;
+        outline: none;
+        padding: 1.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.425);
+        font-size: 1.9rem;
+        font-family: inherit;
+        margin: 0.2rem 0 3rem 0;
+        &:focus {
+            border: 1px solid black;
+        }
+    }
+
+    & input {
+        height: 5rem;
+        width: 100%;
+        padding: 1.5rem;
+        outline: none;
+        margin: 0.2rem 0 2rem 0;
+        border: 1px solid rgba(0, 0, 0, 0.425);
+        font-size: 1.9rem;
+        font-family: inherit;
+        &:focus {
+            border: 1px solid black;
+        }
+    }
 }

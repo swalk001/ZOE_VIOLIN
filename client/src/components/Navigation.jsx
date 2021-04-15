@@ -29,7 +29,9 @@ const Navigation = ({ navModal, displayNavModal, hideNavModal }) => {
                         </li>
                         <li onClick={() => handleNav('audio-player')}>Songs</li>
 
-                        <li onClick={() => handleNav('contact')}>Contact</li>
+                        <li onClick={() => handleNav('contact-form')}>
+                            Contact
+                        </li>
                     </ul>
                 </div>
             </section>

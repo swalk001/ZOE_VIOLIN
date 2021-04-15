@@ -157,13 +157,13 @@
     }
 }
 
-#email {
-    width: 101%;
+// #email {
+//     width: 101%;
 
-    @include respond(phone) {
-        width: 105%;
-    }
-}
+//     @include respond(phone) {
+//         width: 105%;
+//     }
+// }
 
 .contact-modal-wrapper {
     @include absCenter;

@@ -4,7 +4,7 @@
     font-size: 3vh;
     height: 100vh;
     background-color: #e6ddde4f;
-    color: #654a4e;
+    color: black;
     width: 100vw;
     justify-content: center;
     overflow: hidden;
@@ -29,8 +29,8 @@
     content: '';
     opacity: 1;
     position: absolute;
-    height: 50vh;
-    top: 20%;
+    height: 100vh;
+    top: 0;
     right: 0;
     // bottom: 0;
     left: 0;
@@ -44,13 +44,13 @@
 }
 
 .modal-h1 {
-    -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 .modal-h2 {
     font-size: 90%;
-    -webkit-animation-delay: 1.3s;
-    animation-delay: 1.3s;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
     margin-bottom: 20vh;
 }

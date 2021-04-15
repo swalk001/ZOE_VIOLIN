@@ -30,7 +30,6 @@ class App extends React.Component {
 
     componentDidMount() {
         axios.get('/api/instagram').then((data) => {
-            console.log(data);
             this.setState({
                 instagram: data.data.reverse(),
                 updated: data.data[0].updated,
@@ -93,12 +92,16 @@ class App extends React.Component {
                 <Bio />
                 <Description instagram={instagram} />
                 <MusicPlayer showMusic={showMusic} />
-                <Form displayModal={this.displayModal.bind(this)} />
+                {/* <Form displayModal={this.displayModal.bind(this)} />
+                <Modal
+                    modal={modal}
+                    displayModal={this.displayModal.bind(this)}
+                /> */}
+                <ContactForm displayModal={this.displayModal.bind(this)} />
                 <Modal
                     modal={modal}
                     displayModal={this.displayModal.bind(this)}
                 />
-                <ContactForm />
                 <Footer />
             </div>
         );

@@ -75,7 +75,7 @@ const Header = ({ toggleMusic }) => {
                             Music
                         </li>
                         <li
-                            onClick={() => handleNav('contact')}
+                            onClick={() => handleNav('contact-form')}
                             className="header__nav--item"
                         >
                             Contact
