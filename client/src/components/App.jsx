@@ -8,7 +8,7 @@ import '../styles/sass/main.scss';
 import Form from './Form.jsx';
 import Footer from './Footer.jsx';
 import Banner from './Banner.jsx';
-import Description from './Description.jsx';
+import Gallery from './Gallery.jsx';
 import MusicPlayer from './MusicPlayer.jsx';
 import ContactForm from './ContactForm.jsx';
 
@@ -90,7 +90,7 @@ class App extends React.Component {
                 <Header toggleMusic={this.toggleMusic.bind(this)} />
                 <Banner />
                 <Bio />
-                <Description instagram={instagram} />
+                <Gallery instagram={instagram} />
                 <MusicPlayer showMusic={showMusic} />
                 {/* <Form displayModal={this.displayModal.bind(this)} />
                 <Modal

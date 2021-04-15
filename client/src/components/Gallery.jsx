@@ -1,11 +1,11 @@
 import React from 'react';
 import { isScrolledIntoView } from '../js/Effects.js';
 
-const Description = ({ instagram }) => {
+const Gallery = ({ instagram }) => {
     instagram = instagram.map((img, i) => {
         return (
             <div
-                className={`description__img description__img--${i + 1}`}
+                className={`gallery__img gallery__img--${i + 1}`}
                 key={img.url}
             >
                 <img
@@ -22,9 +22,9 @@ const Description = ({ instagram }) => {
     });
 
     window.addEventListener('scroll', (e) => {
-        const section = document.querySelector('.section-description');
-        const heading = document.querySelector('.description__heading');
-        const dark = document.querySelector('.description__heading--dark');
+        const section = document.querySelector('.section-gallery');
+        const heading = document.querySelector('.gallery__heading');
+        const dark = document.querySelector('.gallery__heading--dark');
 
         if (section.getBoundingClientRect().bottom < window.innerHeight) {
             heading.style.opacity = `${
@@ -43,9 +43,9 @@ const Description = ({ instagram }) => {
     });
 
     return (
-        <div className="section-description">
-            <div className="description">
-                <div id="gallery" className="description__heading ">
+        <div className="section-gallery">
+            <div className="gallery">
+                <div id="gallery" className="gallery__heading ">
                     <h2>
                         Curated <span>music</span> for <br></br>weddings and
                         events.
@@ -58,4 +58,4 @@ const Description = ({ instagram }) => {
     );
 };
 
-export default Description;
+export default Gallery;
