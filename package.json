@@ -8,7 +8,7 @@
         "start:dev": "nodemon server/index.js",
         "watch:sass": "node-sass client/src/styles/sass/main.scss client/src/styles/style.css -w",
         "build:dev": "webpack --mode development --watch",
-        "build": "webpack --mode development",
+        "build": "webpack --mode production",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Steven Walker",

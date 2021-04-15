@@ -18,6 +18,9 @@
     overflow: hidden;
 
     height: 150rem;
+    @include respond(phone) {
+        height: 120rem;
+    }
 }
 
 .section-video-player {

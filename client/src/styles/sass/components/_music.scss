@@ -29,6 +29,8 @@
     &__songs {
         height: 45rem;
         overflow-y: scroll;
+        border-bottom: 2px solid rgb(63, 63, 63);
+
         background: rgb(47, 47, 47);
         background: linear-gradient(
             344deg,
@@ -38,14 +40,14 @@
         grid-area: 1/1/7/9;
 
         @include respond(tab-land) {
-            height: 55rem;
+            height: 50rem;
         }
         @include respond(tab-port) {
-            height: 50rem;
+            height: 45rem;
         }
 
         @include respond(phone) {
-            height: 45rem;
+            height: 55rem;
         }
 
         &-ul {
@@ -78,6 +80,10 @@
         margin-top: 2rem;
         justify-content: center;
         align-items: flex-start;
+
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
     }
 
     &__progress {
