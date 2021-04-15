@@ -36,6 +36,7 @@
         font-weight: 700;
         margin-right: 5rem;
         border: 2px solid transparent;
+        transition: 0.2s all;
 
         &:hover {
             border-bottom: 2px solid black;

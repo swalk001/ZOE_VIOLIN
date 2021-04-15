@@ -44,8 +44,8 @@ const Gallery = ({ instagram }) => {
 
     return (
         <div className="section-gallery">
-            <div className="gallery">
-                <div id="gallery" className="gallery__heading ">
+            <div className="gallery" id="gallery">
+                <div className="gallery__heading ">
                     <h2>
                         Curated <span>music</span> for <br></br>weddings and
                         events.

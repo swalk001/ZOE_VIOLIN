@@ -11,6 +11,7 @@ import Banner from './Banner.jsx';
 import Gallery from './Gallery.jsx';
 import MusicPlayer from './MusicPlayer.jsx';
 import ContactForm from './ContactForm.jsx';
+import Packages from './Packages.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -92,11 +93,7 @@ class App extends React.Component {
                 <Bio />
                 <Gallery instagram={instagram} />
                 <MusicPlayer showMusic={showMusic} />
-                {/* <Form displayModal={this.displayModal.bind(this)} />
-                <Modal
-                    modal={modal}
-                    displayModal={this.displayModal.bind(this)}
-                /> */}
+                <Packages />
                 <ContactForm displayModal={this.displayModal.bind(this)} />
                 <Modal
                     modal={modal}
