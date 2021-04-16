@@ -9,7 +9,6 @@ const Header = ({ toggleMusic }) => {
             scroll.spot(id);
         }
     };
-
     return (
         <div className="section-header">
             <div className="header">

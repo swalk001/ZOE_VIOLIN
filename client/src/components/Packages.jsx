@@ -4,7 +4,6 @@ import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 const Packages = () => {
     const target = document.getElementsByClassName('packages');
     const section = document.getElementsByClassName('section-packages');
-
     window.addEventListener('scroll', () => {
         if (isScrolledIntoViewFromTop(section[0])) {
             target[0].classList.add('packages--animate');

@@ -19,7 +19,6 @@ const ContactForm = ({ displayModal }) => {
     };
     const target = document.getElementsByClassName('contact-form');
     const section = document.getElementsByClassName('section-contact-form');
-
     window.addEventListener('scroll', () => {
         if (isScrolledIntoViewFromTop(section[0])) {
             target[0].classList.add('contact-form--animate');
