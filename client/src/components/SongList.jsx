@@ -47,9 +47,7 @@ const SongList = () => {
                     <div className="song-list__heading song-list__heading--top">
                         Songs<span>&rarr;</span>
                     </div>
-                    <div className="song-list__audio">
-                        <AudioPlayer />
-                    </div>
+                    <div className="song-list__audio"></div>
                     <div className="song-list__tab song-list__tab--active">
                         <h3>Classical</h3>
                     </div>
