@@ -1,10 +1,21 @@
 import React, { Fragment } from 'react';
+import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Packages = () => {
+    const target = document.getElementsByClassName('packages');
+    const section = document.getElementsByClassName('section-packages');
+
+    window.addEventListener('scroll', () => {
+        if (isScrolledIntoViewFromTop(section[0])) {
+            target[0].classList.add('packages--animate');
+        } else {
+            target[0].classList.remove('packages--animate');
+        }
+    });
     return (
         <Fragment>
             <section className="section-packages">
-                <div className="packages">
+                <div className="packages" id="packages">
                     <h2 className="packages__heading">Packages</h2>
                     <div className="packages__wrapper">
                         <div className="packages__option">
@@ -16,14 +27,11 @@ const Packages = () => {
                                 />
                             </div>
                             <p>
-                                The Solo Violin offers a simple yet classic
-                                sound to any Ceremony, Cocktail Hour, or event.
-                                The violin creates a warm ambience to all
-                                environments and is able to play any melody
-                                making the song selections endless. The violin
-                                is also able to be amplified (a small and easy
-                                set up) which can help control the volume for
-                                each given venue size and environment. Please
+                                Solo Violin offers a simple yet classic sound
+                                violin creating warm ambience to all
+                                environments. The violin is capable of playing
+                                any melody making the song selections endless.
+                                The violin is also able to be amplified, please
                                 inquire for more details.
                             </p>
                         </div>
@@ -37,16 +45,12 @@ const Packages = () => {
                             </div>
                             {/* <h2>Guitar or Piano/Keyboard</h2> */}
                             <p>
-                                The Violin/Guitar Duo and the Violin/Keyboard
-                                Duo offer a fuller and richer sound to any
-                                Ceremony, Cocktail Hour, or event. The guitar
-                                and piano provide a strong rhythmic and harmonic
-                                element to the melodious violin. The Duo can
-                                articulate any genre or style of music as well.
-                                Both Duo sets are able to be amplified (a small
-                                and easy set up) which can help craft the volume
-                                for each given venue size and environment.
-                                Please inquire for more details.
+                                The Violin can be paired with either a Guitar or
+                                Keyboard/Piano. Both offer a fuller sound and
+                                provide a strong rhythmic and harmonic element
+                                to the melodious violin. The Duo can articulate
+                                any genre or style of music and can be
+                                amplified. Please inquire for more details.
                             </p>
                         </div>
                     </div>
@@ -61,10 +65,11 @@ const Packages = () => {
                         </a>
                     </div>
                     <p className="packages__info">
-                        **All Packages accept song requests.**
+                        **All packages accept song requests**
+                        <br></br>
                         <br></br>
                         **Additional audio samples can be provided upon
-                        request.**
+                        request**
                     </p>
                 </div>
             </section>

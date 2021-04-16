@@ -69,6 +69,12 @@ const Header = ({ toggleMusic }) => {
                             Gallery
                         </li>
                         <li
+                            onClick={() => handleNav('packages')}
+                            className="header__nav--item"
+                        >
+                            Packages
+                        </li>
+                        <li
                             onClick={(e) => toggleMusic()}
                             className="header__nav--item"
                         >

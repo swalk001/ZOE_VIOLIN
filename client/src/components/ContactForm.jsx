@@ -37,6 +37,7 @@ const ContactForm = ({ displayModal }) => {
                         <p className="contact-form__info" id="contact-form">
                             zoewviolin@gmail.com
                             <br></br>
+                            <br></br>
                             803-807-8570
                         </p>
                         <form

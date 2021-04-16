@@ -1,9 +1,10 @@
 .packages {
-    // & h1 {
-    //     font-size: 3rem;
-    //     text-align: center;
-    //     margin-top: 8rem;
-    // }
+    &--animate {
+        -webkit-animation: fade-up 1s;
+        animation: fade-up 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
 
     & h1 {
         font-size: 6rem;
@@ -94,13 +95,15 @@
         margin-bottom: 4rem;
 
         &--button {
-            border-radius: 15px;
+            background-color: white;
+            // border-radius: 15px;
             font-size: 3rem;
             width: 25rem;
             height: 5rem;
             font-family: inherit;
             cursor: pointer;
             transition: 0.2s all;
+            outline: none;
             &:hover {
                 color: white;
                 background-color: black;
