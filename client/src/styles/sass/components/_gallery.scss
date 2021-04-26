@@ -17,14 +17,18 @@
     }
 
     &__heading {
-        font-size: 4rem;
+        font-size: 5rem;
         color: black;
+        font-weight: bolder;
         text-align: center;
         position: absolute;
         top: 0;
         left: 51%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 80%);
         height: auto;
+        width: 120%;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
         transition: all 0.1s;
         transition: color 0.4s;
         z-index: 10;
@@ -44,7 +48,7 @@
 
         & span {
             font-weight: 700;
-            font-size: 7rem;
+            font-size: 12rem;
             font-style: italic;
             padding: 0 0.5rem;
             @include respond(phone) {
@@ -63,7 +67,7 @@
             background-color: white;
             width: 25vw;
             height: 100%;
-            opacity: 0.8;
+            opacity: 0.9;
             -o-object-fit: cover;
             object-fit: cover;
             cursor: pointer;

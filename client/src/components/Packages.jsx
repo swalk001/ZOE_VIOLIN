@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Packages = () => {
+    //SECTION ANIMATION
     const target = document.getElementsByClassName('packages');
     const section = document.getElementsByClassName('section-packages');
     window.addEventListener('scroll', () => {
@@ -10,6 +11,44 @@ const Packages = () => {
         } else {
             target[0].classList.remove('packages--animate');
         }
+    });
+
+    //CARD ANIMATION
+    const card = document.getElementsByClassName('packages__option');
+    const songButton = Array.from(
+        document.getElementsByClassName('packages__songs--button')
+    );
+
+    const items = Array.from(card);
+    window.addEventListener('scroll', () => {
+        items.forEach((x) => {
+            const top = x.getBoundingClientRect().top - 200;
+            if (top > 400 && top < 1000) {
+                let offset = (top - 400) / 10;
+                x.style.transform = `rotate(${offset}deg) translate(0, ${offset}%)`;
+            } else {
+                x.style.transform = `rotate(0) translate(0, 0)`;
+            }
+        });
+    });
+
+    const info = [
+        ...songButton,
+        ...Array.from(document.getElementsByClassName('packages__info')),
+    ];
+    window.addEventListener('scroll', () => {
+        info.forEach((x) => {
+            const isVisible =
+                x.getBoundingClientRect().top + 200 > window.innerHeight;
+            if (isVisible) {
+                x.classList.add('packages--animate');
+            }
+            if (x.getBoundingClientRect().top > window.innerHeight) {
+                x.classList.remove('packages--animate');
+            } else {
+                x.classList.add('packages--animate');
+            }
+        });
     });
     return (
         <Fragment>
@@ -26,12 +65,11 @@ const Packages = () => {
                                 />
                             </div>
                             <p>
-                                Solo Violin offers a simple yet classic sound
-                                violin creating warm ambience to all
-                                environments. The violin is capable of playing
-                                any melody making the song selections endless.
-                                The violin is also able to be amplified, please
-                                inquire for more details.
+                                Simple yet classic, the violin brings a warm
+                                ambience to all environments. The violin is
+                                capable of playing any melody making the song
+                                selections endless. The violin is also able to
+                                be amplified, please inquire for more details.
                             </p>
                         </div>
                         <div className="packages__option">
@@ -66,9 +104,12 @@ const Packages = () => {
                     <p className="packages__info">
                         **All packages accept song requests**
                         <br></br>
+                    </p>
+                    <p className="packages__info">
                         <br></br>
                         **Additional audio samples can be provided upon
                         request**
+                        <br></br>
                     </p>
                 </div>
             </section>

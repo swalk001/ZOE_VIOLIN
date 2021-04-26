@@ -47,8 +47,8 @@ const Gallery = ({ instagram }) => {
             <div className="gallery" id="gallery">
                 <div className="gallery__heading ">
                     <h2>
-                        Curated <span>music</span> for <br></br>weddings and
-                        events.
+                        Curated <span>music</span> for <br></br>Weddings and
+                        Events.
                     </h2>
                 </div>
 
