@@ -55,12 +55,12 @@
         align-self: center;
         shape-rendering: geometricprecision;
         cursor: pointer;
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 3rem;
+        width: 3rem;
         transition: all 0.3s;
 
         &-container {
-            width: 10rem;
+            width: 8rem;
             position: relative;
             transition: all 0.3s;
 
@@ -102,29 +102,28 @@
             justify-content: center;
             flex-direction: row;
             transition: all 0.3s;
+            & .header__music-player-badges--1 {
+                -webkit-animation: music-note-1 1.5s infinite;
+                animation: music-note-1 1.5s infinite;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            & .header__music-player-badges--2 {
+                -webkit-animation: music-note-2 1.5s infinite;
+                animation: music-note-2 1.5s infinite;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            & .header__music-player-badges--3 {
+                -webkit-animation: music-note-3 1.5s infinite;
+                animation: music-note-3 1.5s infinite;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-timing-function: ease-in-out;
+            }
 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.507);
                 cursor: pointer;
-
-                & .header__music-player-badges--1 {
-                    -webkit-animation: music-note-1 1.5s infinite;
-                    animation: music-note-1 1.5s infinite;
-                    animation-timing-function: ease-in-out;
-                    -webkit-animation-timing-function: ease-in-out;
-                }
-                & .header__music-player-badges--2 {
-                    -webkit-animation: music-note-2 1.5s infinite;
-                    animation: music-note-2 1.5s infinite;
-                    animation-timing-function: ease-in-out;
-                    -webkit-animation-timing-function: ease-in-out;
-                }
-                & .header__music-player-badges--3 {
-                    -webkit-animation: music-note-3 1.5s infinite;
-                    animation: music-note-3 1.5s infinite;
-                    animation-timing-function: ease-in-out;
-                    -webkit-animation-timing-function: ease-in-out;
-                }
             }
 
             &--1 {

@@ -31,11 +31,12 @@ const ContactForm = ({ displayModal }) => {
         <Fragment>
             <div className="section-contact-form">
                 <div className="contact-form">
+                    <h2 className="contact-form__heading">
+                        <i>Let's Talk</i>
+                    </h2>
                     <div className="contact-form__wrapper">
-                        <h2 className="contact-form__heading">Let's Talk</h2>
                         <p className="contact-form__info" id="contact-form">
                             zoewviolin@gmail.com
-                            <br></br>
                             <br></br>
                             803-807-8570
                         </p>

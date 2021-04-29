@@ -12,22 +12,23 @@
     transition: all 0.5s ease-in-out;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     background: linear-gradient(344deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
 
-    @include respond(tab-port) {
-        height: 65vh;
-    }
-    @include respond(phone) {
-        height: 75vh;
-    }
+    // @include respond(tab-port) {
+    //     height: 65vh;
+    // }
+    // @include respond(phone) {
+    //     height: 75vh;
+    // }
 
     &--hide {
         transform: translate(105%, 7rem);
     }
 
     &__songs {
-        height: 45rem;
+        // height: 45rem;
+        height: 65vh;
         overflow-y: scroll;
         border-bottom: 2px solid rgb(63, 63, 63);
 
@@ -37,18 +38,18 @@
             rgb(0, 0, 0) 0%,
             rgb(39, 39, 39) 100%
         );
-        grid-area: 1/1/7/9;
+        grid-area: 1/1/6/9;
 
-        @include respond(tab-land) {
-            height: 50rem;
-        }
-        @include respond(tab-port) {
-            height: 45rem;
-        }
+        // @include respond(tab-land) {
+        //     height: 50rem;
+        // }
+        // @include respond(tab-port) {
+        //     height: 45rem;
+        // }
 
-        @include respond(phone) {
-            height: 55rem;
-        }
+        // @include respond(phone) {
+        //     height: 55vh;
+        // }
 
         &-ul {
             height: 100%;
@@ -74,7 +75,7 @@
 
     &__playing {
         font-size: 1.25rem;
-        grid-area: 7/2/7/8;
+        grid-area: 6/2/7/8;
         display: flex;
         height: 2rem;
         margin-top: 2rem;
@@ -87,10 +88,11 @@
     }
 
     &__progress {
-        transform: scale(0.1) translate(0, -200%);
+        transform: scale(0.1) translate(0, 0);
         width: 100%;
         height: 0.75rem;
         border-radius: 1rem;
+        margin-bottom: 3rem;
         background: linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.57) 100%,
@@ -102,7 +104,7 @@
     }
 
     &__control {
-        grid-area: 8/1/9/9;
+        grid-area: 7/1/7/9;
         display: flex;
         color: white;
         justify-content: center;

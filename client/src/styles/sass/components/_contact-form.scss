@@ -1,9 +1,11 @@
 .contact-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size: 2.1rem;
     background-color: white;
-    padding: 6rem 0;
+    padding: 0 0 6rem 0;
     &--animate {
         -webkit-animation: fade-up 1s;
         animation: fade-up 1s;
@@ -13,6 +15,7 @@
     &__wrapper {
         height: auto;
         width: 60%;
+        max-width: 100rem;
 
         @include respond(phone) {
             width: 95%;
@@ -20,30 +23,23 @@
     }
 
     &__heading {
-        width: 100%;
+        // opacity: 0;
+        // width: 100vw;
         text-align: center;
-        font-size: 6rem;
-        margin: 0 0 6rem -2rem;
+        // font-size: 10rem;
+        // box-shadow: 0.1rem 1.1rem 0.5rem rgba($color-black, 0.1);
+        // background-color: rgba(253, 253, 253, 0.699);
 
-        position: relative;
-
-        &::before {
-            content: '';
-            height: 0.1rem;
-            border: 4rem solid #fff2e9;
-            width: 22rem;
-            margin: 0.75rem 0rem 0rem 4rem;
-            position: absolute;
-            z-index: -1;
-            border-radius: 2rem;
-            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
-        }
+        color: rgba(0, 0, 0, 0.233);
+        width: 100%;
+        font-size: 5rem;
+        margin: 4rem 0 0 0;
     }
 
     &__info {
-        font-size: 3rem;
-        font-weight: bolder;
-        margin: 8rem 0 8rem 0;
+        font-size: 2.2rem;
+        // font-weight: bolder;
+        margin: 4rem 0 8rem 0;
         text-align: center;
     }
 
@@ -79,7 +75,7 @@
         border: 2px solid black;
         transition: 0.2s all;
         outline: none;
-
+        cursor: pointer;
         &:hover {
             background-color: black;
             color: white;
@@ -96,6 +92,7 @@
         font-size: 2.1rem;
         font-family: inherit;
         margin: 0.2rem 0 3rem 0;
+        z-index: 10;
         &:focus {
             border: 1px solid black;
         }
@@ -110,6 +107,7 @@
         border: 1px solid rgba(0, 0, 0, 0.425);
         font-size: 2.1rem;
         font-family: inherit;
+        z-index: 10;
         &:focus {
             border: 1px solid black;
         }

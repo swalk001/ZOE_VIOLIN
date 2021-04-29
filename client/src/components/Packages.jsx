@@ -3,21 +3,18 @@ import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Packages = () => {
     //SECTION ANIMATION
-    const target = document.getElementsByClassName('packages');
-    const section = document.getElementsByClassName('section-packages');
-    window.addEventListener('scroll', () => {
-        if (isScrolledIntoViewFromTop(section[0])) {
-            target[0].classList.add('packages--animate');
-        } else {
-            target[0].classList.remove('packages--animate');
-        }
-    });
+    // const target = document.getElementsByClassName('packages');
+    // const section = document.getElementsByClassName('section-packages');
+    // window.addEventListener('scroll', () => {
+    //     if (isScrolledIntoViewFromTop(section[0])) {
+    //         target[0].classList.add('packages--animate');
+    //     } else {
+    //         target[0].classList.remove('packages--animate');
+    //     }
+    // });
 
     //CARD ANIMATION
     const card = document.getElementsByClassName('packages__option');
-    const songButton = Array.from(
-        document.getElementsByClassName('packages__songs--button')
-    );
 
     const items = Array.from(card);
     window.addEventListener('scroll', () => {
@@ -33,8 +30,12 @@ const Packages = () => {
     });
 
     const info = [
-        ...songButton,
+        ...Array.from(
+            document.getElementsByClassName('packages__songs--button')
+        ),
         ...Array.from(document.getElementsByClassName('packages__info')),
+        ...Array.from(document.getElementsByClassName('packages__type')),
+        ...Array.from(document.getElementsByClassName('packages__text')),
     ];
     window.addEventListener('scroll', () => {
         info.forEach((x) => {
@@ -53,41 +54,35 @@ const Packages = () => {
     return (
         <Fragment>
             <section className="section-packages">
-                <div className="packages" id="packages">
+                <div className="packages">
                     <h2 className="packages__heading">Packages</h2>
-                    <div className="packages__wrapper">
-                        <div className="packages__option">
-                            <div className="packages__img">
-                                <h1>Solo Violin</h1>
+                    <div className="packages__wrapper" id="packages">
+                        <div className="packages__option packages__option--solo">
+                            <h1 className="packages__type">Solo</h1>
+                            {/* <div className="packages__img">
                                 <img
                                     src="https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/febfilm_+68+(1).jpg"
                                     alt=""
                                 />
-                            </div>
-                            <p>
+                            </div> */}
+                        </div>
+                        <div className="packages__text-box-1">
+                            <p className="packages__text">
                                 Simple yet classic, the violin brings a warm
-                                ambience to all environments. The violin is
-                                capable of playing any melody making the song
-                                selections endless. The violin is also able to
-                                be amplified, please inquire for more details.
+                                ambience to any atmosphere, small or large, and
+                                is capable of playing any melody making song
+                                selection endless.
                             </p>
                         </div>
-                        <div className="packages__option">
-                            <div className="packages__img">
-                                <h1>Violin Duo</h1>
-                                <img
-                                    src="https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/ZOE_CHRISTIAN.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            {/* <h2>Guitar or Piano/Keyboard</h2> */}
-                            <p>
-                                The Violin can be paired with either a Guitar or
-                                Keyboard/Piano. Both offer a fuller sound and
-                                provide a strong rhythmic and harmonic element
-                                to the melodious violin. The Duo can articulate
-                                any genre or style of music and can be
-                                amplified. Please inquire for more details.
+                        <div className="packages__option packages__option--duo">
+                            <h1 className="packages__type">Duo</h1>
+                        </div>
+                        <div className="packages__text-box-2">
+                            <p className="packages__text">
+                                The violin can be paired with either guitar or
+                                keyboard. Both offer a full sound as well as
+                                providing a strong rhythmic and harmonic element
+                                to the melodious violin.
                             </p>
                         </div>
                     </div>

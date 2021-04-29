@@ -59,9 +59,9 @@
 
     &__img {
         overflow: hidden;
-        @include respond(phone) {
-            width: 33.33333vw;
-        }
+        // @include respond(phone) {
+        //     width: 33.33333vw;
+        // }
 
         & img {
             background-color: white;

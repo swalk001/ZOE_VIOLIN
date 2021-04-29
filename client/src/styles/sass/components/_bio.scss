@@ -9,24 +9,18 @@
         animation-fill-mode: forwards;
     }
     &__heading-box {
-        text-align: center;
+        width: 100vw;
     }
     &__heading {
-        color: black;
-        margin-left: -1.4rem;
-        font-size: 6rem;
-        padding: 0 0 5rem 0;
-
-        &::before {
-            content: '';
-            height: 0.1rem;
-            width: 9rem;
-            margin: 0rem 0rem 0rem 2.8rem;
-            position: absolute;
-            border: 4rem solid #fff2e9;
-            border-radius: 2rem;
-            z-index: -1;
-            box-shadow: 1.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
+        // opacity: 0.3;
+        color: rgba(0, 0, 0, 0.233);
+        text-align: left;
+        width: 100%;
+        font-size: 5rem;
+        margin: 4rem 14rem;
+        @include respond(phone) {
+            margin: 4rem auto;
+            text-align: center;
         }
     }
     &__text {

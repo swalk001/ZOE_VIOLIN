@@ -24,7 +24,7 @@ const Gallery = ({ instagram }) => {
     window.addEventListener('scroll', (e) => {
         const section = document.querySelector('.section-gallery');
         const heading = document.querySelector('.gallery__heading');
-        const dark = document.querySelector('.gallery__heading--dark');
+        // const dark = document.querySelector('.gallery__heading--dark');
 
         if (section.getBoundingClientRect().bottom < window.innerHeight) {
             heading.style.opacity = `${
@@ -39,6 +39,12 @@ const Gallery = ({ instagram }) => {
             heading.style.opacity = `${
                 1 - section.getBoundingClientRect().top / 600
             }`;
+        }
+
+        if (-section.getBoundingClientRect().top - 500 > window.innerHeight) {
+            heading.style.display = 'none';
+        } else {
+            heading.style.display = 'block';
         }
     });
 

@@ -139,10 +139,10 @@ class MusicPlayer extends React.Component {
                         handlePlay={this.handlePlay}
                         isPlaying={isPlaying}
                     />
-                    <div className="music__playing">
+                    {/* <div className="music__playing">
                         <h2>{isPlaying ? isPlaying : ''}</h2>
-                    </div>
-                    <div className="music__progress"></div>
+                    </div> */}
+                    <div className="music__progress" />
                     <div className="music__control">
                         <Controls
                             isPlaying={isPlaying}
