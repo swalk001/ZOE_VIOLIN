@@ -13,8 +13,8 @@
         position: absolute;
 
         color: black;
-        -webkit-text-fill-color: #fff2e9f6; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-fill-color: #fff2e9f6;
+        -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: black;
         top: 0;
         left: 0;
@@ -22,10 +22,8 @@
         text-transform: uppercase;
         @include respond(phone) {
             font-size: 18rem;
+            -webkit-text-stroke-width: 0.75px;
         }
-        // @include respond(tab-port) {
-        //     font-size: 1vw;
-        // }
     }
     & h2 {
         text-align: center;
@@ -36,7 +34,6 @@
         text-align: center;
         margin: 0 auto 6rem auto;
         font-size: 10rem;
-        // padding: 1rem;
         box-shadow: 0.1rem 1.1rem 0.5rem rgba($color-black, 0.4);
         background-color: rgba(253, 253, 253, 0.699);
     }
@@ -60,7 +57,8 @@
             padding: 2rem;
             line-height: 3.5rem;
             font-weight: 300;
-            background-color: #fff2e9de;
+            // background-color: #fff2e9de;
+            background-color: white;
             -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
             font-size: 2rem;
@@ -116,10 +114,6 @@
                 margin-left: 0;
             }
         }
-
-        // @include respond(tab-port) {
-        //     width: 70%;
-        // }
     }
 
     &__text {
@@ -142,29 +136,6 @@
             }
         }
     }
-    // &__img {
-    //     height: 30rem;
-    //     // width: 75%;
-    //     // margin: 2rem auto;
-    //     position: relative;
-    //     padding: 4rem;
-    //     border: 2px solid rgba(0, 0, 0, 0.048);
-    //     border-bottom: hidden;
-    //     border-top: hidden;
-    //     & img {
-    //         display: none;
-    //         height: inherit;
-    //         width: inherit;
-    //         -o-object-fit: cover;
-    //         object-fit: cover;
-    //         border-left: hidden;
-    //         border-right: hidden;
-    //         // padding: 2rem 0;
-    //         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
-    //         // border-radius: 15px;
-    //     }
-    // }
 
     &__songs {
         display: flex;
@@ -185,7 +156,6 @@
             cursor: pointer;
             transition: 0.2s all;
             outline: none;
-            border-radius: 2rem;
 
             &:hover {
                 color: white;
@@ -197,7 +167,8 @@
     &__info {
         opacity: 0;
         text-align: center;
-        font-size: 2.6rem;
-        font-weight: bolder;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 600;
     }
 }

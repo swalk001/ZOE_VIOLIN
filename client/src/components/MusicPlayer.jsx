@@ -20,8 +20,10 @@ class MusicPlayer extends React.Component {
         this.handleNext = this.handleNext.bind(this);
     }
 
-    componentDidMount() {
-        this.handleLoad();
+    componentDidUpdate() {
+        if (!this.props.hideMusic && this.state.audio.length === 0) {
+            this.handleLoad();
+        }
     }
 
     handleLoad() {
@@ -121,11 +123,11 @@ class MusicPlayer extends React.Component {
     }
 
     render() {
-        const { songList, isPlaying, current } = this.state;
+        const { songList, isPlaying, current, audio } = this.state;
 
         const player = document.getElementsByClassName('music')[0];
         if (player) {
-            if (this.props.showMusic) {
+            if (this.props.hideMusic) {
                 player.classList.remove('music--hide');
             } else {
                 player.classList.add('music--hide');

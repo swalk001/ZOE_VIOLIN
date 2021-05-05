@@ -5,10 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    // grid-gap: 0.2rem;
-    // border: 2px solid red;
-    // justify-content: center;
-    // align-items: flex-start;
+
     position: relative;
 
     @include respond(phone) {
@@ -59,9 +56,6 @@
 
     &__img {
         overflow: hidden;
-        // @include respond(phone) {
-        //     width: 33.33333vw;
-        // }
 
         & img {
             background-color: white;

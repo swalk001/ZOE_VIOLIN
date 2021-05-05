@@ -21,10 +21,10 @@ const Packages = () => {
         items.forEach((x) => {
             const top = x.getBoundingClientRect().top - 200;
             if (top > 400 && top < 1000) {
-                let offset = (top - 400) / 10;
-                x.style.transform = `rotate(${offset}deg) translate(0, ${offset}%)`;
+                let offset = (top - 400) / 20;
+                x.style.transform = `translate(0, ${offset}%)`;
             } else {
-                x.style.transform = `rotate(0) translate(0, 0)`;
+                x.style.transform = `translate(0, 0)`;
             }
         });
     });
@@ -59,12 +59,6 @@ const Packages = () => {
                     <div className="packages__wrapper" id="packages">
                         <div className="packages__option packages__option--solo">
                             <h1 className="packages__type">Solo</h1>
-                            {/* <div className="packages__img">
-                                <img
-                                    src="https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/febfilm_+68+(1).jpg"
-                                    alt=""
-                                />
-                            </div> */}
                         </div>
                         <div className="packages__text-box-1">
                             <p className="packages__text">

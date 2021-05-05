@@ -14,7 +14,13 @@ const Banner = () => {
     return (
         <div className="section-banner">
             <div className="banner">
-                <img src="./imgs/hetz387.jpg" alt="" className="banner__img" />
+                <img
+                    src="https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/hetz387.jpg"
+                    srcSet="https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/hetz387-small.jpeg 600w, https://zoe-violin.s3.us-east-2.amazonaws.com/imgs/hetz387.jpg 1080w"
+                    sizes="50vw"
+                    alt="Zoe Whittaker"
+                    className="banner__img"
+                />
                 <div className="banner__heading">
                     <span>Z</span>
                     <span>o</span>

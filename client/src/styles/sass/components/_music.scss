@@ -7,23 +7,18 @@
     position: fixed;
     right: 0;
     top: 0;
-    transform: translate(0, 7rem);
+    transform: translate(105%, 7rem);
     z-index: 1000;
     transition: all 0.5s ease-in-out;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 1fr);
     background: linear-gradient(344deg, rgb(0, 0, 0) 0%, rgb(39, 39, 39) 100%);
-
-    // @include respond(tab-port) {
-    //     height: 65vh;
-    // }
-    // @include respond(phone) {
-    //     height: 75vh;
-    // }
+    -webkit-animation: music-load 2s ease-in-out;
+    animation: music-load 2s ease-in-out;
 
     &--hide {
-        transform: translate(105%, 7rem);
+        transform: translate(0, 7rem);
     }
 
     &__songs {

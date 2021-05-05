@@ -21,24 +21,30 @@
     &__heading {
         position: absolute;
         text-align: center;
-        width: 80rem;
+        width: 100rem;
         right: 0rem;
         top: 10rem;
         line-height: 0.7;
-        font-size: 18rem;
+        font-size: 20rem;
         font-weight: 500;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
         transition: all 0.2s;
+
+        color: black;
+        // -webkit-text-fill-color: #fff2e9f6;
+        // -webkit-text-stroke-width: 1.5px;
+        // -webkit-text-stroke-color: black;
 
         @include respond(tab-port) {
             font-size: 14rem;
         }
 
         @include respond(phone) {
-            font-size: 10rem;
+            font-size: 23vw;
             @include absCenter;
-            top: 17rem;
+            -webkit-text-stroke-width: 0.75px;
+            top: 20rem;
         }
 
         & span {

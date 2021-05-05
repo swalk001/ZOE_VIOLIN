@@ -24,7 +24,7 @@ class App extends React.Component {
                 },
             ],
             modal: false,
-            showMusic: false,
+            hideMusic: true,
             updated: null,
         };
     }
@@ -78,21 +78,21 @@ class App extends React.Component {
     }
 
     toggleMusic() {
-        const { showMusic } = this.state;
+        const { hideMusic } = this.state;
         this.setState({
-            showMusic: !showMusic,
+            hideMusic: !hideMusic,
         });
     }
 
     render() {
-        const { modal, navModal, instagram, showMusic } = this.state;
+        const { modal, navModal, instagram, hideMusic } = this.state;
         return (
             <div>
                 <Header toggleMusic={this.toggleMusic.bind(this)} />
                 <Banner />
                 <Bio />
                 <Gallery instagram={instagram} />
-                <MusicPlayer showMusic={showMusic} />
+                <MusicPlayer hideMusic={hideMusic} />
                 <Packages />
                 <ContactForm displayModal={this.displayModal.bind(this)} />
                 <Modal
