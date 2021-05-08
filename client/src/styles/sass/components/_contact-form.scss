@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     font-size: 2.1rem;
     background-color: white;
     padding: 0 0 6rem 0;
@@ -23,22 +24,24 @@
     }
 
     &__heading {
-        // opacity: 0;
-        // width: 100vw;
         text-align: center;
-        // font-size: 10rem;
-        // box-shadow: 0.1rem 1.1rem 0.5rem rgba($color-black, 0.1);
-        // background-color: rgba(253, 253, 253, 0.699);
-
-        color: rgba(0, 0, 0, 0.233);
+        font-family: initial;
+        color: rgba(0, 0, 0, 0.89);
         width: 100%;
-        font-size: 5rem;
         margin: 4rem 0 0 0;
+        color: rgba(0, 0, 0, 0.89);
+        font-family: initial;
+        font-size: 6rem;
+        font-style: italic;
+        font-weight: 700;
+        @include respond(phone) {
+            font-size: 4rem;
+        }
     }
 
     &__info {
         font-size: 2.2rem;
-        // font-weight: bolder;
+        font-family: 'Nunito', serif;
         margin: 4rem 0 8rem 0;
         text-align: center;
     }
@@ -46,6 +49,7 @@
     &__form {
         display: flex;
         flex-direction: column;
+        font-family: 'Nunito', serif;
     }
 
     &__name {

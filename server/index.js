@@ -20,7 +20,7 @@ app.get('/api/instagram', (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            //Determine if the database has been updated today
+            // Determine if the database has been updated today
             if (!(Date.now() - images[0].updated < 86400000)) {
                 fetch();
                 console.log('db updated');

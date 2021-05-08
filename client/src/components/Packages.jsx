@@ -2,17 +2,6 @@ import React, { Fragment } from 'react';
 import { isScrolledIntoViewFromTop } from '../js/Effects.js';
 
 const Packages = () => {
-    //SECTION ANIMATION
-    // const target = document.getElementsByClassName('packages');
-    // const section = document.getElementsByClassName('section-packages');
-    // window.addEventListener('scroll', () => {
-    //     if (isScrolledIntoViewFromTop(section[0])) {
-    //         target[0].classList.add('packages--animate');
-    //     } else {
-    //         target[0].classList.remove('packages--animate');
-    //     }
-    // });
-
     //CARD ANIMATION
     const card = document.getElementsByClassName('packages__option');
 

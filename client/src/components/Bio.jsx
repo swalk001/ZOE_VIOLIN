@@ -15,16 +15,11 @@ const Bio = () => {
 
     return (
         <section className="section-bio">
-            <h2
-                className="bio__heading scroll-horizontal-left"
-                data-rate=".2"
-                data-direction="vertical"
-            >
-                <i>A little about me...</i>
-            </h2>
             <div className="row">
+                <h2 className="bio__heading col-1-of-2">
+                    A little about me...
+                </h2>
                 <div className="bio" id="bio">
-                    <div className="bio__heading-box"></div>
                     <section className="bio__text">
                         <p className="col-1-of-2">
                             Zoe has studied the violin for over 20 years. Her

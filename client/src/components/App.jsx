@@ -12,6 +12,7 @@ import Gallery from './Gallery.jsx';
 import MusicPlayer from './MusicPlayer.jsx';
 import ContactForm from './ContactForm.jsx';
 import Packages from './Packages.jsx';
+import LazyLoad from 'react-lazyload';
 
 class App extends React.Component {
     constructor(props) {

@@ -16,7 +16,7 @@
 .section-gallery {
     overflow: hidden;
 
-    height: 150rem;
+    height: auto;
     @include respond(phone) {
         height: 100rem;
     }

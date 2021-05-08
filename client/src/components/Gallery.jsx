@@ -24,7 +24,6 @@ const Gallery = ({ instagram }) => {
     window.addEventListener('scroll', (e) => {
         const section = document.querySelector('.section-gallery');
         const heading = document.querySelector('.gallery__heading');
-        // const dark = document.querySelector('.gallery__heading--dark');
 
         if (section.getBoundingClientRect().bottom < window.innerHeight) {
             heading.style.opacity = `${
@@ -53,11 +52,10 @@ const Gallery = ({ instagram }) => {
             <div className="gallery" id="gallery">
                 <div className="gallery__heading ">
                     <h2>
-                        Curated <span>music</span> for <br></br>Weddings and
-                        Events.
+                        Curated <span>music</span>
                     </h2>
+                    <h2>Weddings + Events</h2>
                 </div>
-
                 {instagram}
             </div>
         </div>
