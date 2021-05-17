@@ -29,7 +29,7 @@
         }
     }
     &__text {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-family: 'Nunito', serif;
 
         color: black;
@@ -42,8 +42,6 @@
         @include respond(phone) {
             text-indent: 3rem;
             line-height: 3rem;
-
-            font-size: 2rem;
         }
 
         & p {

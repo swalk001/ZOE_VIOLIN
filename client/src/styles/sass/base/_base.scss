@@ -29,10 +29,10 @@ html {
     //     linear-gradient(5deg, transparent 5%, rgba(255, 255, 255, 0.19) 5%);
     // background-size: 13px, 29px, 37px, 53px;
 
-    ::-webkit-scrollbar {
-        width: 0rem;
-        background: transparent;
-    }
+    // ::-webkit-scrollbar {
+    //     width: 0rem;
+    //     background: transparent;
+    // }
 
     @include respond(phone) {
         font-size: 44%;
